@@ -1,0 +1,14 @@
+WhereHurt
+
+This repository includes or references third-party anatomy assets from
+Anatria-3D:
+https://github.com/Nurkan1/Anatria-3D/tree/main/public/anatomy
+
+The upstream project identifies the anatomy data as derived from Z-Anatomy /
+BodyParts3D and distributed under the Creative Commons Attribution-ShareAlike
+4.0 International license (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/
+
+The anatomy assets are separate from the original WhereHurt source code. Their
+license and attribution requirements continue to apply. Refer to the upstream
+project for the complete attribution chain and source terms.
