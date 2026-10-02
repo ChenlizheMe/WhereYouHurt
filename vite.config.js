@@ -1,2 +1,4 @@
 import { defineConfig } from 'vite'
-export default defineConfig({ base: '/WhereYouHurt/' })
+
+// Relative assets keep the build usable on GitHub Pages project URLs and local previews.
+export default defineConfig({ base: './' })
