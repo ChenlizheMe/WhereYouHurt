@@ -50,3 +50,7 @@ Small fixes and clear issue reports are welcome. See [`CONTRIBUTING.md`](CONTRIB
 ## License
 
 Original source code and project documentation are licensed under the MIT License; see [`LICENSE`](LICENSE). Third-party dependencies and anatomy assets retain their own licenses.
+
+## Installable web app
+
+The production build includes a lightweight Progressive Web App shell. Open the deployed site in a modern browser and use its **Install app / Add to Home Screen** action. The shell, manifest, and local matching data can load offline after the first visit; anatomy GLB models are still fetched from the upstream CDN and require connectivity the first time each layer is opened. This is a web PWA, not an APK or native mobile package.
