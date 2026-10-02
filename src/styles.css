@@ -182,3 +182,35 @@ body{background:#10110f}
 /* Keep centered dialog geometry while the spring animation runs. */
 @keyframes spring-sheet{0%{transform:translateX(-50%) scale(.86);opacity:.2}60%{transform:translateX(-50%) scale(1.04);opacity:1}82%{transform:translateX(-50%) scale(.98)}100%{transform:translateX(-50%) scale(1);opacity:1}}
 .sticker-sheet{animation-name:spring-sheet}
+
+/* Calm the TV treatment: stripes and drift, no grid/mesh. */
+.viewer canvas{filter:saturate(.86) contrast(1.08) brightness(.97)}
+.crt-overlay{filter:none;background:radial-gradient(ellipse at center,transparent 54%,rgba(0,0,0,.24) 100%)}
+.crt-overlay:before{opacity:.28}
+.crt-scanlines{opacity:.28;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(232,223,185,.075) 4px,transparent 5px)}
+.crt-chroma{opacity:.2;background:linear-gradient(90deg,rgba(228,93,60,.13),transparent 18% 82%,rgba(65,186,142,.13))}
+.crt-grain{opacity:.08;background-size:5px 5px}
+.crt-posterize{display:none!important}
+.signal-bars{display:none!important}
+/* Three compact horizontal layer cards; icon above the vertical Chinese label. */
+.scene-tools{align-items:flex-end}
+.model-layers{flex-direction:row!important;align-items:stretch;gap:6px}
+.layer-dot{width:58px;height:70px;min-width:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.layer-dot .layer-icon{font-size:18px;line-height:1}
+.layer-dot .layer-name{writing-mode:horizontal-tb;white-space:nowrap;letter-spacing:.12em;font-size:10px;line-height:1}
+.reset-control{border:1px solid rgba(228,93,60,.7)!important;background:rgba(228,93,60,.12)!important;color:#e45d3c!important;font-size:8px!important;letter-spacing:.06em}
+/* Inset Y rail with a visible halo of scene around the backing panel. */
+.vertical-control{left:calc(env(safe-area-inset-left) + 22px);width:48px;height:240px;min-width:48px;min-height:240px;max-width:48px;max-height:240px;padding:9px 6px;background:rgba(16,18,15,.9);border:1px solid rgba(232,223,185,.65);box-shadow:0 0 0 7px rgba(16,18,15,.3),4px 4px 0 rgba(0,0,0,.3);gap:6px}
+.vertical-control input{flex-basis:150px;height:150px;min-height:150px;max-height:150px;width:18px;min-width:18px;max-width:18px}
+/* Stickers occupy the former bottom camera-control row. */
+.sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 78px);}
+.sticker-card{position:relative;overflow:visible}
+.sticker-card:active:after,.layer-dot:active:after,.scene-controls button:active:after{content:"";position:absolute;inset:-7px;border:2px solid rgba(228,93,60,.72);border-radius:inherit;pointer-events:none;animation:press-burst .34s ease-out both}
+@keyframes press-burst{0%{opacity:.9;transform:scale(.82)}100%{opacity:0;transform:scale(1.16)} }
+@media(max-width:760px){
+ .layer-dot{width:52px;min-width:52px;height:62px}.layer-dot .layer-icon{font-size:16px}.layer-dot .layer-name{font-size:9px}
+ .vertical-control{left:calc(env(safe-area-inset-left) + 14px);width:42px;height:208px;min-width:42px;min-height:208px;max-width:42px;max-height:208px;padding:7px 4px;box-shadow:0 0 0 5px rgba(16,18,15,.3),3px 3px 0 rgba(0,0,0,.3);gap:5px}
+ .vertical-control input{flex-basis:128px;height:128px;min-height:128px;max-height:128px;width:16px;min-width:16px;max-width:16px}
+ .sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 68px);width:calc(100% - 66px);max-width:calc(100% - 66px)}
+ .scene-tools{right:10px}.scene-controls button{font-size:8px;padding:5px 6px}
+}
