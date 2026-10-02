@@ -337,3 +337,9 @@ body{background:#10110f}
 .sticker-sheet{will-change:transform,opacity}
 .vertical-track{will-change:transform}
 @media(prefers-reduced-motion:reduce){.crt-scanlines{opacity:.12!important}.layer-glitch{transition:none!important}.boot-screen,.boot-bar i{animation:none!important}}
+
+/* Broadcast texture: stronger horizontal scanlines, a quiet vignette, and rare analog noise bursts. */
+.crt-scanlines{display:block!important;opacity:.32!important;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(232,223,185,.09) 4px,transparent 5px)!important;mix-blend-mode:screen!important}
+.crt-vignette{display:block!important;background:radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.48) 100%)!important;opacity:.82!important;mix-blend-mode:multiply!important}
+.crt-noise{display:block!important;position:absolute;inset:-12%;z-index:3;pointer-events:none;opacity:0;background:repeating-linear-gradient(0deg,transparent 0 8px,rgba(232,223,185,.11) 9px 10px,transparent 11px)!important;background-size:100% 17px!important;mix-blend-mode:screen!important;animation:tape-noise-burst 6.8s steps(1,end) infinite!important}
+@keyframes tape-noise-burst{0%,74%{opacity:0}75%{opacity:.04}76%{opacity:.16;transform:translateX(-1.2%)}78%{opacity:.08;transform:translateX(1.5%)}80%{opacity:.02;transform:translateX(0)}81%,100%{opacity:0}}

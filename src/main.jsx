@@ -65,10 +65,14 @@ function App(){
    const next=pendingLayerRef.current;
    const tl=gsap.timeline({onComplete:()=>{setLayerGlitch(false);transitionTimeline.current=null;}});
    transitionTimeline.current=tl;
-   tl.set(el,{autoAlpha:1,xPercent:-100,scaleX:.28,transformOrigin:'left center'})
-     .to(el,{xPercent:0,scaleX:1,duration:.34,ease:'power3.inOut'})
-     .add(()=>{if(next)setLayer(next)},'-=.08')
-     .to(el,{xPercent:100,scaleX:.28,transformOrigin:'right center',duration:.38,ease:'power3.in'})
+   tl.set(el,{autoAlpha:1,xPercent:-100,scaleX:1,transformOrigin:'left center'})
+     .addLabel('cover')
+     .to(el,{xPercent:0,duration:.38,ease:'power3.inOut'},'cover')
+     .addLabel('covered')
+     .to({}, {duration:.16}, 'covered')
+     .add(()=>{if(next)setLayer(next)}, 'covered+=.16')
+     .addLabel('reveal','covered+=.161')
+     .to(el,{xPercent:100,duration:.44,ease:'power3.inOut'},'reveal')
      .set(el,{autoAlpha:0});
    return ()=>tl.kill();
  },[layerGlitch]);
