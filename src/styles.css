@@ -314,3 +314,5 @@ body{background:#10110f}
 .crt-overlay{filter:none!important;background:none!important}
 .crt-overlay:before,.crt-overlay:after,.crt-noise,.crt-vignette,.crt-chroma,.crt-grain{display:none!important}
 .crt-scanlines{display:block!important;opacity:.25!important;background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(232,223,185,.075) 5px,transparent 6px)!important;mix-blend-mode:screen!important}
+/* The framebuffer shader owns all tone/vignette; CSS retains only scanlines. */
+.viewer:after{display:none!important}
