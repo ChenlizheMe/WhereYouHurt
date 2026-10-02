@@ -8,6 +8,15 @@ import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader.js';
 import './styles.css';
 import knowledge from '../data/knowledge.json';
 
+// Register the lightweight offline shell only in production builds.
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(() => {
+      // Offline shell is an enhancement; the app remains usable without it.
+    });
+  });
+}
+
 const MODEL_URLS={skeleton:'https://cdn.jsdelivr.net/gh/Nurkan1/Anatria-3D@main/public/anatomy/skeletal_male.glb',muscle:'https://cdn.jsdelivr.net/gh/Nurkan1/Anatria-3D@main/public/anatomy/muscular_male.glb',nerve:'https://cdn.jsdelivr.net/gh/Nurkan1/Anatria-3D@main/public/anatomy/nervous_male.glb'};
 const copy={zh:{slogan:'您哪疼？WhereYouHurt',view:'查看',layer:'选择图层',parts:'点击疼痛部位',feel:'疼痛感觉（可多选）',signs:'外部表现（可多选）',result:'本地参考结果',loading:'加载解剖模型…',none:'请至少选择一个疼痛部位或标签',basis:'判断依据',advice:'日常建议',structures:'可能涉及结构',disclaimer:'非专业医疗建议，仅用于日常自我参考，不能替代医生诊断。如有严重或持续症状请及时就医。',disclaimerShort:'医疗提示：仅供参考，严重或持续症状请就医',medication:'非处方药教育信息',medicationIntro:'仅为一般类别说明；请阅读包装标签并咨询药师。这里不提供处方药建议或个体化剂量。',otcPain:'止痛类非处方药（如对乙酰氨基酚或布洛芬）可能用于短期轻微疼痛；按标签使用。',otcTopical:'局部非处方产品（如冷/热敷或外用止痛/止痒产品）可按标签短期使用；破损皮肤勿用外用产品。',medicationWarn:'有肝肾疾病、胃溃疡/出血、正在用药、怀孕/哺乳、对药物过敏或不确定是否适合时，先咨询药师或医生；出现严重反应立即停用并求助。',noPrescription:'不推荐处方药，也不提供个体化用药或剂量。'},en:{slogan:'WhereYouHurt / 您哪疼',view:'VIEW',layer:'LAYERS',parts:'CLICK A PAINFUL AREA',feel:'PAIN FEELINGS (MULTI-SELECT)',signs:'VISIBLE SIGNS (MULTI-SELECT)',result:'LOCAL REFERENCE',loading:'Loading anatomy…',none:'Select at least one body area or tag',basis:'Why it matched',advice:'Everyday advice',structures:'Likely structures',disclaimer:'Not professional medical advice. For daily self-reference only. Cannot replace a doctor’s diagnosis. Seek medical help if severe or persistent.',disclaimerShort:'Medical note: reference only; seek care for severe or persistent symptoms',medication:'OTC medication education',medicationIntro:'General categories only; read the package label and ask a pharmacist. No prescription recommendations or individualized dosing.',otcPain:'OTC pain-relief categories (such as acetaminophen or ibuprofen) may help short-term minor pain; follow the label.',otcTopical:'OTC topical options (such as cold/heat packs or topical pain/itch products) may be used briefly as labeled; do not use topical products on broken skin.',medicationWarn:'If you have liver/kidney disease, ulcers or bleeding, take other medicines, are pregnant/breastfeeding, have allergies, or are unsure, ask a pharmacist or clinician first; stop and seek help for a serious reaction.',noPrescription:'No prescription medicines or individualized medication/dose recommendations.'}};
 const layers=[['skeleton','骨骼','SKELETON'],['muscle','肌肉','MUSCLE'],['nerve','神经','NERVES']];
