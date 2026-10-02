@@ -71,7 +71,8 @@ function App(){
      .addLabel('covered')
      .to({}, {duration:.16}, 'covered')
      .add(()=>{if(next)setLayer(next)}, 'covered+=.16')
-     .addLabel('reveal','covered+=.161')
+     .to({}, {duration:.08}, 'covered+=.16')
+     .addLabel('reveal','covered+=.241')
      .to(el,{xPercent:100,duration:.44,ease:'power3.inOut'},'reveal')
      .set(el,{autoAlpha:0});
    return ()=>tl.kill();
