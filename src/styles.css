@@ -295,3 +295,22 @@ body{background:#10110f}
 .sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 30px)!important}
 .sticker-sheet{bottom:calc(env(safe-area-inset-bottom) + 94px)!important}
 @media(max-width:760px){.sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 25px)!important}.sticker-sheet{bottom:calc(env(safe-area-inset-bottom) + 84px)!important}}
+
+/* Current viewport pass: camera-only Y rail, closer framing range, and a higher
+   cassette action row.  The icon replaces the old visible Y/readout labels so
+   the narrow rail stays legible without text overflow. */
+.vertical-control{top:40%!important;grid-template-rows:auto 1fr!important;align-content:center!important;height:228px!important;min-height:228px!important;max-height:228px!important;padding:9px 7px!important;gap:7px!important}
+.vertical-camera-icon{display:grid;place-items:center;width:100%;height:20px;color:#41ba8e;font-size:15px;line-height:1;text-shadow:0 0 8px rgba(65,186,142,.5)}
+.vertical-camera-icon .fa-camera{font-family:"Font Awesome 6 Free",sans-serif;font-weight:900}
+.vertical-track{height:172px!important;min-height:172px!important;width:24px!important}
+.vertical-track input{width:162px!important;min-width:162px!important;max-width:162px!important}
+.sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 44px)!important}
+.sticker-sheet{height:264px!important;min-height:264px!important;max-height:264px!important;bottom:calc(env(safe-area-inset-bottom) + 94px)!important}
+@media(max-width:760px){
+ .vertical-control{top:38%!important;height:194px!important;min-height:194px!important;max-height:194px!important;padding:7px 5px!important;gap:5px!important}
+ .vertical-camera-icon{height:18px;font-size:13px}
+ .vertical-track{height:142px!important;min-height:142px!important;width:21px!important}
+ .vertical-track input{width:132px!important;min-width:132px!important;max-width:132px!important}
+ .sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 38px)!important}
+ .sticker-sheet{height:231px!important;min-height:231px!important;max-height:231px!important;bottom:calc(env(safe-area-inset-bottom) + 84px)!important}
+}
