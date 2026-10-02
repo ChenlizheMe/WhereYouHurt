@@ -7,7 +7,7 @@ import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import './styles.css';
 import knowledge from '../data/knowledge.json';
 
-const MODEL_URLS={skeleton:'https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/skeletal_male.glb',muscle:'https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/muscular_male.glb',nerve:'https://raw.githubusercontent.com/Nurkan1/Anatria-3D/main/public/anatomy/nervous_male.glb'};
+const MODEL_URLS={skeleton:'https://cdn.jsdelivr.net/gh/Nurkan1/Anatria-3D@main/public/anatomy/skeletal_male.glb',muscle:'https://cdn.jsdelivr.net/gh/Nurkan1/Anatria-3D@main/public/anatomy/muscular_male.glb',nerve:'https://cdn.jsdelivr.net/gh/Nurkan1/Anatria-3D@main/public/anatomy/nervous_male.glb'};
 const copy={zh:{slogan:'您哪疼？WhereYouHurt',view:'查看',layer:'选择图层',parts:'点击疼痛部位',feel:'疼痛感觉（可多选）',signs:'外部表现（可多选）',result:'本地参考结果',loading:'加载解剖模型…',none:'请至少选择一个疼痛部位或标签',basis:'判断依据',advice:'日常建议',structures:'可能涉及结构',disclaimer:'非专业医疗建议，仅用于日常自我参考，不能替代医生诊断。如有严重或持续症状请及时就医。'},en:{slogan:'WhereYouHurt / 您哪疼',view:'VIEW',layer:'LAYERS',parts:'CLICK A PAINFUL AREA',feel:'PAIN FEELINGS (MULTI-SELECT)',signs:'VISIBLE SIGNS (MULTI-SELECT)',result:'LOCAL REFERENCE',loading:'Loading anatomy…',none:'Select at least one body area or tag',basis:'Why it matched',advice:'Everyday advice',structures:'Likely structures',disclaimer:'Not professional medical advice. For daily self-reference only. Cannot replace a doctor’s diagnosis. Seek medical help if severe or persistent.'}};
 const layers=[['skeleton','骨骼','SKELETON'],['muscle','肌肉','MUSCLE'],['nerve','神经','NERVES']];
 function tagLabel(t,lang){return lang==='zh'?t.zh:t.en}
