@@ -1,0 +1,21 @@
+{
+  "name": "WhereYouHurt / 您哪疼",
+  "short_name": "WhereYouHurt",
+  "description": "An offline-first body-area and pain reference tool.",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#171916",
+  "theme_color": "#d4c99d",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
