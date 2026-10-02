@@ -289,3 +289,9 @@ body{background:#10110f}
  .sticker-card{height:38px;min-height:38px;padding:7px 6px;font-size:8px}.sticker-dock{gap:4px}
  .scene-tools{width:116px;max-width:116px}.model-layers{width:116px}.layer-dot{width:116px;min-width:116px;max-width:116px;height:28px;min-height:28px;max-height:28px;padding:3px 7px;gap:6px}.layer-dot .layer-icon{font-size:13px;flex-basis:16px}.layer-dot .layer-name{font-size:8px}
 }
+
+/* Final interaction direction + viewport-safe dock lift. */
+.vertical-track input{direction:ltr!important;writing-mode:horizontal-tb!important}
+.sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 30px)!important}
+.sticker-sheet{bottom:calc(env(safe-area-inset-bottom) + 94px)!important}
+@media(max-width:760px){.sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 25px)!important}.sticker-sheet{bottom:calc(env(safe-area-inset-bottom) + 84px)!important}}
