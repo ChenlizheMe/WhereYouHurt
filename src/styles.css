@@ -6,3 +6,32 @@
 .model-loading{display:grid;place-items:center;min-height:420px;color:#d4c99d;font-size:12px}
 
 .fold{margin-top:10px}.fold summary{cursor:pointer;font-size:11px;font-weight:800;letter-spacing:.5px;margin:8px 0 9px;list-style:none}.fold summary::-webkit-details-marker{display:none}.fold summary:before{content:'▾ ';color:#e45d3c}.fold:not([open]) summary:before{content:'▸ '}
+
+/* Cassette Futurism visual layer: lightweight CRT glass, telemetry and signal drift */
+.viewer{isolation:isolate}
+.viewer .hint{z-index:2}
+.crt-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;mix-blend-mode:screen;opacity:.78}
+.crt-scanlines{position:absolute;inset:0;background:repeating-linear-gradient(to bottom,rgba(255,244,187,.055) 0,rgba(255,244,187,.055) 1px,transparent 1px,transparent 4px);animation:scan-drift 9s linear infinite}
+.crt-noise{position:absolute;inset:-40%;opacity:.08;background-image:radial-gradient(rgba(255,255,220,.7) .5px,transparent .7px),radial-gradient(rgba(50,255,190,.5) .5px,transparent .7px);background-size:3px 3px,5px 5px;background-position:0 0,2px 1px;animation:noise-shift .22s steps(2) infinite}
+.crt-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 48%,rgba(3,8,7,.3) 100%),linear-gradient(90deg,rgba(255,104,60,.06),transparent 16%,transparent 84%,rgba(58,214,164,.06))}
+.telemetry{position:absolute;top:12px;right:14px;display:flex;gap:10px;color:#9cdbc4;font-size:9px;letter-spacing:.08em;text-shadow:0 0 7px #41ba8e;opacity:.8}
+.signal-bars{position:absolute;bottom:14px;right:15px;display:flex;align-items:end;gap:2px;height:14px;opacity:.8}.signal-bars i{display:block;width:3px;background:#41ba8e;box-shadow:0 0 6px #41ba8e;animation:signal-pulse 1.4s ease-in-out infinite}.signal-bars i:nth-child(1){height:4px}.signal-bars i:nth-child(2){height:7px;animation-delay:.15s}.signal-bars i:nth-child(3){height:10px;animation-delay:.3s}.signal-bars i:nth-child(4){height:14px;animation-delay:.45s}
+.particles{position:absolute;inset:0}.particles i{position:absolute;left:calc((var(--i) * 13% + 7%));top:calc((var(--i) * 17% + 9%));width:2px;height:2px;border-radius:50%;background:#d7d1a8;box-shadow:0 0 7px #41ba8e;opacity:.42;animation:particle-float 5s ease-in-out infinite;animation-delay:calc(var(--i) * -0.55s)}
+.led{animation:led-blink 2.4s steps(2,end) infinite}
+@keyframes scan-drift{from{background-position-y:0}to{background-position-y:40px}}@keyframes noise-shift{0%{transform:translate(0,0)}25%{transform:translate(2%,-1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(1%,1%)}100%{transform:translate(0,0)}}@keyframes signal-pulse{0%,100%{opacity:.42}50%{opacity:1}}@keyframes led-blink{0%,91%,100%{opacity:1}94%{opacity:.35}}@keyframes particle-float{0%,100%{transform:translate3d(0,0,0);opacity:.25}50%{transform:translate3d(8px,-12px,0);opacity:.65}}
+@media(prefers-reduced-motion:reduce){.crt-scanlines,.crt-noise,.signal-bars i,.particles i,.led{animation:none}.crt-noise{display:none}.crt-overlay{opacity:.55}}
+/* Compact expandable medical notice and education panel */
+.warning{padding:0;text-align:left}
+.warning summary{display:flex;align-items:center;justify-content:center;gap:8px;min-height:34px;padding:7px 16px;cursor:pointer;list-style:none;font-size:11px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.warning summary::-webkit-details-marker{display:none}
+.warning summary span{font-size:10px;opacity:.8;transition:transform .15s ease}
+.warning[open] summary span{transform:rotate(180deg)}
+.warning-detail{padding:0 16px 9px;text-align:center;font-size:11px;line-height:1.4}
+.medication-panel{margin-top:14px;border:2px solid #777454;padding:9px 10px;background:rgba(65,186,142,.08)}
+.medication-panel summary{cursor:pointer;font-size:11px;font-weight:800;color:#41ba8e;list-style:none}
+.medication-panel summary::-webkit-details-marker{display:none}
+.medication-copy{font-size:10px;line-height:1.55;margin-top:8px}
+.medication-copy p{margin:7px 0}
+.medication-copy ul{margin:7px 0;padding-left:18px}
+.medication-copy li{margin:5px 0}
+@media(max-width:760px){.warning summary{justify-content:flex-start;padding-left:10px;padding-right:10px}.warning-detail{text-align:left;padding-left:10px;padding-right:10px}}
