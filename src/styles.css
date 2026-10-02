@@ -316,3 +316,5 @@ body{background:#10110f}
 .crt-scanlines{display:block!important;opacity:.25!important;background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(232,223,185,.075) 5px,transparent 6px)!important;mix-blend-mode:screen!important}
 /* The framebuffer shader owns all tone/vignette; CSS retains only scanlines. */
 .viewer:after{display:none!important}
+/* CSS keeps the physical TV vignette alongside scanlines; tone/posterization stay in WebGL. */
+.crt-vignette{display:block!important;inset:0;background:radial-gradient(ellipse at center,transparent 58%,rgba(0,0,0,.34) 100%)!important;opacity:.9!important;mix-blend-mode:multiply!important}
