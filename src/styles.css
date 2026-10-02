@@ -179,3 +179,6 @@ body{background:#10110f}
 .layer-dot.active,.sticker-card.active{animation:spring-card .44s cubic-bezier(.18,1.42,.32,1) both,button-glitch .56s steps(2,end) both}
 @keyframes button-glitch{0%,100%{filter:none}18%{filter:drop-shadow(2px 0 rgba(228,93,60,.8)) drop-shadow(-2px 0 rgba(65,186,142,.8))}35%{filter:none}52%{filter:drop-shadow(-1px 0 rgba(228,93,60,.7))}}
 @media(max-width:760px){.crt-chroma{opacity:.38}.crt-grain{opacity:.1}}
+/* Keep centered dialog geometry while the spring animation runs. */
+@keyframes spring-sheet{0%{transform:translateX(-50%) scale(.86);opacity:.2}60%{transform:translateX(-50%) scale(1.04);opacity:1}82%{transform:translateX(-50%) scale(.98)}100%{transform:translateX(-50%) scale(1);opacity:1}}
+.sticker-sheet{animation-name:spring-sheet}
