@@ -59,7 +59,7 @@ class AppErrorBoundary extends React.Component{state={error:null}; static getDer
 function App(){
  const [lang,setLang]=useState('zh'),[dark,setDark]=useState(true),[layer,setLayer]=useState('skeleton'),[orbit,setOrbit]=useState(0),[elevation,setElevation]=useState(0),[lift,setLift]=useState(0),[zoom,setZoom]=useState(INITIAL_ZOOM),[parts,setParts]=useState([]),[feels,setFeels]=useState([]),[signs,setSigns]=useState([]),[sheet,setSheet]=useState(null),[result,setResult]=useState(null),[busy,setBusy]=useState(false),[booting,setBooting]=useState(true),[layerGlitch,setLayerGlitch]=useState(false); const pinchRef=useRef(null); const liftDragRef=useRef(null); const c=copy[lang];
  useEffect(()=>{const timer=setTimeout(()=>setBooting(false),900);return()=>clearTimeout(timer)},[]);
- const chooseLayer=id=>{if(id===layer)return;setLayerGlitch(true);setTimeout(()=>setLayer(id),220);setTimeout(()=>setLayerGlitch(false),560)};
+ const chooseLayer=id=>{if(id===layer)return;setLayerGlitch(true);setTimeout(()=>setLayer(id),220);setTimeout(()=>setLayerGlitch(false),760)};
  const toggle=(arr,set,v)=>set(arr.includes(v)?arr.filter(x=>x!==v):[...arr,v]);
  const run=()=>{if(!parts.length&&!feels.length&&!signs.length){setResult({error:c.none});setSheet('diagnosis');return}setBusy(true);setSheet('diagnosis');setTimeout(()=>{const scored=knowledge.conditions.map(x=>{let score=0,why=[];for(const p of parts){if(x.parts.includes(p)){score+=3;why.push(p)}}for(const f of feels){if(x.feelings.includes(f)){score+=2;why.push(f)}}for(const z of signs){if(x.signs.includes(z)){score+=2;why.push(z)}}return {...x,score,why:[...new Set(why)]}}).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,3);setResult({items:scored});setBusy(false)},320)};
  const dragRef=useRef(null);
