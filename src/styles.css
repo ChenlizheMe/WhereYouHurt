@@ -314,3 +314,16 @@ body{background:#10110f}
  .sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 38px)!important}
  .sticker-sheet{height:231px!important;max-height:min(231px,calc(100dvh - 190px))!important;bottom:calc(env(safe-area-inset-bottom) + 84px)!important}
 }
+
+/* Layer-switch signal burst: visible horizontal tears with restrained RGB drift. */
+.layer-glitch{z-index:20!important;mix-blend-mode:screen!important;pointer-events:none!important}
+.layer-glitch.active{opacity:1!important;animation:signal-burst .72s steps(7,end) both!important;background:repeating-linear-gradient(0deg,transparent 0 9px,rgba(232,223,185,.14) 9px 11px,transparent 11px 18px),linear-gradient(90deg,rgba(228,93,60,.38),rgba(16,18,15,.94) 18% 78%,rgba(65,186,142,.38))!important}
+.layer-glitch.active:before{z-index:1!important;opacity:.9!important;animation:signal-rgb .72s steps(6,end) both!important;background:linear-gradient(90deg,transparent 0 32%,rgba(228,93,60,.9) 39% 43%,rgba(65,186,142,.8) 45% 49%,transparent 56%)!important}
+.layer-glitch.active:after{z-index:2!important;opacity:.9!important;animation:signal-tears .72s steps(8,end) both!important;background:repeating-linear-gradient(90deg,rgba(228,93,60,.75) 0 18px,transparent 18px 32px,rgba(65,186,142,.7) 32px 45px,transparent 45px 64px)!important}
+@keyframes signal-burst{0%{opacity:0;clip-path:inset(45% 0 52% 0);transform:translateX(-18px) skewX(-4deg)}14%{opacity:1;clip-path:inset(12% 0 69% 0);transform:translateX(11px)}35%{clip-path:inset(57% 0 18% 0);transform:translateX(-8px)}58%{clip-path:inset(26% 0 40% 0);transform:translateX(6px)}82%{opacity:.9;clip-path:inset(0);transform:translateX(-2px)}100%{opacity:0;clip-path:inset(0);transform:translateX(0)}}
+@keyframes signal-rgb{0%{transform:translateX(-28%);opacity:0}25%{transform:translateX(4%);opacity:1}62%{transform:translateX(-7%);opacity:.8}100%{transform:translateX(22%);opacity:0}}
+@keyframes signal-tears{0%{transform:translateX(-30%) scaleX(.7);opacity:0}24%{transform:translateX(8%) scaleX(1.12);opacity:1}55%{transform:translateX(-5%) scaleX(.94);opacity:.8}100%{transform:translateX(26%) scaleX(.7);opacity:0}}
+/* Put the control a little farther into the scene and give it a restrained bezel. */
+.vertical-control{left:calc(env(safe-area-inset-left) + 34px)!important;width:40px!important;min-width:40px!important;max-width:40px!important;height:190px!important;padding:6px!important;background:rgba(16,18,15,.72)!important;border:1px solid rgba(232,223,185,.42)!important;border-radius:4px!important;box-shadow:3px 3px 0 rgba(0,0,0,.28),inset 0 0 0 1px rgba(65,186,142,.13)!important}
+.vertical-track{width:26px!important;height:178px!important}
+@media(max-width:760px){.vertical-control{left:calc(env(safe-area-inset-left) + 18px)!important;width:34px!important;min-width:34px!important;max-width:34px!important;height:160px!important;padding:5px!important}.vertical-track{width:22px!important;height:148px!important}}
