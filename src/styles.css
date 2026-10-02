@@ -258,3 +258,34 @@ body{background:#10110f}
  .layer-dot{height:48px}.layer-dot .layer-icon{font-size:13px}.layer-dot .layer-name{font-size:7px}
  .medical-note{top:49px;left:calc(env(safe-area-inset-left) + 9px);width:min(132px,34vw);max-width:132px;font-size:6px}.hint{top:79px;left:calc(env(safe-area-inset-left) + 9px);font-size:6px}
 }
+
+/* Self-contained Y rail: a real internal track, thumb and readout inside the inset bezel. */
+.vertical-control{position:absolute;left:calc(env(safe-area-inset-left) + 20px);right:auto;top:50%;transform:translateY(-50%);z-index:8;width:58px;height:228px;min-width:58px;min-height:228px;max-width:58px;max-height:228px;box-sizing:border-box;overflow:visible;display:grid;grid-template-rows:auto auto 1fr;justify-items:center;align-items:center;gap:5px;padding:9px 7px;background:rgba(14,17,14,.94);border:1px solid rgba(232,223,185,.68);border-radius:5px;box-shadow:0 0 0 8px rgba(16,18,15,.22),4px 4px 0 rgba(0,0,0,.34);contain:layout}
+.vertical-caption{display:block;max-width:100%;overflow:hidden;white-space:nowrap;color:#d9d0aa;font-size:7px;letter-spacing:.08em;writing-mode:vertical-rl;transform:rotate(180deg);line-height:1}
+.vertical-control output{display:block;min-width:24px;max-width:100%;overflow:hidden;text-align:center;color:#41ba8e;font:8px 'JetBrains Mono',monospace;line-height:1}
+.vertical-track{position:relative;width:24px;height:156px;min-height:0;display:grid;place-items:center;border:1px solid rgba(207,200,164,.32);border-radius:4px;background:linear-gradient(90deg,rgba(228,93,60,.08),rgba(65,186,142,.08));box-sizing:border-box}
+.vertical-track:after{content:"";position:absolute;inset:9px 50%;width:2px;transform:translateX(-50%);background:linear-gradient(#e45d3c,#41ba8e);opacity:.72;pointer-events:none}
+.vertical-track input{position:absolute;z-index:1;width:146px;height:20px;min-width:146px;max-width:146px;margin:0;padding:0;transform:rotate(-90deg);transform-origin:center;accent-color:#e45d3c;cursor:pointer}
+@media(max-width:760px){
+ .vertical-control{left:calc(env(safe-area-inset-left) + 13px);width:48px;height:194px;min-width:48px;min-height:194px;max-width:48px;max-height:194px;padding:7px 5px;gap:4px;box-shadow:0 0 0 6px rgba(16,18,15,.22),3px 3px 0 rgba(0,0,0,.32)}
+ .vertical-caption{font-size:6px}.vertical-control output{font-size:7px}.vertical-track{height:128px;width:21px}.vertical-track input{width:118px;min-width:118px;max-width:118px;height:18px}.vertical-track:after{inset:7px 50%}
+}
+
+/* In-scene cassette labels: flat tape strips instead of floating cards. */
+.sticker-dock{gap:6px;align-items:stretch}
+.sticker-card{min-height:42px;height:42px;padding:8px 10px;border:1px solid rgba(232,223,185,.52);border-top:3px solid #d4c99d;border-radius:2px;background:linear-gradient(180deg,rgba(37,39,30,.95),rgba(21,24,20,.95));color:#e8dfb9;box-shadow:4px 4px 0 rgba(0,0,0,.34);transform:none!important;animation:none!important;letter-spacing:.04em}
+.sticker-card:before{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:rgba(228,93,60,.4);pointer-events:none}.sticker-card:nth-child(2){border-top-color:#41ba8e;border-radius:2px;transform:none!important}.sticker-card:nth-child(3){border-top-color:#e45d3c;border-radius:2px;transform:none!important}
+.sticker-card.active{background:linear-gradient(180deg,rgba(65,186,142,.34),rgba(21,24,20,.96));box-shadow:2px 2px 0 rgba(0,0,0,.34);transform:translate(2px,2px)!important;animation:none!important}
+.sticker-card:active{transform:translate(2px,3px) scale(.985)!important;box-shadow:1px 1px 0 rgba(0,0,0,.4)}
+.sticker-card:active:after{display:none}
+/* Right-side layer strips stack vertically, icon and readable label in one row. */
+.scene-tools{width:138px;max-width:138px}
+.model-layers{display:flex!important;flex-direction:column!important;width:138px;gap:4px}
+.layer-dot{width:138px;min-width:138px;max-width:138px;height:31px;min-height:31px;max-height:31px;display:flex;flex-direction:row;justify-content:flex-start;align-items:center;gap:8px;padding:4px 9px;border-radius:3px;transform:none!important;animation:none!important}
+.layer-dot .layer-icon{font-size:15px;line-height:1;flex:0 0 18px}.layer-dot .layer-name{writing-mode:horizontal-tb;white-space:nowrap;font-size:9px;letter-spacing:.13em;line-height:1;text-align:left;overflow:visible}
+.layer-dot.active{background:rgba(65,186,142,.32);box-shadow:2px 2px 0 rgba(0,0,0,.35);animation:none!important}
+.layer-dot:active{transform:translate(1px,1px) scale(.98)!important}.layer-dot:active:after{display:none}
+@media(max-width:760px){
+ .sticker-card{height:38px;min-height:38px;padding:7px 6px;font-size:8px}.sticker-dock{gap:4px}
+ .scene-tools{width:116px;max-width:116px}.model-layers{width:116px}.layer-dot{width:116px;min-width:116px;max-width:116px;height:28px;min-height:28px;max-height:28px;padding:3px 7px;gap:6px}.layer-dot .layer-icon{font-size:13px;flex-basis:16px}.layer-dot .layer-name{font-size:8px}
+}
