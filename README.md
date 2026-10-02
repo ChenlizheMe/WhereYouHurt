@@ -1,28 +1,52 @@
-# WhereYouHurt / 您哪疼
+# WhereYouHurt
 
-移动优先的离线参考工具：React + React Three Fiber + Three.js。页面把部位、疼痛感觉、外部表现编码为本地特征，通过 `data/knowledge.json` 中的规则和加权相似度输出最多三个“参考匹配”。没有大模型或远程推理 API。
+WhereHurt is a small, experimental reference tool for exploring body areas, pain descriptions, and visible signs through a 3D anatomy viewer. It was built to test Codex dot and is intentionally lightweight: the interface runs in the browser, the matching rules are local JSON, and there is no remote inference service.
 
-## 开发
+The results are rule-based references, not medical diagnoses. Do not use this project to make clinical decisions. Seek professional care for severe, persistent, rapidly worsening, or neurologic symptoms.
+
+## Run locally
+
+Requirements: Node.js 20 or newer.
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 构建 / GitHub Pages
+Create a production build with:
 
 ```bash
 npm run build
-# 将 dist 发布到 GitHub Pages（项目 Pages 设为 GitHub Actions 或上传 dist）
 ```
 
-## 模型与许可
+The included GitHub Actions workflow builds and deploys `dist/` to GitHub Pages when enabled for the repository.
 
-示例加载 Anatria-3D 的公开男性骨骼、肌肉和神经 GLB：
-https://github.com/Nurkan1/Anatria-3D/tree/main/public/anatomy
+## What is included
 
-这些文件来自 Z-Anatomy / BodyParts3D 衍生数据，仓库标注 CC BY-SA 4.0；使用时应保留署名与相同许可要求。第一版故意不伪装成完整男女双套模型：当前 UI 使用全身男性分层模型，避免把不完整的女性躯干模型误称为完整解剖覆盖。生产部署建议将经过许可审查的 GLB 固定下载到自己的 CDN，并继续保留 NOTICE/署名。
+- React, Vite, Three.js, and React Three Fiber
+- Skeleton, muscle, and nervous-system viewing layers
+- Bilingual English/Chinese interface
+- Local weighted matching from `data/knowledge.json`
+- Light/dark display modes and touch-friendly controls
 
-## 医疗边界
+## Anatomy assets and attribution
 
-百分比是本地规则匹配分，不是经过临床验证的患病概率，也不是诊断。遇到严重、持续、快速加重或伴神经功能异常的症状应及时就医。
+The viewer loads the following public GLB assets from [Anatria-3D](https://github.com/Nurkan1/Anatria-3D/tree/main/public/anatomy):
+
+- `skeletal_male.glb`
+- `muscular_male.glb`
+- `nervous_male.glb`
+
+Anatria-3D identifies these files as derived from Z-Anatomy / BodyParts3D and distributed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Attribution and license information are recorded in [`NOTICE`](NOTICE). If you redistribute the anatomy assets or modified versions, review and follow the upstream license terms.
+
+## Scope and limitations
+
+This repository contains a prototype, not a validated medical product. The percentages shown in the interface are relative scores produced by local rules; they are not probabilities. Anatomy assets are loaded from the upstream GitHub repository at runtime, so the viewer requires network access for the 3D models even though the matching data is local.
+
+## Contributing
+
+Small fixes and clear issue reports are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull request.
+
+## License
+
+Original source code and project documentation are licensed under the MIT License; see [`LICENSE`](LICENSE). Third-party dependencies and anatomy assets retain their own licenses.
