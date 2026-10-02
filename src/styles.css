@@ -308,3 +308,9 @@ body{background:#10110f}
 .medical-note{top:auto!important;bottom:calc(env(safe-area-inset-bottom) + 91px)!important;left:calc(env(safe-area-inset-left) + 16px)!important;right:auto!important;z-index:4!important;width:min(220px,44vw)!important}
 .sticker-sheet{z-index:14!important}
 @media(max-width:760px){.medical-note{bottom:calc(env(safe-area-inset-bottom) + 83px)!important;left:calc(env(safe-area-inset-left) + 9px)!important;width:min(168px,46vw)!important}.sticker-sheet{z-index:14!important}}
+
+/* WebGL owns tone, noise, chroma and vignette. CSS keeps only the physical TV scanline/stripe pass. */
+.viewer canvas{filter:none!important}
+.crt-overlay{filter:none!important;background:none!important}
+.crt-overlay:before,.crt-overlay:after,.crt-noise,.crt-vignette,.crt-chroma,.crt-grain{display:none!important}
+.crt-scanlines{display:block!important;opacity:.25!important;background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(232,223,185,.075) 5px,transparent 6px)!important;mix-blend-mode:screen!important}
