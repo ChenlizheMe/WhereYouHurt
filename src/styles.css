@@ -296,21 +296,21 @@ body{background:#10110f}
 .sticker-sheet{bottom:calc(env(safe-area-inset-bottom) + 94px)!important}
 @media(max-width:760px){.sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 25px)!important}.sticker-sheet{bottom:calc(env(safe-area-inset-bottom) + 84px)!important}}
 
-/* Current viewport pass: camera-only Y rail, closer framing range, and a higher
-   cassette action row.  The icon replaces the old visible Y/readout labels so
-   the narrow rail stays legible without text overflow. */
-.vertical-control{top:40%!important;grid-template-rows:auto 1fr!important;align-content:center!important;height:228px!important;min-height:228px!important;max-height:228px!important;padding:9px 7px!important;gap:7px!important;overflow:hidden!important}
-.vertical-camera-icon,.vertical-control>span.vertical-camera-icon{display:grid!important;place-items:center;width:100%;max-width:none!important;height:20px;color:#41ba8e;font-size:15px!important;line-height:1;text-shadow:0 0 8px rgba(65,186,142,.5);writing-mode:horizontal-tb!important;transform:none!important;white-space:normal!important;overflow:visible!important}
-.vertical-camera-icon .fa-camera{font-family:"Font Awesome 6 Free",sans-serif;font-weight:900}
-.vertical-track{height:172px!important;min-height:172px!important;width:24px!important}
-.vertical-track input{width:162px!important;min-width:162px!important;max-width:162px!important}
+/* Bare drag-only Y track; no outer bezel, icon, browser range fill or tap jump. */
+.viewer{touch-action:auto}
+.anatomy-canvas{touch-action:none}
+.sticker-sheet{touch-action:pan-y;overscroll-behavior:contain;cursor:auto;user-select:text;-webkit-user-select:text}
+.vertical-control{top:clamp(104px,24dvh,230px)!important;left:calc(env(safe-area-inset-left) + 18px);transform:none!important;width:28px!important;min-width:28px!important;max-width:28px!important;height:172px!important;min-height:0!important;max-height:none!important;padding:0!important;gap:0!important;display:block!important;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;contain:none!important;touch-action:none}
+.vertical-track{position:relative;width:28px!important;height:172px!important;min-height:0!important;display:block;border:0;border-radius:0;background:none;box-shadow:none;touch-action:none;cursor:ns-resize;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent;outline:none}
+.vertical-track:after{inset:9px auto 9px 50%;width:3px;border-radius:2px;background:linear-gradient(#e45d3c,#41ba8e);opacity:.85}
+.lift-thumb{position:absolute;z-index:2;left:50%;width:22px;height:16px;transform:translate(-50%,50%);background:#e45d3c;border:1px solid #e8dfb9;border-radius:3px;box-shadow:2px 2px 0 rgba(0,0,0,.4);pointer-events:none}
+.vertical-track:focus-visible{outline:1px dashed #e8dfb9;outline-offset:3px;border-radius:3px}
+.vertical-track:active .lift-thumb{background:#f38d59}
 .sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 44px)!important}
-.sticker-sheet{height:264px!important;min-height:264px!important;max-height:264px!important;bottom:calc(env(safe-area-inset-bottom) + 94px)!important}
+.sticker-sheet{height:264px!important;min-height:0!important;max-height:min(264px,calc(100dvh - 200px))!important;bottom:calc(env(safe-area-inset-bottom) + 94px)!important}
 @media(max-width:760px){
- .vertical-control{top:38%!important;height:194px!important;min-height:194px!important;max-height:194px!important;padding:7px 5px!important;gap:5px!important}
- .vertical-camera-icon,.vertical-control>span.vertical-camera-icon{height:18px;font-size:13px!important}
- .vertical-track{height:142px!important;min-height:142px!important;width:21px!important}
- .vertical-track input{width:132px!important;min-width:132px!important;max-width:132px!important}
+ .vertical-control{left:calc(env(safe-area-inset-left) + 7px);height:142px!important}
+ .vertical-track{height:142px!important}
  .sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 38px)!important}
- .sticker-sheet{height:231px!important;min-height:231px!important;max-height:231px!important;bottom:calc(env(safe-area-inset-bottom) + 84px)!important}
+ .sticker-sheet{height:231px!important;max-height:min(231px,calc(100dvh - 190px))!important;bottom:calc(env(safe-area-inset-bottom) + 84px)!important}
 }
