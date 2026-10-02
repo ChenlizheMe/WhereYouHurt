@@ -98,6 +98,10 @@ body{background:#10110f}
 .sticker-card{min-height:48px}
 .hint{top:78px;bottom:auto;z-index:4;opacity:.72;font-size:8px;letter-spacing:.05em}
 .sticker-sheet{bottom:74px;z-index:8;width:min(600px,calc(100% - 180px));max-height:min(42%,340px)}
+.layer-glitch{position:absolute;inset:0;z-index:9;pointer-events:none;opacity:0;background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(228,93,60,.13) 6px 7px),linear-gradient(90deg,transparent 0 47%,rgba(65,186,142,.18) 48% 52%,transparent 53%);mix-blend-mode:screen;transform:translateX(-8px);clip-path:inset(0 100% 0 0);transition:opacity .08s}
+.layer-glitch.active{opacity:1;animation:layer-glitch .23s steps(2,end) both}
+.layer-glitch span{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);font-size:11px;color:#e45d3c;letter-spacing:.16em;text-shadow:3px 0 #41ba8e,-3px 0 #e45d3c}
+@keyframes layer-glitch{0%{clip-path:inset(44% 0 45% 0);transform:translateX(-12px)}25%{clip-path:inset(17% 0 62% 0);transform:translateX(9px)}55%{clip-path:inset(65% 0 12% 0);transform:translateX(-5px)}100%{clip-path:inset(0);transform:translateX(0);opacity:0}}
 .telemetry{position:absolute;top:16px;left:22px;z-index:1;display:flex;gap:12px;color:#41ba8e;font:9px 'JetBrains Mono',monospace;opacity:.72;transform:translateY(31px)}
 .signal-bars{position:absolute;right:24px;bottom:104px;z-index:1;display:flex;gap:3px;align-items:end;opacity:.6}.signal-bars i{display:block;width:4px;background:#41ba8e}.signal-bars i:nth-child(1){height:6px}.signal-bars i:nth-child(2){height:10px}.signal-bars i:nth-child(3){height:14px}.signal-bars i:nth-child(4){height:18px}
 .boot-screen{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#10110f;color:#e8dfb9;animation:boot-fade .25s ease 1.15s forwards;pointer-events:none}
@@ -164,6 +168,14 @@ body{background:#10110f}
 @keyframes vhs-jitter{0%{transform:translate(-1px,0);clip-path:inset(0 0 2% 0)}35%{transform:translate(2px,-1px);clip-path:inset(4% 0 0 0)}70%{transform:translate(-2px,1px);clip-path:inset(0 0 5% 0)}100%{transform:translate(1px,0);clip-path:inset(2% 0 1% 0)}}
 @keyframes grain-shift{0%{transform:translate(0,0)}50%{transform:translate(-2%,1%)}100%{transform:translate(1%,-2%)}}
 /* Layer changes become an obvious masked wipe with glitch bars. */
+.layer-glitch.active{opacity:1;animation:layer-glitch-wipe .56s steps(7,end) both;background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(228,93,60,.24) 5px 7px),linear-gradient(90deg,rgba(16,18,15,.96),rgba(65,186,142,.3) 48%,rgba(228,93,60,.35) 52%,rgba(16,18,15,.96))}
+.layer-glitch.active:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,transparent 0 39%,rgba(232,223,185,.75) 43% 45%,rgba(228,93,60,.85) 48% 51%,rgba(65,186,142,.8) 54% 56%,transparent 60%);transform:translateX(-120%);animation:layer-wipe .56s cubic-bezier(.18,.9,.22,1) both}
+.layer-glitch.active:after{content:"";position:absolute;left:0;right:0;top:38%;height:18%;background:repeating-linear-gradient(90deg,rgba(228,93,60,.5) 0 8px,transparent 8px 17px,rgba(65,186,142,.45) 17px 23px,transparent 23px 31px);mix-blend-mode:screen;animation:layer-bars .56s steps(5,end) both}
+.layer-glitch.active span{animation:layer-label .56s steps(2,end) both}
+@keyframes layer-glitch-wipe{0%{opacity:0;clip-path:inset(0 100% 0 0)}16%{opacity:1;clip-path:inset(0 0 0 0)}76%{opacity:1;clip-path:inset(0 0 0 0)}100%{opacity:0;clip-path:inset(0 0 0 100%)}}
+@keyframes layer-wipe{0%{transform:translateX(-120%)}58%{transform:translateX(15%)}100%{transform:translateX(120%)}}
+@keyframes layer-bars{0%{transform:translateX(-25%) scaleX(.7);opacity:0}28%{transform:translateX(12%) scaleX(1.3);opacity:1}100%{transform:translateX(25%) scaleX(.8);opacity:0}}
+@keyframes layer-label{0%{opacity:0;transform:translate(-50%,-50%) skewX(-20deg)}30%{opacity:1;transform:translate(-50%,-50%) skewX(14deg)}100%{opacity:0;transform:translate(-50%,-50%) skewX(0)}}
 .layer-dot.active,.sticker-card.active{animation:spring-card .44s cubic-bezier(.18,1.42,.32,1) both,button-glitch .56s steps(2,end) both}
 @keyframes button-glitch{0%,100%{filter:none}18%{filter:drop-shadow(2px 0 rgba(228,93,60,.8)) drop-shadow(-2px 0 rgba(65,186,142,.8))}35%{filter:none}52%{filter:drop-shadow(-1px 0 rgba(228,93,60,.7))}}
 @media(max-width:760px){.crt-chroma{opacity:.38}.crt-grain{opacity:.1}}
@@ -304,17 +316,24 @@ body{background:#10110f}
 }
 
 
-/* Medical note shares a compact row above the action tape; the drawer sits over it. */
-.medical-note{top:auto!important;bottom:calc(env(safe-area-inset-bottom) + 91px)!important;left:calc(env(safe-area-inset-left) + 16px)!important;right:auto!important;z-index:4!important;width:min(220px,44vw)!important}
-.sticker-sheet{z-index:14!important}
-@media(max-width:760px){.medical-note{bottom:calc(env(safe-area-inset-bottom) + 83px)!important;left:calc(env(safe-area-inset-left) + 9px)!important;width:min(168px,46vw)!important}.sticker-sheet{z-index:14!important}}
-
-/* WebGL owns tone, noise, chroma and vignette. CSS keeps only the physical TV scanline/stripe pass. */
+/* Swiss transition and restrained broadcast surface. WebGL stays a plain scene; motion is GSAP-driven. */
 .viewer canvas{filter:none!important}
 .crt-overlay{filter:none!important;background:none!important}
-.crt-overlay:before,.crt-overlay:after,.crt-noise,.crt-vignette,.crt-chroma,.crt-grain{display:none!important}
-.crt-scanlines{display:block!important;opacity:.25!important;background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(232,223,185,.075) 5px,transparent 6px)!important;mix-blend-mode:screen!important}
-/* The framebuffer shader owns all tone/vignette; CSS retains only scanlines. */
-.viewer:after{display:none!important}
-/* CSS keeps the physical TV vignette alongside scanlines; tone/posterization stay in WebGL. */
-.crt-vignette{display:block!important;inset:0;background:radial-gradient(ellipse at center,transparent 58%,rgba(0,0,0,.34) 100%)!important;opacity:.9!important;mix-blend-mode:multiply!important}
+.crt-noise,.crt-chroma,.crt-grain,.particles{display:none!important}
+.crt-overlay:before,.crt-overlay:after{display:none!important}
+.crt-scanlines{display:block!important;opacity:.2!important;background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(232,223,185,.06) 6px,transparent 7px)!important;mix-blend-mode:screen!important}
+.crt-vignette{display:block!important;inset:0;background:radial-gradient(ellipse at center,transparent 58%,rgba(0,0,0,.34) 100%)!important;opacity:.86!important;mix-blend-mode:multiply!important}
+/* A clean full-viewport block: GSAP controls xPercent/scaleX for a precise Swiss wipe. */
+.layer-glitch{display:grid!important;place-items:center;position:absolute;inset:0;z-index:9;pointer-events:none;opacity:0;visibility:hidden;clip-path:none!important;transform:translateX(-100%) scaleX(.28);transform-origin:left center;background:#e8dfb9!important;color:#171916!important;mix-blend-mode:normal!important;animation:none!important;transition:none!important;overflow:hidden}
+.layer-glitch:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#e45d3c 0 10%,transparent 10% 12%,#41ba8e 12% 14%,transparent 14% 100%);opacity:.9}
+.layer-glitch:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0 64%,rgba(23,25,22,.9) 64% 65%,transparent 65% 100%);mix-blend-mode:multiply}
+.layer-glitch i,.layer-glitch b{position:absolute;display:block;z-index:1;background:#171916}
+.layer-glitch i{width:36vw;max-width:320px;height:10px;left:12%;top:28%}
+.layer-glitch b{width:22vw;max-width:220px;height:10px;right:10%;bottom:25%;background:#e45d3c}
+.layer-glitch span{position:relative;z-index:2;top:auto;left:auto;transform:none!important;font-size:clamp(10px,1.2vw,14px);font-weight:800;letter-spacing:.18em;color:#171916;text-shadow:none!important}
+.layer-glitch.active{opacity:1;visibility:visible}
+/* GSAP owns these transforms; CSS only supplies tactile baseline states. */
+.scene-controls button,.layer-dot,.sticker-card,.sheet-sticker,.sheet-head button{will-change:transform}
+.sticker-sheet{will-change:transform,opacity}
+.vertical-track{will-change:transform}
+@media(prefers-reduced-motion:reduce){.crt-scanlines{opacity:.12!important}.layer-glitch{transition:none!important}.boot-screen,.boot-bar i{animation:none!important}}
