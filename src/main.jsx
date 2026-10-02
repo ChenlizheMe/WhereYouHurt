@@ -1,6 +1,6 @@
 import React,{useEffect,useMemo,useState,useRef,useLayoutEffect,Suspense} from 'react';
 import {createRoot} from 'react-dom/client';
-import {Canvas,useLoader,useThree} from '@react-three/fiber';
+import {Canvas,useLoader,useThree,useFrame} from '@react-three/fiber';
 import {Loader,Html} from '@react-three/drei';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
