@@ -417,3 +417,4 @@ body{background:#10110f}
    without turning the drawer into another floating panel. */
 .diagnosis-sheet .card{border-top:3px solid #41ba8e;background:linear-gradient(180deg,rgba(65,186,142,.07),rgba(24,27,22,.88))}
 .diagnosis-sheet .card:nth-child(2n){border-top-color:#e45d3c}
+.diagnosis-sheet .card:after{content:"";display:block;height:2px;margin:9px -3px -2px;background:linear-gradient(90deg,rgba(228,93,60,.45) 0 18%,transparent 18% 24%,rgba(65,186,142,.35) 24% 42%,transparent 42% 100%);opacity:.7}
