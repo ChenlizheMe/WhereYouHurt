@@ -105,8 +105,8 @@ body{background:#10110f}
 @keyframes boot-load{to{width:100%}}@keyframes boot-fade{to{opacity:0;visibility:hidden}}
 @media(max-width:760px){
  .screen-label{top:14px;left:14px;gap:7px}.screen-label strong{font-size:15px}.screen-label>span:not(.led){font-size:8px}.scene-tools{top:12px;right:12px;gap:8px}.scene-controls button{padding:5px 7px}.layer-dot{width:40px;height:56px}.layer-dot .layer-icon{font-size:15px}.layer-dot .layer-name{font-size:9px}.vertical-control{left:8px;min-height:180px;width:40px;padding:8px 5px}.vertical-control input{height:98px}.axis-controls{left:58px;right:58px;bottom:84px;gap:8px;padding:6px 8px;min-height:42px}.axis-controls label{font-size:8px}.zoom-readout{flex:0 0 92px;font-size:7px;white-space:normal;text-align:center}.sticker-dock{width:calc(100% - 82px);bottom:11px;gap:5px}.sticker-card{font-size:8px;min-height:40px;padding:7px 6px}.sticker-sheet{width:calc(100% - 42px);bottom:62px;max-height:41%}.telemetry{left:14px;top:13px;transform:translateY(26px);font-size:8px}.signal-bars{right:14px;bottom:96px}}
-.medical-note{position:absolute;right:18px;bottom:153px;z-index:6;width:min(230px,28vw);color:#d9d0aa;font-size:8px;line-height:1.45;background:rgba(16,18,15,.78);border:1px solid rgba(207,200,164,.45);border-radius:4px;padding:6px 8px}.medical-note summary{cursor:pointer;color:#e45d3c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.medical-note div{margin-top:5px;color:#d9d0aa}
-@media(max-width:760px){.medical-note{right:10px;bottom:133px;width:min(180px,42vw);font-size:7px}}
+.medical-note summary{cursor:pointer;color:#e45d3c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.medical-note div{margin-top:5px;color:#d9d0aa}
+@media(max-width:760px){}
 
 /* Final safe-area pass: controls live in dedicated rows and never escape their panels. */
 .screen-label{z-index:4}
@@ -118,7 +118,7 @@ body{background:#10110f}
 .axis-controls{left:calc(env(safe-area-inset-left) + 76px);right:calc(env(safe-area-inset-right) + 14px);bottom:calc(env(safe-area-inset-bottom) + 78px);box-sizing:border-box;overflow:hidden}
 .sticker-dock{left:calc(50% + env(safe-area-inset-left)/2 - env(safe-area-inset-right)/2);bottom:calc(env(safe-area-inset-bottom) + 12px);width:min(600px, calc(100% - 78px - env(safe-area-inset-left) - env(safe-area-inset-right)));max-width:calc(100% - 78px);box-sizing:border-box;overflow:visible}
 .sticker-card{min-width:0;box-sizing:border-box}
-.medical-note{top:62px;bottom:auto;right:calc(env(safe-area-inset-right) + 74px);width:min(230px,28vw);box-sizing:border-box}
+
 
 .crt-overlay{z-index:1;background:radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.32) 100%)}
 .crt-overlay:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 4px);mix-blend-mode:screen;opacity:.52;animation:crt-roll 8s linear infinite}
@@ -133,7 +133,7 @@ body{background:#10110f}
  .vertical-control>span{font-size:7px;max-width:8px}.vertical-control input{flex-basis:104px;height:104px;min-height:104px;max-height:104px;width:16px;min-width:16px;max-width:16px}.vertical-control output{font-size:7px;max-width:26px}
  .axis-controls{left:calc(env(safe-area-inset-left) + 56px);right:calc(env(safe-area-inset-right) + 8px);bottom:calc(env(safe-area-inset-bottom) + 72px);min-height:42px}
  .sticker-dock{left:50%;bottom:calc(env(safe-area-inset-bottom) + 9px);width:calc(100% - 66px - env(safe-area-inset-left) - env(safe-area-inset-right));max-width:calc(100% - 66px)}
- .medical-note{top:54px;left:calc(env(safe-area-inset-left) + 10px);right:auto;width:min(185px,48vw);font-size:7px}
+ 
 }
 
 /* Direct viewport orbit: the model itself is the rotation control. */
@@ -216,11 +216,11 @@ body{background:#10110f}
 .layer-dot{width:100%;min-width:0;max-width:none;box-sizing:border-box}
 .layer-dot .layer-name{white-space:normal;overflow:hidden;text-overflow:ellipsis;text-align:center;max-width:100%}
 /* Dedicated left information rows keep the layer row clear. */
-.medical-note{top:54px;left:calc(env(safe-area-inset-left) + 16px);right:auto;width:min(220px,44vw);max-width:220px}
+
 
 @media(max-width:760px){
  .scene-tools{right:calc(env(safe-area-inset-right) + 8px);width:min(236px,calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right) - 20px));max-width:calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right) - 20px)}
- .medical-note{top:50px;left:calc(env(safe-area-inset-left) + 12px);width:min(175px,46vw);max-width:175px}
+ 
 }
 
 /* Compact cassette drawer: reserve a panel above the always-visible action dock. */
@@ -235,14 +235,14 @@ body{background:#10110f}
 .scene-tools{width:min(236px,calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right) - 24px));max-width:calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right) - 24px);right:calc(env(safe-area-inset-right) + 12px)}
 .model-layers{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
 .layer-dot{height:54px;width:100%;min-width:0;padding:4px 2px;gap:3px;border-radius:3px}.layer-dot .layer-icon{font-size:14px}.layer-dot .layer-name{font-size:8px;letter-spacing:.08em}
-.medical-note{top:54px;left:calc(env(safe-area-inset-left) + 12px);width:min(148px,36vw);max-width:148px;font-size:7px;padding:5px 6px}
+
 @media(max-width:760px){
  .sticker-dock{bottom:calc(env(safe-area-inset-bottom) + 9px)!important;width:calc(100% - 48px);max-width:calc(100% - 48px)}
  .sticker-sheet{bottom:calc(env(safe-area-inset-bottom) + 61px)!important;width:calc(100% - 66px);height:154px;min-height:154px;max-height:154px;padding:9px 10px}
  .sticker-sheet:before{top:-11px;font-size:6px}.sticker-sheet .sheet-head{height:20px;font-size:8px}.sheet-sticker{padding:6px 7px;font-size:8px}
  .scene-tools{width:min(216px,calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right) - 18px));max-width:calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right) - 18px);right:calc(env(safe-area-inset-right) + 7px)}
  .layer-dot{height:48px}.layer-dot .layer-icon{font-size:13px}.layer-dot .layer-name{font-size:7px}
- .medical-note{top:49px;left:calc(env(safe-area-inset-left) + 9px);width:min(132px,34vw);max-width:132px;font-size:6px}
+ 
 }
 
 /* Self-contained Y rail: a real internal track, thumb and readout inside the inset bezel. */
@@ -343,7 +343,13 @@ body{background:#10110f}
 
 
 /* Final shell geometry: keep the medical note with the bottom action tape. */
-.medical-note{top:auto!important;left:50%!important;right:auto!important;bottom:calc(env(safe-area-inset-bottom) + 92px)!important;transform:translateX(-50%)!important;z-index:10!important;width:min(520px,calc(100% - 112px))!important;max-width:none!important;box-sizing:border-box!important}
+
 .sticker-dock{z-index:20!important}
 .sticker-sheet{z-index:30!important}
+@media(max-width:760px){.sticker-sheet{z-index:30!important}}
+
+
+/* Canonical medical note placement: directly above the action tape, behind the drawer. */
+.medical-note{position:absolute;top:auto!important;left:50%!important;right:auto!important;bottom:calc(env(safe-area-inset-bottom) + 92px)!important;transform:translateX(-50%)!important;z-index:10!important;width:min(520px,calc(100% - 112px))!important;max-width:none!important;box-sizing:border-box!important;color:#d9d0aa;font-size:8px;line-height:1.45;background:rgba(16,18,15,.78);border:1px solid rgba(207,200,164,.45);border-radius:4px;padding:6px 8px}
+.sticker-dock{z-index:20!important}.sticker-sheet{z-index:30!important}
 @media(max-width:760px){.medical-note{bottom:calc(env(safe-area-inset-bottom) + 82px)!important;width:calc(100% - 66px)!important;font-size:7px!important}.sticker-sheet{z-index:30!important}}
