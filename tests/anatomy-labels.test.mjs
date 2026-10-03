@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PropertyBinding} from 'three';
-import {partLabel,anatomyIdentity} from '../src/anatomyLabels.js';
+import {partLabel,anatomyIdentity,safePartLabel} from '../src/anatomyLabels.js';
 for (const [layer,file] of Object.entries({skeleton:'skeletal',muscle:'muscular',nerve:'nervous'})) {
  test(`${layer}: every GLB mesh, loader name and entity-encoded variant has a bilingual label`,()=>{
   const b=fs.readFileSync(new URL(`../public/anatomy/${file}_male.glb`,import.meta.url));
@@ -25,4 +25,7 @@ test('reported palpebral name and natural terminal letters',()=>{
  assert.equal(partLabel('Palpebral part of orbicularis oculil&amp;#x20;','muscle').zh,'左侧眼轮匝肌睑部');
  for(const name of ['Obturator internus','Adductor longus','Orbicularis oris muscle'])assert.equal(anatomyIdentity(name).side,'');
  assert.doesNotThrow(()=>partLabel('&#99999999999999;','muscle'));
+ const safe=safePartLabel('Palpebral part of orbicularis oculil&amp;#x20;','muscle');
+ assert.equal(safe.zh,'左侧眼轮匝肌睑部');
+ assert.equal(safePartLabel('Unreviewed atlas node &#x20;','muscle').zh,'待核验肌肉结构');
 });

@@ -77,4 +77,14 @@ function partLabel(raw,layer){
   return withSide({zh:zh.trim(),en:cleaned});
 }
 
+// Final display guard. New atlas exports can introduce an unreviewed node
+// name at any time; never leak HTML entities or raw identifiers into Chinese UI.
+export function safePartLabel(raw,layer){
+  const label=partLabel(raw,layer);
+  const fallback=layer==='skeleton'?{zh:'待核验骨骼结构',en:'Unreviewed skeletal structure'}:layer==='muscle'?{zh:'待核验肌肉结构',en:'Unreviewed muscular structure'}:{zh:'待核验神经结构',en:'Unreviewed nervous structure'};
+  const zh=decodeName(label.zh).replace(/&#(?:x[\da-f]+|\d+);?/gi,'').trim();
+  const en=decodeName(label.en).replace(/&#(?:x[\da-f]+|\d+);?/gi,'').trim();
+  return {zh:/[A-Za-z]{2,}/.test(zh)?fallback.zh:zh||fallback.zh,en:en||fallback.en};
+}
+
 export { cleanPartName, partLabel };
