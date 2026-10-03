@@ -1,6 +1,14 @@
 // Additional labels for the muscle and nervous atlas nodes that are not
 // covered by the original curated glossary.
 const anatomyGlossaryExtended={
+  'pisiform bone':{zh:'豌豆骨'},
+  'scaphoid bone':{zh:'舟骨'},
+  'second metacarpal bone':{zh:'第二掌骨'},
+  'sesamoid bones of foot':{zh:'足部籽骨'},
+  'third metacarpal bone':{zh:'第三掌骨'},
+  'trapezium bone':{zh:'大多角骨'},
+  'trapezoid bone':{zh:'小多角骨'},
+  'triquetrum bone':{zh:'三角骨'},
   'abductor digiti minimi of foot':{zh:'小趾展肌（足）'},
   'abductor digiti minimi of hand':{zh:'小指展肌（手）'},
   'abductor hallucis':{zh:'拇展肌'},

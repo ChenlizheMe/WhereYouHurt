@@ -83,7 +83,7 @@ function partLabel(raw,layer){
   const ribOrdinal=layer==='skeleton'&&RIB_ORDINALS[cleaned.toLowerCase()];
   if(ribOrdinal)return {zh:`${ribOrdinal}肋骨`,en:`${cleaned} rib`};
   const reviewed=anatomyGlossary[cleaned.toLowerCase()];
-  if(reviewed)return reviewed;
+  if(reviewed)return {zh:reviewed.zh,en:reviewed.en||cleaned};
   const curated=CURATED_PARTS[layer]?.[cleaned.toLowerCase()];
   if(curated)return curated;
   let zh=cleaned.toLowerCase();
