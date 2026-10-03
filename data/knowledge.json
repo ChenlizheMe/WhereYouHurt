@@ -520,12 +520,24 @@
         "肌肉 / Muscle"
       ],
       "advice": {
-        "zh": "先减少引发疼痛的动作，短时间冷敷，之后按舒适程度热敷和轻柔活动。若无法承重、明显肿胀或数天不缓解，请就医。",
-        "en": "Reduce the triggering activity. Try a short cold pack, then gentle movement or warmth if comfortable. Seek care for inability to bear weight, marked swelling, or symptoms that persist."
+        "zh": "先减少引发疼痛的动作，短时间冷敷，之后按舒适程度热敷和轻柔活动。",
+        "en": "Reduce the triggering activity."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "局部酸痛或牵拉痛，用力与活动时加重。",
+        "en": "Local aching or pulling pain, worse with effort or movement."
+      },
+      "triggers": {
+        "zh": "重复负荷、突然发力或长时间保持同一姿势",
+        "en": "Repeated load, sudden exertion or a prolonged posture"
+      },
+      "threshold": {
+        "zh": "无法承重、明显肿胀或症状持续不改善：就医。",
+        "en": "Seek care for inability to bear weight, marked swelling or failure to improve."
       }
     },
     {
@@ -555,12 +567,24 @@
         "神经 / Nerve"
       ],
       "advice": {
-        "zh": "避免长时间压迫患处，记录麻木范围和变化。若出现肢体无力、说话含糊、面部歪斜或大小便异常，立即急诊。",
-        "en": "Avoid prolonged pressure and note how numbness changes. Get urgent help for weakness, slurred speech, facial droop, or loss of bladder/bowel control."
+        "zh": "避免长时间压迫患处，记录麻木范围和变化。",
+        "en": "Avoid prolonged pressure and note how numbness changes."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "麻木、针刺或电击样痛，可沿肢体放射。",
+        "en": "Numbness, tingling or electric pain that may radiate along a limb."
+      },
+      "triggers": {
+        "zh": "局部压迫、姿势受限或邻近组织肿胀",
+        "en": "Local pressure, restricted posture or nearby swelling"
+      },
+      "threshold": {
+        "zh": "新发无力、面部歪斜、说话含糊或大小便异常：立即急诊。",
+        "en": "New weakness, facial droop, slurred speech or bladder/bowel changes: emergency assessment."
       }
     },
     {
@@ -593,12 +617,24 @@
         "皮肤 / Skin"
       ],
       "advice": {
-        "zh": "保持清洁干燥，避免抓挠和新用的护肤品。红肿快速扩散、伴发热或流脓时尽快就医。",
-        "en": "Keep the area clean and dry; avoid scratching and new products. Seek care promptly if redness spreads quickly, fever or pus appears."
+        "zh": "保持清洁干燥，避免抓挠和新用的护肤品。",
+        "en": "Keep the area clean and dry."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的外用保湿或止痒类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable topical moisturising or itch-relief category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "皮肤灼痛、刺痛，伴红斑、干燥或脱皮。",
+        "en": "Burning or stinging skin with redness, dryness or peeling."
+      },
+      "triggers": {
+        "zh": "摩擦、汗液、清洁剂或新接触的产品",
+        "en": "Friction, sweat, cleansers or a newly introduced product"
+      },
+      "threshold": {
+        "zh": "红肿快速扩散、发热或流脓：尽快就医。",
+        "en": "Rapidly spreading redness, fever or pus: seek prompt care."
       }
     },
     {
@@ -626,12 +662,24 @@
         "骨骼 + 肌肉 / Bone + muscle"
       ],
       "advice": {
-        "zh": "减少负重，短时间冷敷并观察活动范围。关节明显变形、无法活动或伴高热请尽快就医。",
-        "en": "Reduce load and use a short cold pack while watching range of motion. Seek prompt care for deformity, inability to move, or high fever."
+        "zh": "减少负重，短时间冷敷并观察活动范围。",
+        "en": "Reduce load and use a short cold pack while watching range of motion."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "关节周围胀痛、红热，活动受限。",
+        "en": "Pain and warmth around a joint with restricted movement."
+      },
+      "triggers": {
+        "zh": "重复负重、扭转、外伤或关节周围刺激",
+        "en": "Repeated loading, twisting, injury or irritation around a joint"
+      },
+      "threshold": {
+        "zh": "明显变形、无法活动或红热关节伴发热：尽快就医。",
+        "en": "Deformity, inability to move or a hot joint with fever: seek prompt care."
       }
     },
     {
@@ -665,8 +713,8 @@
         "皮肤 / Skin"
       ],
       "advice": {
-        "zh": "避免抓挠和近期新用的产品，温和清洁并保持干燥。若迅速扩散、明显疼痛、流脓或伴发热，请尽快就医。",
-        "en": "Avoid scratching and recently introduced products; cleanse gently and keep the area dry. Seek prompt care if it spreads quickly, becomes very painful, drains pus, or comes with fever."
+        "zh": "避免抓挠和近期新用的产品，温和清洁并保持干燥。",
+        "en": "Avoid scratching and recently introduced products."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的外用保湿或止痒类别，并按包装标签使用。",
@@ -675,6 +723,18 @@
       "summary": "接触新护肤品、清洁剂或金属后出现持续瘙痒、红斑、脱皮或水疱，更符合接触性皮炎；短时间出现、迁移并消退的风团更像荨麻疹，仍需结合病史判断。",
       "summaryEn": "Persistent itch, redness, scaling or blisters after a new product, detergent or metal can fit contact dermatitis; rapidly appearing, moving and fading welts fit urticaria more closely. History is still needed.",
       "redFlags": {
+        "zh": "面唇舌肿胀、喘鸣或吞咽困难提示严重过敏；皮疹迅速扩散、流脓、明显疼痛或伴发热时尽快就医。",
+        "en": "Swelling of the lips, tongue or face, wheeze or trouble swallowing can signal a severe allergy. Seek prompt care if the rash spreads quickly, drains, becomes very painful or comes with fever."
+      },
+      "shortDescription": {
+        "zh": "瘙痒伴红斑、脱皮、水疱或短暂风团。",
+        "en": "Itch with redness, scaling, blisters or transient wheals."
+      },
+      "triggers": {
+        "zh": "新护肤品、洗涤剂、金属或环境暴露",
+        "en": "A new skincare product, detergent, metal or environmental exposure"
+      },
+      "threshold": {
         "zh": "面唇舌肿胀、喘鸣或吞咽困难提示严重过敏；皮疹迅速扩散、流脓、明显疼痛或伴发热时尽快就医。",
         "en": "Swelling of the lips, tongue or face, wheeze or trouble swallowing can signal a severe allergy. Seek prompt care if the rash spreads quickly, drains, becomes very painful or comes with fever."
       }
@@ -707,8 +767,8 @@
         "皮肤 + 软组织 / Skin + soft tissue"
       ],
       "advice": {
-        "zh": "先停止会加重不适的活动，短时间冷敷并抬高患处（如舒适）。疼痛加重、肿胀明显、无法活动或没有明确碰撞原因时请就医。",
-        "en": "Stop activities that worsen symptoms; try a short cold pack and elevate the area if comfortable. Seek care for worsening pain, marked swelling, inability to move, or a bruise without a clear bump."
+        "zh": "先停止会加重不适的活动，短时间冷敷并抬高患处（如舒适）。",
+        "en": "Stop activities that worsen symptoms."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
@@ -717,6 +777,18 @@
       "summary": "明确碰撞或挤压后出现局部淤青、压痛和轻度肿胀，符合软组织挫伤的常见表现；没有外伤经过时应重新考虑其他原因。",
       "summaryEn": "Local bruising, tenderness and mild swelling after a clear bump or compression can fit a soft-tissue contusion; without an injury history, other causes should be considered.",
       "redFlags": {
+        "zh": "肿胀快速增大、无法活动或承重、肢体麻冷、疼痛持续加重，或无明显外伤却反复淤青时尽快就医。",
+        "en": "Seek prompt care for rapidly increasing swelling, inability to move or bear weight, a cold or numb limb, worsening pain, or recurrent bruising without a clear injury."
+      },
+      "shortDescription": {
+        "zh": "碰撞后局部淤青、压痛和肿胀。",
+        "en": "Local bruising, tenderness and swelling after an impact."
+      },
+      "triggers": {
+        "zh": "碰撞、挤压或轻微扭伤",
+        "en": "A bump, compression or minor twist"
+      },
+      "threshold": {
         "zh": "肿胀快速增大、无法活动或承重、肢体麻冷、疼痛持续加重，或无明显外伤却反复淤青时尽快就医。",
         "en": "Seek prompt care for rapidly increasing swelling, inability to move or bear weight, a cold or numb limb, worsening pain, or recurrent bruising without a clear injury."
       }
@@ -746,8 +818,8 @@
         "肌肉 / Muscle"
       ],
       "advice": {
-        "zh": "先停下活动，按舒适程度轻柔拉伸和放松，日常补充水分。若反复发生、持续不松或伴明显无力，请就医评估。",
-        "en": "Pause the activity and gently stretch or relax the area as comfortable; keep up ordinary hydration. Seek evaluation if cramps recur, do not release, or come with marked weakness."
+        "zh": "先停下活动，按舒适程度轻柔拉伸和放松，日常补充水分。",
+        "en": "Pause the activity and gently stretch or relax the area as comfortable."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
@@ -756,6 +828,18 @@
       "summary": "肌肉突然紧缩、变硬并出现短暂剧痛，活动、出汗、脱水或长时间保持姿势后更常见；反复发作需要寻找诱因。",
       "summaryEn": "Sudden tightening, hardening and brief severe pain in a muscle can fit a cramp, often after activity, sweating, dehydration or prolonged posture; recurrent episodes need a cause review.",
       "redFlags": {
+        "zh": "痉挛持续不缓解、反复频繁、伴明显无力、肿胀、发热或尿色明显变深时尽快就医。",
+        "en": "Seek care if a cramp does not release, keeps recurring, or comes with marked weakness, swelling, fever or very dark urine."
+      },
+      "shortDescription": {
+        "zh": "肌肉突然紧缩、变硬，出现短暂疼痛。",
+        "en": "Sudden painful tightening and hardening of a muscle."
+      },
+      "triggers": {
+        "zh": "运动、出汗、脱水或长时间保持姿势",
+        "en": "Exercise, sweating, dehydration or holding one posture"
+      },
+      "threshold": {
         "zh": "痉挛持续不缓解、反复频繁、伴明显无力、肿胀、发热或尿色明显变深时尽快就医。",
         "en": "Seek care if a cramp does not release, keeps recurring, or comes with marked weakness, swelling, fever or very dark urine."
       }
@@ -787,8 +871,8 @@
         "关节 + 周围组织 / Joint + surrounding tissue"
       ],
       "advice": {
-        "zh": "减少负重和重复动作，短时间冷敷并观察活动范围。突然严重肿胀、变形、无法承重或伴高热时请尽快就医。",
-        "en": "Reduce load and repetitive motion; use a short cold pack and watch range of motion. Seek prompt care for sudden severe swelling, deformity, inability to bear weight, or high fever."
+        "zh": "减少负重和重复动作，短时间冷敷并观察活动范围。",
+        "en": "Reduce load and repetitive motion."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
@@ -797,6 +881,18 @@
       "summary": "关节或关节旁组织出现红、热、肿、痛和活动受限时，可能来自外伤、晶体性关节炎、感染或滑囊炎，单靠模型不能区分。",
       "summaryEn": "A red, hot, swollen and painful joint or nearby bursa can result from injury, crystal arthritis, infection or bursitis; the model cannot distinguish them.",
       "redFlags": {
+        "zh": "首次出现的红热肿胀关节、伴高热寒战、无法承重、明显变形或疼痛快速加重时应尽快排除感染。",
+        "en": "A first hot swollen joint, fever or chills, inability to bear weight, deformity or rapidly worsening pain needs prompt assessment to exclude infection."
+      },
+      "shortDescription": {
+        "zh": "关节红、热、肿、痛，活动不便。",
+        "en": "A red, hot, swollen, painful joint with limited movement."
+      },
+      "triggers": {
+        "zh": "外伤、感染、晶体沉积或突然增加的负荷",
+        "en": "Injury, infection, crystal deposition or a sudden increase in load"
+      },
+      "threshold": {
         "zh": "首次出现的红热肿胀关节、伴高热寒战、无法承重、明显变形或疼痛快速加重时应尽快排除感染。",
         "en": "A first hot swollen joint, fever or chills, inability to bear weight, deformity or rapidly worsening pain needs prompt assessment to exclude infection."
       }
@@ -830,8 +926,8 @@
         "神经 / Nerve"
       ],
       "advice": {
-        "zh": "避免长时间压迫患处，记录感觉范围和变化。若突然出现无力、说话含糊、面部歪斜或步行困难，立即急诊。",
-        "en": "Avoid prolonged pressure and note the area and changes. Get urgent help for sudden weakness, slurred speech, facial droop, or trouble walking."
+        "zh": "避免长时间压迫患处，记录感觉范围和变化。",
+        "en": "Avoid prolonged pressure and note the area and changes."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
@@ -840,6 +936,18 @@
       "summary": "沿固定神经分布出现麻刺、灼烧、电击样痛或感觉减退，可能涉及神经受压、神经根刺激或周围神经病变；需要记录范围和力量变化。",
       "summaryEn": "Pins-and-needles, burning, electric pain or reduced sensation along a nerve distribution can involve compression, a nerve root or peripheral neuropathy; track the area and strength changes.",
       "redFlags": {
+        "zh": "突然单侧无力、面部歪斜、说话含糊、步行困难，或进行性肌力下降、大小便异常时立即就医。",
+        "en": "Get urgent help for sudden one-sided weakness, facial droop, slurred speech or trouble walking, or for progressive weakness or bowel/bladder changes."
+      },
+      "shortDescription": {
+        "zh": "沿固定区域出现麻刺、灼烧或感觉减退。",
+        "en": "Tingling, burning or reduced sensation in a defined distribution."
+      },
+      "triggers": {
+        "zh": "持续压迫、重复动作或代谢因素",
+        "en": "Persistent pressure, repetitive motion or metabolic factors"
+      },
+      "threshold": {
         "zh": "突然单侧无力、面部歪斜、说话含糊、步行困难，或进行性肌力下降、大小便异常时立即就医。",
         "en": "Get urgent help for sudden one-sided weakness, facial droop, slurred speech or trouble walking, or for progressive weakness or bowel/bladder changes."
       }
@@ -868,8 +976,8 @@
         "头部软组织 + 神经 / Head soft tissue + nerves"
       ],
       "advice": {
-        "zh": "在安静、光线较低的地方休息，补充日常水分并记录诱因。若突然达到最严重、伴发热颈硬、意识改变、无力或视力异常，请立即急诊。",
-        "en": "Rest in a quiet, dim place, keep up ordinary hydration, and note possible triggers. Seek emergency care for sudden worst-ever pain, fever with neck stiffness, confusion, weakness, or vision changes."
+        "zh": "在安静、光线较低的地方休息，补充日常水分并记录诱因。",
+        "en": "Rest in a quiet, dim place, keep up ordinary hydration, and note possible triggers."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
@@ -878,6 +986,18 @@
       "summary": "双侧或环形压迫、紧箍样疼痛，伴颈肩紧张且通常没有明显恶心呕吐，更符合紧张型头痛；首次或模式改变仍需评估。",
       "summaryEn": "Bilateral or band-like pressure with neck or shoulder tension and little nausea can fit a tension-type headache; a first or changed pattern still needs assessment.",
       "redFlags": {
+        "zh": "突然达到最严重、伴高热颈硬、意识改变、单侧无力、视力异常或反复呕吐时立即急诊。",
+        "en": "Seek emergency care for sudden worst-ever pain, fever with stiff neck, confusion, one-sided weakness, vision change or repeated vomiting."
+      },
+      "shortDescription": {
+        "zh": "双侧或环形紧箍样头痛，可伴颈肩紧张。",
+        "en": "Bilateral or band-like headache, sometimes with neck tension."
+      },
+      "triggers": {
+        "zh": "压力、睡眠不足、久坐或颈肩紧张",
+        "en": "Stress, poor sleep, prolonged sitting or neck and shoulder tension"
+      },
+      "threshold": {
         "zh": "突然达到最严重、伴高热颈硬、意识改变、单侧无力、视力异常或反复呕吐时立即急诊。",
         "en": "Seek emergency care for sudden worst-ever pain, fever with stiff neck, confusion, one-sided weakness, vision change or repeated vomiting."
       }
@@ -913,8 +1033,8 @@
         "皮肤 / Skin"
       ],
       "advice": {
-        "zh": "拍照记录变化，避免抓挠和刺激物，温和清洁。若出现快速扩散、大片起泡、开放伤口或伴发热，请尽快就医。",
-        "en": "Photograph changes over time, avoid scratching and irritants, and cleanse gently. Seek prompt care for rapid spread, extensive blistering, open wounds, or fever."
+        "zh": "拍照记录变化，避免抓挠和刺激物，温和清洁。",
+        "en": "Photograph changes over time, avoid scratching and irritants, and cleanse gently."
       },
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的外用保湿或止痒类别，并按包装标签使用。",
@@ -923,6 +1043,18 @@
       "summary": "干燥、脱皮、红斑、瘙痒或反复在接触部位出现的皮损，常见于湿疹或接触性皮炎；需要追问新产品、药物和环境暴露。",
       "summaryEn": "Dryness, scaling, redness, itch or recurrent changes at contact sites can fit eczema or contact dermatitis; ask about new products, medicines and exposures.",
       "redFlags": {
+        "zh": "大片水疱、皮肤破溃、流脓、明显疼痛、迅速扩散或伴发热时尽快就医。",
+        "en": "Seek prompt care for extensive blisters, open skin, drainage, marked pain, rapid spread or fever."
+      },
+      "shortDescription": {
+        "zh": "干燥、脱皮、红斑与瘙痒，可反复出现。",
+        "en": "Recurring dryness, scaling, redness and itch."
+      },
+      "triggers": {
+        "zh": "接触刺激物、干燥环境或摩擦",
+        "en": "An irritant, dry environment or friction"
+      },
+      "threshold": {
         "zh": "大片水疱、皮肤破溃、流脓、明显疼痛、迅速扩散或伴发热时尽快就医。",
         "en": "Seek prompt care for extensive blisters, open skin, drainage, marked pain, rapid spread or fever."
       }
@@ -960,8 +1092,8 @@
       "summary": "自发性牙痛或冷热刺激后持续疼痛，可能提示牙髓受累，需要牙科检查确认。",
       "summaryEn": "Spontaneous tooth pain or lingering hot/cold sensitivity can involve the pulp and needs a dental exam.",
       "advice": {
-        "zh": "先避开冷热甜刺激，保持清洁并预约牙科检查；不要把阿司匹林直接放在牙龈上。",
-        "en": "Avoid hot, cold and sweet triggers, keep the area clean, and arrange a dental exam; do not place aspirin directly on the gum."
+        "zh": "先避开冷热甜刺激，保持清洁并预约牙科检查。",
+        "en": "Avoid hot, cold and sweet triggers, keep the area clean, and arrange a dental exam."
       },
       "redFlags": {
         "zh": "面部或颈部肿胀、发热、吞咽或呼吸困难时立即急诊。",
@@ -970,6 +1102,18 @@
       "medication": {
         "zh": "短期不适可向药师咨询适合的非处方止痛或口腔护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about an appropriate OTC pain-relief or oral-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "自发或夜间牙痛，冷热刺激去除后仍持续痛。",
+        "en": "Spontaneous or night-time toothache; pain lingers after hot or cold exposure."
+      },
+      "triggers": {
+        "zh": "龋洞加深、冷热刺激或牙体裂纹",
+        "en": "Deep decay, hot or cold triggers, or a tooth crack"
+      },
+      "threshold": {
+        "zh": "面部或颈部肿胀、发热、吞咽或呼吸困难时立即急诊。",
+        "en": "Go to urgent care now for facial or neck swelling, fever, or difficulty swallowing or breathing."
       }
     },
     {
@@ -1005,8 +1149,8 @@
       "summary": "鼻塞、面部压迫感或分泌物改变可见于鼻炎或鼻窦炎，症状本身不能确定病因。",
       "summaryEn": "Congestion, facial pressure or changed discharge can occur with rhinitis or sinusitis; symptoms alone do not confirm the cause.",
       "advice": {
-        "zh": "补充水分，避免烟雾等刺激，按说明使用盐水清洁；症状持续或反复请咨询医生。",
-        "en": "Hydrate, avoid smoke and other irritants, and use saline rinses as directed; ask a clinician if symptoms persist or recur."
+        "zh": "补充水分，避免烟雾等刺激，按说明使用盐水清洁。",
+        "en": "Hydrate, avoid smoke and other irritants, and use saline rinses as directed."
       },
       "redFlags": {
         "zh": "眼周肿胀或视力改变、剧烈头痛、颈项僵硬或高热时尽快就医。",
@@ -1015,6 +1159,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "鼻塞、分泌物改变，伴面部压迫或疼痛。",
+        "en": "Nasal blockage or changed discharge with facial pressure or pain."
+      },
+      "triggers": {
+        "zh": "上呼吸道感染、过敏或鼻腔引流受阻",
+        "en": "An upper-airway infection, allergy or blocked nasal drainage"
+      },
+      "threshold": {
+        "zh": "眼周肿胀或视力改变、剧烈头痛、颈项僵硬或高热时尽快就医。",
+        "en": "Seek prompt care for swelling around the eye, vision changes, severe headache, stiff neck or high fever."
       }
     },
     {
@@ -1050,8 +1206,8 @@
       "summary": "碰撞后疼痛、肿胀或鼻出血需要结合受伤经过和外观评估。",
       "summaryEn": "Pain, swelling or bleeding after impact should be assessed with the injury history and appearance.",
       "advice": {
-        "zh": "坐直并身体前倾，捏住鼻翼软部持续十分钟；不要仰头或把纸巾塞深。",
-        "en": "Sit upright and lean forward while pinching the soft part of the nose for ten minutes; do not tilt the head back or pack tissue deeply."
+        "zh": "坐直并身体前倾，捏住鼻翼软部持续十分钟。",
+        "en": "Sit upright and lean forward while pinching the soft part of the nose for ten minutes."
       },
       "redFlags": {
         "zh": "出血持续超过二十分钟、鼻形明显改变、头部受伤后嗜睡或清液流出时立即就医。",
@@ -1060,6 +1216,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "鼻部疼痛、肿胀或出血，可与碰撞有关。",
+        "en": "Nasal pain, swelling or bleeding, sometimes after an impact."
+      },
+      "triggers": {
+        "zh": "鼻部碰撞、抠鼻、干燥空气或用力擤鼻",
+        "en": "Nasal impact, picking, dry air or forceful nose blowing"
+      },
+      "threshold": {
+        "zh": "出血持续超过二十分钟、鼻形明显改变、头部受伤后嗜睡或清液流出时立即就医。",
+        "en": "Seek urgent care if bleeding lasts over twenty minutes, the nose is visibly deformed, or head injury causes drowsiness or clear fluid drainage."
       }
     },
     {
@@ -1089,8 +1257,8 @@
       "summary": "随姿势或活动变化的颈背痛常见于肌肉、关节或椎间盘负荷，单靠感觉不能确定原因。",
       "summaryEn": "Neck or back pain that changes with posture or movement can involve muscles, joints or discs; symptoms alone cannot confirm the cause.",
       "advice": {
-        "zh": "暂时减少诱发动作，保持轻柔活动，避免长时间卧床；持续、反复或影响日常活动时安排评估。",
-        "en": "Temporarily reduce triggering movements, keep gentle activity, and avoid prolonged bed rest; arrange an assessment if it persists, recurs or limits daily activity."
+        "zh": "暂时减少诱发动作，保持轻柔活动，避免长时间卧床。",
+        "en": "Temporarily reduce triggering movements, keep gentle activity, and avoid prolonged bed rest."
       },
       "redFlags": {
         "zh": "新出现的肢体无力、会阴麻木、大小便控制改变、发热或重大外伤后疼痛需立即就医。",
@@ -1099,6 +1267,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "颈背痛随姿势、弯腰或转身变化。",
+        "en": "Neck or back pain that changes with posture, bending or turning."
+      },
+      "triggers": {
+        "zh": "久坐、搬抬、姿势变化或突然扭转",
+        "en": "Prolonged sitting, lifting, posture change or sudden twisting"
+      },
+      "threshold": {
+        "zh": "新出现的肢体无力、会阴麻木、大小便控制改变、发热或重大外伤后疼痛需立即就医。",
+        "en": "Seek urgent care for new weakness, saddle numbness, bowel or bladder changes, fever, or pain after major trauma."
       }
     },
     {
@@ -1130,8 +1310,8 @@
       "summary": "疼痛或麻刺沿颈背向手臂放射，可能与神经根受刺激有关，需要结合力量和感觉检查。",
       "summaryEn": "Pain or tingling that travels from the neck or back into an arm can involve a nerve root and needs strength and sensation checks.",
       "advice": {
-        "zh": "避免持续压迫和反复搬重物，记录放射范围与力量变化；症状持续请咨询医生或康复专业人员。",
-        "en": "Avoid prolonged pressure and repeated heavy lifting, and note the spread and any strength changes; consult a clinician or physiotherapist if it persists."
+        "zh": "避免持续压迫和反复搬重物，记录放射范围与力量变化。",
+        "en": "Avoid prolonged pressure and repeated heavy lifting, and note the spread and any strength changes."
       },
       "redFlags": {
         "zh": "进行性无力、走路不稳、双侧症状、会阴麻木或大小便异常时立即急诊。",
@@ -1140,6 +1320,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "颈背痛向肢体放射，可伴麻刺或无力。",
+        "en": "Pain radiating from the neck or back into a limb, with possible tingling or weakness."
+      },
+      "triggers": {
+        "zh": "椎间盘负荷、咳嗽用力或长时间弯腰",
+        "en": "Disc loading, forceful coughing or prolonged bending"
+      },
+      "threshold": {
+        "zh": "进行性无力、走路不稳、双侧症状、会阴麻木或大小便异常时立即急诊。",
+        "en": "Get emergency help for progressive weakness, unsteady walking, symptoms on both sides, saddle numbness, or bowel or bladder changes."
       }
     },
     {
@@ -1169,8 +1361,8 @@
       "summary": "碰撞、咳嗽或深呼吸后局部胸壁痛可能来自肋骨或肋软骨，但需要排除肺部问题。",
       "summaryEn": "Localized chest-wall pain after impact, coughing or deep breaths can involve a rib or cartilage; lung problems still need to be excluded.",
       "advice": {
-        "zh": "减少扭转和提重物，按舒适程度冷敷并保持正常浅深呼吸；不要用绷带紧紧束胸。",
-        "en": "Reduce twisting and heavy lifting, use a cold pack if comfortable, and keep breathing normally; do not tightly bind the chest."
+        "zh": "减少扭转和提重物，按舒适程度冷敷并保持正常浅深呼吸。",
+        "en": "Reduce twisting and heavy lifting, use a cold pack if comfortable, and keep breathing normally."
       },
       "redFlags": {
         "zh": "呼吸困难、咳血、嘴唇发青、胸痛压榨感或受伤后头晕需立即急诊。",
@@ -1179,6 +1371,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "局部胸壁压痛，深呼吸、咳嗽或转身时加重。",
+        "en": "Focal chest-wall tenderness, worse with breathing, coughing or turning."
+      },
+      "triggers": {
+        "zh": "碰撞、剧烈咳嗽或深呼吸牵拉",
+        "en": "Impact, forceful coughing or strain with deep breathing"
+      },
+      "threshold": {
+        "zh": "呼吸困难、咳血、嘴唇发青、胸痛压榨感或受伤后头晕需立即急诊。",
+        "en": "Seek emergency care for breathing difficulty, coughing blood, blue lips, crushing chest pain, or dizziness after injury."
       }
     },
     {
@@ -1209,8 +1413,8 @@
       "summary": "抬臂或侧卧时肩部疼痛可见于肩袖肌腱或滑囊刺激，不能仅凭位置确诊。",
       "summaryEn": "Shoulder pain with lifting or lying on that side can involve the rotator cuff or bursa; location alone cannot diagnose it.",
       "advice": {
-        "zh": "短期减少过顶动作，保持无痛范围内活动，避免强行拉伸；持续或影响抬臂请评估。",
-        "en": "Temporarily reduce overhead activity, move within a comfortable range, and avoid forceful stretching; seek assessment if it persists or limits lifting."
+        "zh": "短期减少过顶动作，保持无痛范围内活动，避免强行拉伸。",
+        "en": "Temporarily reduce overhead activity, move within a comfortable range, and avoid forceful stretching."
       },
       "redFlags": {
         "zh": "明显变形、突然无法抬臂、手臂发凉发白或伴胸痛气促时尽快就医。",
@@ -1219,6 +1423,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "抬臂或患侧卧时肩痛，可伴活动受限。",
+        "en": "Shoulder pain with arm elevation or lying on the affected side."
+      },
+      "triggers": {
+        "zh": "反复过顶动作、抬臂或侧卧压迫",
+        "en": "Repeated overhead activity, lifting the arm or lying on that side"
+      },
+      "threshold": {
+        "zh": "明显变形、突然无法抬臂、手臂发凉发白或伴胸痛气促时尽快就医。",
+        "en": "Seek prompt care for visible deformity, sudden inability to lift the arm, a cold or pale arm, or chest pain with breathlessness."
       }
     },
     {
@@ -1248,8 +1464,8 @@
       "summary": "肘内侧到无名指、小指的麻刺可能与尺神经受压有关，需观察握力和手指灵活性。",
       "summaryEn": "Tingling from the inner elbow into the ring and little fingers can involve ulnar-nerve pressure; watch grip and finger control.",
       "advice": {
-        "zh": "避免长时间屈肘或把肘部压在硬面上，夜间保持舒适伸直；持续或反复请检查。",
-        "en": "Avoid prolonged elbow flexion or leaning on a hard surface; keep the elbow comfortably extended at night and seek an exam if it persists or recurs."
+        "zh": "避免长时间屈肘或把肘部压在硬面上，夜间保持舒适伸直。",
+        "en": "Avoid prolonged elbow flexion or leaning on a hard surface."
       },
       "redFlags": {
         "zh": "握力进行性下降、手指明显无力、手部肌肉变薄或持续麻木时尽快就医。",
@@ -1258,6 +1474,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "肘内侧至无名指、小指麻刺，可伴握力下降。",
+        "en": "Tingling from the inner elbow into the ring and little fingers; grip may weaken."
+      },
+      "triggers": {
+        "zh": "肘部长期屈曲、靠肘支撑或局部撞击",
+        "en": "Prolonged elbow flexion, leaning on the elbow or local impact"
+      },
+      "threshold": {
+        "zh": "握力进行性下降、手指明显无力、手部肌肉变薄或持续麻木时尽快就医。",
+        "en": "Seek prompt care for worsening grip loss, marked finger weakness, visible hand-muscle wasting, or persistent numbness."
       }
     },
     {
@@ -1287,8 +1515,8 @@
       "summary": "髋部或腹股沟疼痛可能来自关节、肌腱或周围肌肉，需要结合负重和活动范围评估。",
       "summaryEn": "Hip or groin pain can involve the joint, tendons or nearby muscles and should be assessed with weight-bearing and range of motion.",
       "advice": {
-        "zh": "减少会加重疼痛的负重和扭转，保持轻柔活动；无法承重或持续不缓解时请评估。",
-        "en": "Reduce painful loading and twisting while keeping gentle movement; seek assessment if you cannot bear weight or symptoms persist."
+        "zh": "减少会加重疼痛的负重和扭转，保持轻柔活动。",
+        "en": "Reduce painful loading and twisting while keeping gentle movement."
       },
       "redFlags": {
         "zh": "跌倒后无法承重、髋部明显变形、发热伴关节痛或腿部突然肿胀时尽快就医。",
@@ -1297,6 +1525,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "髋部或腹股沟痛，负重或活动时明显。",
+        "en": "Hip or groin pain, often worse with weight bearing or movement."
+      },
+      "triggers": {
+        "zh": "跑跳、负重增加、久坐或步态改变",
+        "en": "Running or jumping, increased load, prolonged sitting or altered gait"
+      },
+      "threshold": {
+        "zh": "跌倒后无法承重、髋部明显变形、发热伴关节痛或腿部突然肿胀时尽快就医。",
+        "en": "Seek prompt care after a fall if you cannot bear weight, the hip is deformed, fever accompanies joint pain, or a leg suddenly swells."
       }
     },
     {
@@ -1327,8 +1567,8 @@
       "summary": "膝部疼痛、肿胀或活动受限可能来自扭伤、髌股负荷或其他结构，需要检查稳定性。",
       "summaryEn": "Knee pain, swelling or limited movement can follow a sprain or patellofemoral load and needs a stability check.",
       "advice": {
-        "zh": "先减少跑跳和扭转，短时间冷敷并在舒适范围内活动；不要强行“掰回”膝盖。",
-        "en": "Reduce running, jumping and twisting, use a short cold pack, and move within comfort; do not force the knee back into place."
+        "zh": "先减少跑跳和扭转，短时间冷敷并在舒适范围内活动。",
+        "en": "Reduce running, jumping and twisting, use a short cold pack, and move within comfort."
       },
       "redFlags": {
         "zh": "无法承重、膝盖卡住、明显变形、快速肿胀或小腿肿痛时及时就医。",
@@ -1337,6 +1577,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "膝痛、肿胀，跑跳或活动时加重。",
+        "en": "Knee pain and swelling, aggravated by activity or impact."
+      },
+      "triggers": {
+        "zh": "扭转、跌倒、跑跳或负重突然增加",
+        "en": "Twisting, falling, running or a sudden increase in load"
+      },
+      "threshold": {
+        "zh": "无法承重、膝盖卡住、明显变形、快速肿胀或小腿肿痛时及时就医。",
+        "en": "Seek care for inability to bear weight, locking, deformity, rapid swelling, or a painful swollen calf."
       }
     },
     {
@@ -1367,8 +1619,8 @@
       "summary": "扭转后外踝疼痛、肿胀或淤青常见于踝部扭伤，但骨折仍需排除。",
       "summaryEn": "Lateral ankle pain, swelling or bruising after a twist often follows a sprain, but fracture still needs to be excluded.",
       "advice": {
-        "zh": "保护患处并短时间冷敷、抬高；在疼痛允许时逐步活动，无法走四步或骨点压痛请检查。",
-        "en": "Protect the ankle with a short cold pack and elevation; gradually move as pain allows, and seek an exam if you cannot take four steps or bone tenderness is marked."
+        "zh": "保护患处并短时间冷敷、抬高。",
+        "en": "Protect the ankle with a short cold pack and elevation."
       },
       "redFlags": {
         "zh": "明显畸形、脚趾发凉发白、麻木或疼痛迅速加重时立即就医。",
@@ -1377,6 +1629,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "扭转后踝部疼痛、肿胀或淤青。",
+        "en": "Ankle pain, swelling or bruising after twisting."
+      },
+      "triggers": {
+        "zh": "踩空、内翻或运动中的突然变向",
+        "en": "A misstep, inversion or sudden change of direction"
+      },
+      "threshold": {
+        "zh": "明显畸形、脚趾发凉发白、麻木或疼痛迅速加重时立即就医。",
+        "en": "Seek urgent care for deformity, cold or pale toes, numbness, or rapidly worsening pain."
       }
     },
     {
@@ -1404,8 +1668,8 @@
       "summary": "足底起步痛或长时间站立后的疼痛可能与足底腱膜和负荷有关，需结合鞋具与活动变化观察。",
       "summaryEn": "Start-up or standing-related sole pain can involve the plantar fascia and load; footwear and activity changes matter.",
       "advice": {
-        "zh": "减少高冲击活动，穿有支撑的鞋，做温和小腿和足底活动；持续或麻木加重时评估。",
-        "en": "Reduce high-impact activity, use supportive footwear, and try gentle calf and foot mobility; seek assessment if it persists or numbness worsens."
+        "zh": "减少高冲击活动，穿有支撑的鞋，做温和小腿和足底活动。",
+        "en": "Reduce high-impact activity, use supportive footwear, and try gentle calf and foot mobility."
       },
       "redFlags": {
         "zh": "足部明显发红发热、伤口流脓、无法承重或糖尿病伴新足部伤口时尽快就医。",
@@ -1414,6 +1678,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "晨起第一步或久站后足跟、足底疼痛。",
+        "en": "Heel or sole pain on the first steps or after prolonged standing."
+      },
+      "triggers": {
+        "zh": "久站、跑跳、鞋底支撑不足或活动量增加",
+        "en": "Long standing, running, poor shoe support or increased activity"
+      },
+      "threshold": {
+        "zh": "足部明显发红发热、伤口流脓、无法承重或糖尿病伴新足部伤口时尽快就医。",
+        "en": "Seek prompt care for marked redness and warmth, drainage, inability to bear weight, or a new foot wound with diabetes."
       }
     },
     {
@@ -1444,8 +1720,8 @@
       "summary": "沿臀部、大腿或小腿放射的麻刺、灼烧感可能与神经受刺激有关，需观察力量和步态。",
       "summaryEn": "Radiating tingling or burning through the buttock, thigh or leg can involve a nerve and should be monitored with strength and gait.",
       "advice": {
-        "zh": "避免长时间压迫和突然加量，记录麻木范围、步行和力量变化；持续请咨询医生。",
-        "en": "Avoid prolonged pressure and sudden load increases, and track numbness, walking and strength changes; consult a clinician if it persists."
+        "zh": "避免长时间压迫和突然加量，记录麻木范围、步行和力量变化。",
+        "en": "Avoid prolonged pressure and sudden load increases, and track numbness, walking and strength changes."
       },
       "redFlags": {
         "zh": "新出现或加重的无力、脚下垂、步态明显不稳、会阴麻木或大小便异常需急诊。",
@@ -1454,6 +1730,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "臀腿放射痛、麻刺或灼烧，可影响步行。",
+        "en": "Radiating buttock or leg pain, tingling or burning that may affect walking."
+      },
+      "triggers": {
+        "zh": "腰臀部受压、久坐或重复负荷",
+        "en": "Pressure around the low back or hip, prolonged sitting or repeated load"
+      },
+      "threshold": {
+        "zh": "新出现或加重的无力、脚下垂、步态明显不稳、会阴麻木或大小便异常需急诊。",
+        "en": "Get emergency help for new or worsening weakness, foot drop, major gait instability, saddle numbness, or bowel or bladder changes."
       }
     },
     {
@@ -1484,8 +1772,8 @@
       "summary": "头痛部位、持续时间和伴随症状只能帮助分型，不能仅凭模型判断偏头痛、紧张型头痛或继发性原因。",
       "summaryEn": "Location, duration and associated symptoms help classify a headache but cannot by themselves distinguish migraine, tension-type or secondary causes.",
       "advice": {
-        "zh": "在安静环境休息，记录起始时间、诱因和伴随症状；反复或影响生活时咨询医生。",
-        "en": "Rest in a quiet setting and record onset, triggers and associated symptoms; consult a clinician if headaches recur or disrupt life."
+        "zh": "在安静环境休息，记录起始时间、诱因和伴随症状。",
+        "en": "Rest in a quiet setting and record onset, triggers and associated symptoms."
       },
       "redFlags": {
         "zh": "突发最严重头痛、发热颈硬、意识改变、单侧无力、视力改变或头部外伤后加重时立即急诊。",
@@ -1494,6 +1782,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "头部疼痛，可伴压迫、搏动或其他不适。",
+        "en": "Head pain with pressure, throbbing or associated symptoms."
+      },
+      "triggers": {
+        "zh": "睡眠变化、脱水、压力或近期感染",
+        "en": "Sleep change, dehydration, stress or a recent infection"
+      },
+      "threshold": {
+        "zh": "突发最严重头痛、发热颈硬、意识改变、单侧无力、视力改变或头部外伤后加重时立即急诊。",
+        "en": "Seek emergency care for sudden worst-ever pain, fever with stiff neck, confusion, one-sided weakness, vision change or worsening after head injury."
       }
     },
     {
@@ -1532,6 +1832,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "面部感觉、表情、眼球运动、听觉或吞咽改变。",
+        "en": "Changes in facial sensation, expression, eye movement, hearing or swallowing."
+      },
+      "triggers": {
+        "zh": "感染、外伤或突然出现的神经功能变化",
+        "en": "Infection, injury or a sudden neurological change"
+      },
+      "threshold": {
+        "zh": "面部歪斜、说话含糊、吞咽困难、突发视力丧失或肢体无力需立即急诊。",
+        "en": "Get emergency help for facial droop, slurred speech, trouble swallowing, sudden vision loss or limb weakness."
       }
     },
     {
@@ -1571,6 +1883,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "双侧感觉变化、肌力下降或步态不稳。",
+        "en": "Bilateral sensory changes, weakness or an unsteady gait."
+      },
+      "triggers": {
+        "zh": "外伤、脊柱压迫或进行性神经症状",
+        "en": "Trauma, spinal compression or progressive neurological symptoms"
+      },
+      "threshold": {
+        "zh": "进行性无力、走路不稳、会阴麻木或大小便控制改变时立即急诊。",
+        "en": "Seek emergency care for progressive weakness, unsteady walking, saddle numbness, or bowel or bladder changes."
       }
     },
     {
@@ -1600,8 +1924,8 @@
       "summary": "扭转、咳嗽或运动后局部腹壁痛可能来自肌肉负荷，但持续或伴包块需要检查。",
       "summaryEn": "Localized abdominal-wall pain after twisting, coughing or exercise can involve muscle load; persistent pain or a bulge needs an exam.",
       "advice": {
-        "zh": "先减少诱发动作，保持轻柔活动并观察咳嗽、起身时变化；避免强行训练。",
-        "en": "Reduce triggering movement, keep gentle activity, and observe changes with coughing or rising; avoid forceful training."
+        "zh": "先减少诱发动作，保持轻柔活动并观察咳嗽、起身时变化。",
+        "en": "Reduce triggering movement, keep gentle activity, and observe changes with coughing or rising."
       },
       "redFlags": {
         "zh": "持续加重的腹痛、明显包块、呕吐、发热或腹部僵硬时尽快就医。",
@@ -1610,6 +1934,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "咳嗽、起身或扭转时局部腹壁牵拉痛。",
+        "en": "Focal pulling pain in the abdominal wall with coughing, sitting up or twisting."
+      },
+      "triggers": {
+        "zh": "咳嗽、扭转、仰卧起坐或搬重物",
+        "en": "Coughing, twisting, sit-ups or lifting"
+      },
+      "threshold": {
+        "zh": "持续加重的腹痛、明显包块、呕吐、发热或腹部僵硬时尽快就医。",
+        "en": "Seek prompt care for worsening abdominal pain, a marked bulge, vomiting, fever or a rigid abdomen."
       }
     },
     {
@@ -1639,8 +1975,8 @@
       "summary": "久坐、姿势变化或突然动作后的颈部酸痛常见于肌肉紧张，但需要留意神经症状。",
       "summaryEn": "Neck soreness after posture strain or a sudden movement can involve muscle tension; watch for neurologic symptoms.",
       "advice": {
-        "zh": "调整屏幕和睡眠姿势，短时间热敷并做舒适范围内活动；避免用力扳颈。",
-        "en": "Adjust screen and sleep posture, use brief warmth and move within comfort; avoid forceful neck manipulation."
+        "zh": "调整屏幕和睡眠姿势，短时间热敷并做舒适范围内活动。",
+        "en": "Adjust screen and sleep posture, use brief warmth and move within comfort."
       },
       "redFlags": {
         "zh": "颈痛伴发热和颈项僵硬、手臂无力麻木、吞咽困难或重大外伤时立即就医。",
@@ -1649,6 +1985,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "颈部酸痛、紧绷，转头时加重。",
+        "en": "Neck aching or tightness, worse when turning the head."
+      },
+      "triggers": {
+        "zh": "久坐、低头、睡姿改变或突然转头",
+        "en": "Prolonged sitting, looking down, a changed sleep posture or sudden turning"
+      },
+      "threshold": {
+        "zh": "颈痛伴发热和颈项僵硬、手臂无力麻木、吞咽困难或重大外伤时立即就医。",
+        "en": "Seek urgent care for neck pain with fever and stiffness, arm weakness or numbness, trouble swallowing, or major trauma."
       }
     },
     {
@@ -1679,8 +2027,8 @@
       "summary": "背部局部紧绷或活动相关疼痛可能与竖脊肌、腰方肌或筋膜负荷有关。",
       "summaryEn": "Localized back tightness or movement-related pain can involve the erector spinae, quadratus lumborum or fascia.",
       "advice": {
-        "zh": "减少重复弯转和久坐，保持轻柔行走与活动；持续、夜间明显或反复发作请评估。",
-        "en": "Reduce repetitive bending and prolonged sitting while keeping gentle walking and movement; seek assessment for persistent, night-time or recurrent pain."
+        "zh": "减少重复弯转和久坐，保持轻柔行走与活动。",
+        "en": "Reduce repetitive bending and prolonged sitting while keeping gentle walking and movement."
       },
       "redFlags": {
         "zh": "进行性无力、会阴麻木、大小便变化、发热或不明原因体重下降时立即就医。",
@@ -1689,6 +2037,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "胸腰背部紧绷、压痛，随活动变化。",
+        "en": "Thoracic or lumbar tightness and tenderness that vary with movement."
+      },
+      "triggers": {
+        "zh": "久坐、反复弯腰、搬抬或核心负荷增加",
+        "en": "Prolonged sitting, repeated bending, lifting or increased core load"
+      },
+      "threshold": {
+        "zh": "进行性无力、会阴麻木、大小便变化、发热或不明原因体重下降时立即就医。",
+        "en": "Seek urgent care for progressive weakness, saddle numbness, bowel or bladder changes, fever or unexplained weight loss."
       }
     },
     {
@@ -1729,6 +2089,18 @@
       "medication": {
         "zh": "短期不适可向药师咨询适合的非处方止痛或口腔护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about an appropriate OTC pain-relief or oral-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "冷热或甜食引起短暂牙痛，可伴龋洞。",
+        "en": "Brief tooth pain triggered by hot, cold or sweet foods; a cavity may be visible."
+      },
+      "triggers": {
+        "zh": "高频摄入含糖食物、菌斑堆积或牙面磨损",
+        "en": "Frequent sugar exposure, plaque build-up or enamel wear"
+      },
+      "threshold": {
+        "zh": "面部肿胀、发热、吞咽或呼吸困难时立即急诊。",
+        "en": "面部肿胀、发热、吞咽或呼吸困难时立即急诊。"
       }
     },
     {
@@ -1762,7 +2134,7 @@
       "summaryEn": "Bleeding or swollen gums and biting discomfort can come from gingival or periodontal disease and need dental assessment.",
       "advice": {
         "zh": "使用软毛牙刷轻柔清洁，避免吸烟和反复刺激，尽快预约牙科。",
-        "en": "使用软毛牙刷轻柔清洁，避免吸烟和反复刺激，尽快预约牙科。"
+        "en": "使用软毛牙刷轻柔清洁，避免吸烟和反复刺激，尽快预约牙科。."
       },
       "redFlags": {
         "zh": "面部肿胀、发热、流脓或张口困难时及时就医。",
@@ -1771,6 +2143,18 @@
       "medication": {
         "zh": "短期不适可向药师咨询适合的非处方止痛或口腔护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about an appropriate OTC pain-relief or oral-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "牙龈出血、肿胀、口腔异味或咬合不适。",
+        "en": "Bleeding or swollen gums, bad breath or discomfort on biting."
+      },
+      "triggers": {
+        "zh": "牙菌斑、牙石、吸烟或口腔清洁不足",
+        "en": "Plaque, calculus, smoking or inadequate oral hygiene"
+      },
+      "threshold": {
+        "zh": "面部肿胀、发热、流脓或张口困难时及时就医。",
+        "en": "面部肿胀、发热、流脓或张口困难时及时就医。"
       }
     },
     {
@@ -1800,7 +2184,7 @@
       "summaryEn": "Pain near the ear, limited opening or a changed bite can involve the temporomandibular joint or chewing muscles.",
       "advice": {
         "zh": "暂时吃软食，避免大张口和咬硬物，热敷并记录卡顿情况。",
-        "en": "暂时吃软食，避免大张口和咬硬物，热敷并记录卡顿情况。"
+        "en": "暂时吃软食，避免大张口和咬硬物，热敷并记录卡顿情况。."
       },
       "redFlags": {
         "zh": "关节锁住、明显外伤、面部肿胀或吞咽呼吸困难时及时就医。",
@@ -1809,6 +2193,18 @@
       "medication": {
         "zh": "短期不适可向药师咨询适合的非处方止痛或口腔护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about an appropriate OTC pain-relief or oral-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "耳前或咀嚼肌痛，张口弹响、受限或卡住。",
+        "en": "Pain near the ear or chewing muscles with clicking, restricted opening or locking."
+      },
+      "triggers": {
+        "zh": "磨牙、咬紧、偏侧咀嚼或张口过度",
+        "en": "Bruxism, clenching, one-sided chewing or excessive opening"
+      },
+      "threshold": {
+        "zh": "关节锁住、明显外伤、面部肿胀或吞咽呼吸困难时及时就医。",
+        "en": "关节锁住、明显外伤、面部肿胀或吞咽呼吸困难时及时就医。"
       }
     },
     {
@@ -1839,7 +2235,7 @@
       "summaryEn": "Sharp pain on biting, temperature sensitivity or pain after trauma should be assessed for a cracked or fractured tooth.",
       "advice": {
         "zh": "避免用患侧咀嚼，保留脱落碎片，尽快看牙科。",
-        "en": "避免用患侧咀嚼，保留脱落碎片，尽快看牙科。"
+        "en": "避免用患侧咀嚼，保留脱落碎片，尽快看牙科。."
       },
       "redFlags": {
         "zh": "牙齿明显移位、持续出血、面部肿胀或吞咽困难时急诊。",
@@ -1848,6 +2244,18 @@
       "medication": {
         "zh": "短期不适可向药师咨询适合的非处方止痛或口腔护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about an appropriate OTC pain-relief or oral-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "咬合锐痛、冷热敏感，可出现在外伤后。",
+        "en": "Sharp biting pain or temperature sensitivity, sometimes after injury."
+      },
+      "triggers": {
+        "zh": "咬硬物、磨牙或直接外伤",
+        "en": "Biting something hard, bruxism or direct trauma"
+      },
+      "threshold": {
+        "zh": "牙齿明显移位、持续出血、面部肿胀或吞咽困难时急诊。",
+        "en": "牙齿明显移位、持续出血、面部肿胀或吞咽困难时急诊。"
       }
     },
     {
@@ -1873,8 +2281,8 @@
       "summary": "搏动性头痛伴恶心、畏光或视觉先兆可见于偏头痛，但首次或异常头痛需要排查其他原因。",
       "summaryEn": "Throbbing headache with nausea, light sensitivity or visual aura can fit migraine, but a first or unusual headache needs assessment.",
       "advice": {
-        "zh": "安静避光休息，记录持续时间和诱因；反复发作请就医制定方案。",
-        "en": "安静避光休息，记录持续时间和诱因；反复发作请就医制定方案。"
+        "zh": "安静避光休息，记录持续时间和诱因。",
+        "en": "安静避光休息，记录持续时间和诱因；反复发作请就医制定方案。."
       },
       "redFlags": {
         "zh": "突然最严重头痛、发热颈硬、意识改变或单侧无力时立即急诊。",
@@ -1883,6 +2291,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "搏动性头痛，伴恶心、畏光或视觉先兆。",
+        "en": "Throbbing headache with nausea, light sensitivity or visual aura."
+      },
+      "triggers": {
+        "zh": "睡眠不足、压力、漏餐、酒精或强光",
+        "en": "Poor sleep, stress, missed meals, alcohol or bright light"
+      },
+      "threshold": {
+        "zh": "突然最严重头痛、发热颈硬、意识改变或单侧无力时立即急诊。",
+        "en": "突然最严重头痛、发热颈硬、意识改变或单侧无力时立即急诊。"
       }
     },
     {
@@ -1910,7 +2330,7 @@
       "summaryEn": "Brief electric facial pain triggered by touch, chewing or cold air can involve the trigeminal nerve and needs review.",
       "advice": {
         "zh": "记录触发动作和疼痛分布，避免自行加大止痛药剂量，尽快安排评估。",
-        "en": "记录触发动作和疼痛分布，避免自行加大止痛药剂量，尽快安排评估。"
+        "en": "记录触发动作和疼痛分布，避免自行加大止痛药剂量，尽快安排评估。."
       },
       "redFlags": {
         "zh": "伴面部无力、持续感觉缺失、视力改变或其他神经症状时立即就医。",
@@ -1919,6 +2339,18 @@
       "medication": {
         "zh": "短期不适可向药师咨询适合的非处方止痛或口腔护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about an appropriate OTC pain-relief or oral-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "单侧面部短促电击样痛，轻触或咀嚼可诱发。",
+        "en": "Brief electric-shock facial pain, triggered by light touch or chewing."
+      },
+      "triggers": {
+        "zh": "触碰面部、咀嚼、刷牙或冷风",
+        "en": "Facial touch, chewing, brushing teeth or cold air"
+      },
+      "threshold": {
+        "zh": "伴面部无力、持续感觉缺失、视力改变或其他神经症状时立即就医。",
+        "en": "伴面部无力、持续感觉缺失、视力改变或其他神经症状时立即就医。"
       }
     },
     {
@@ -1945,8 +2377,8 @@
       "summary": "拇指、食指、中指麻刺或夜间加重可见于正中神经受压，需要结合握力和感觉检查。",
       "summaryEn": "Tingling in the thumb, index and middle fingers, often worse at night, can reflect median-nerve compression.",
       "advice": {
-        "zh": "减少长时间屈腕和重复抓握，保持腕部中立；持续或无力请评估。",
-        "en": "减少长时间屈腕和重复抓握，保持腕部中立；持续或无力请评估。"
+        "zh": "减少长时间屈腕和重复抓握，保持腕部中立。",
+        "en": "减少长时间屈腕和重复抓握，保持腕部中立；持续或无力请评估。."
       },
       "redFlags": {
         "zh": "手部进行性无力、肌肉萎缩或麻木持续扩展时尽快就医。",
@@ -1955,6 +2387,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "拇、食、中指麻刺，常在夜间加重。",
+        "en": "Tingling in the thumb, index and middle fingers, often worse at night."
+      },
+      "triggers": {
+        "zh": "腕部反复屈曲、握持工具或夜间压迫",
+        "en": "Repeated wrist flexion, tool use or pressure during sleep"
+      },
+      "threshold": {
+        "zh": "手部进行性无力、肌肉萎缩或麻木持续扩展时尽快就医。",
+        "en": "手部进行性无力、肌肉萎缩或麻木持续扩展时尽快就医。"
       }
     },
     {
@@ -1985,7 +2429,7 @@
       "summaryEn": "Electric or tingling pain from the low back or buttock into the leg can involve the sciatic nerve or lumbosacral roots.",
       "advice": {
         "zh": "保持轻柔活动，避免长时间坐压和突然搬重物，记录力量与步态变化。",
-        "en": "保持轻柔活动，避免长时间坐压和突然搬重物，记录力量与步态变化。"
+        "en": "保持轻柔活动，避免长时间坐压和突然搬重物，记录力量与步态变化。."
       },
       "redFlags": {
         "zh": "脚下垂、进行性无力、会阴麻木或大小便异常时立即急诊。",
@@ -1994,6 +2438,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "腰臀向腿足放射的电击痛、麻刺或灼痛。",
+        "en": "Electric, tingling or burning pain from the lower back or buttock into the leg."
+      },
+      "triggers": {
+        "zh": "久坐、弯腰、搬抬或腰骶部负荷",
+        "en": "Prolonged sitting, bending, lifting or lumbosacral load"
+      },
+      "threshold": {
+        "zh": "脚下垂、进行性无力、会阴麻木或大小便异常时立即急诊。",
+        "en": "脚下垂、进行性无力、会阴麻木或大小便异常时立即急诊。"
       }
     },
     {
@@ -2022,7 +2478,7 @@
       "summaryEn": "Symmetric burning, tingling or numbness needs assessment for metabolic, medication, nutritional and nerve causes.",
       "advice": {
         "zh": "记录对称范围和进展，检查鞋袜及皮肤是否受伤，尽快安排评估。",
-        "en": "记录对称范围和进展，检查鞋袜及皮肤是否受伤，尽快安排评估。"
+        "en": "记录对称范围和进展，检查鞋袜及皮肤是否受伤，尽快安排评估。."
       },
       "redFlags": {
         "zh": "快速进展的无力、呼吸吞咽困难或步行明显不稳时立即就医。",
@@ -2031,6 +2487,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "双侧对称麻木、灼烧或针刺，常累及手足。",
+        "en": "Symmetric numbness, burning or tingling, often in hands or feet."
+      },
+      "triggers": {
+        "zh": "代谢异常、营养不足、药物或长期压迫",
+        "en": "Metabolic problems, nutritional deficiency, medication or chronic pressure"
+      },
+      "threshold": {
+        "zh": "快速进展的无力、呼吸吞咽困难或步行明显不稳时立即就医。",
+        "en": "快速进展的无力、呼吸吞咽困难或步行明显不稳时立即就医。"
       }
     },
     {
@@ -2057,7 +2525,7 @@
       "summaryEn": "New one-sided facial movement or eye-closure change needs prompt neurological assessment.",
       "advice": {
         "zh": "记录开始时间并保护眼睛避免干燥，尽快就医评估。",
-        "en": "记录开始时间并保护眼睛避免干燥，尽快就医评估。"
+        "en": "记录开始时间并保护眼睛避免干燥，尽快就医评估。."
       },
       "redFlags": {
         "zh": "突然面部歪斜伴说话含糊、手臂无力或视力异常时立即急诊。",
@@ -2066,6 +2534,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "单侧表情无力、口角下垂或闭眼不全。",
+        "en": "One-sided facial weakness, drooping mouth or incomplete eye closure."
+      },
+      "triggers": {
+        "zh": "感染后或突然出现的单侧面部功能改变",
+        "en": "A post-infectious or sudden one-sided facial change"
+      },
+      "threshold": {
+        "zh": "突然面部歪斜伴说话含糊、手臂无力或视力异常时立即急诊。",
+        "en": "突然面部歪斜伴说话含糊、手臂无力或视力异常时立即急诊。"
       }
     },
     {
@@ -2097,8 +2577,8 @@
       "summary": "随重复负荷出现的局部压痛和活动痛可能来自肌腱过度使用，需要结合动作和力量判断。",
       "summaryEn": "Local tenderness and activity pain after repeated loading can reflect tendon overload or tendinopathy.",
       "advice": {
-        "zh": "减少诱发负荷但保持舒适范围活动，逐步恢复；持续请接受康复评估。",
-        "en": "减少诱发负荷但保持舒适范围活动，逐步恢复；持续请接受康复评估。"
+        "zh": "减少诱发负荷但保持舒适范围活动，逐步恢复。",
+        "en": "减少诱发负荷但保持舒适范围活动，逐步恢复；持续请接受康复评估。."
       },
       "redFlags": {
         "zh": "突然断裂感、明显无力、快速肿胀或无法承重时及时就医。",
@@ -2107,6 +2587,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "肌腱附近压痛，用力或重复动作时疼痛。",
+        "en": "Tenderness near a tendon with pain on loading or repetitive motion."
+      },
+      "triggers": {
+        "zh": "重复动作、训练量突然增加或恢复不足",
+        "en": "Repetitive motion, a sudden training increase or inadequate recovery"
+      },
+      "threshold": {
+        "zh": "突然断裂感、明显无力、快速肿胀或无法承重时及时就医。",
+        "en": "突然断裂感、明显无力、快速肿胀或无法承重时及时就医。"
       }
     },
     {
@@ -2137,8 +2629,8 @@
       "summary": "关节外侧受压或活动时疼痛、局部肿胀和压痛可见于滑囊刺激或炎症。",
       "summaryEn": "Pain, tenderness and swelling over a pressure point can occur with bursal irritation or inflammation.",
       "advice": {
-        "zh": "减少直接压迫，短时间冷敷并保持轻柔活动；红热明显请评估。",
-        "en": "减少直接压迫，短时间冷敷并保持轻柔活动；红热明显请评估。"
+        "zh": "减少直接压迫，短时间冷敷并保持轻柔活动。",
+        "en": "减少直接压迫，短时间冷敷并保持轻柔活动；红热明显请评估。."
       },
       "redFlags": {
         "zh": "高热、迅速扩大的红肿、流脓或无法活动时尽快就医。",
@@ -2147,6 +2639,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "关节旁压痛、局部肿胀，受压时加重。",
+        "en": "Tenderness and swelling beside a joint, worse with direct pressure."
+      },
+      "triggers": {
+        "zh": "局部反复受压、跪坐或重复摩擦",
+        "en": "Repeated local pressure, kneeling or friction"
+      },
+      "threshold": {
+        "zh": "高热、迅速扩大的红肿、流脓或无法活动时尽快就医。",
+        "en": "高热、迅速扩大的红肿、流脓或无法活动时尽快就医。"
       }
     },
     {
@@ -2175,7 +2679,7 @@
       "summaryEn": "Locking, swelling or instability after twisting raises concern for meniscal or ligament injury.",
       "advice": {
         "zh": "停止扭转和跑跳，抬高并短时间冷敷，尽快评估。",
-        "en": "停止扭转和跑跳，抬高并短时间冷敷，尽快评估。"
+        "en": "停止扭转和跑跳，抬高并短时间冷敷，尽快评估。."
       },
       "redFlags": {
         "zh": "无法承重、明显变形、膝关节锁死或肿胀迅速出现时及时就医。",
@@ -2184,6 +2688,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "扭伤后膝肿、卡顿、锁住或不稳。",
+        "en": "Knee swelling, catching, locking or instability after twisting."
+      },
+      "triggers": {
+        "zh": "膝部扭转、变向、跌倒或运动外伤",
+        "en": "Knee twisting, pivoting, falling or sports injury"
+      },
+      "threshold": {
+        "zh": "无法承重、明显变形、膝关节锁死或肿胀迅速出现时及时就医。",
+        "en": "无法承重、明显变形、膝关节锁死或肿胀迅速出现时及时就医。"
       }
     },
     {
@@ -2215,8 +2731,8 @@
       "summary": "左侧腹部点位如果伴进食、排便或恶心变化，疼痛可能来自胃肠道而非表层肌肉。",
       "summaryEn": "Left abdominal pain with meal, bowel or nausea changes may come from the gut rather than the abdominal wall.",
       "advice": {
-        "zh": "记录进食、排便和疼痛位置变化，补充水分；持续或反复请就医检查。",
-        "en": "记录进食、排便和疼痛位置变化，补充水分；持续或反复请就医检查。"
+        "zh": "记录进食、排便和疼痛位置变化，补充水分。",
+        "en": "记录进食、排便和疼痛位置变化，补充水分；持续或反复请就医检查。."
       },
       "redFlags": {
         "zh": "持续加重、腹部僵硬、呕血黑便、反复呕吐或高热时立即就医。",
@@ -2225,6 +2741,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "左侧腹痛伴进食、排便变化或恶心。",
+        "en": "Left-sided abdominal pain related to meals, bowel changes or nausea."
+      },
+      "triggers": {
+        "zh": "进食、排便变化、感染或腹部胀气",
+        "en": "Meals, bowel changes, infection or abdominal gas"
+      },
+      "threshold": {
+        "zh": "持续加重、腹部僵硬、呕血黑便、反复呕吐或高热时立即就医。",
+        "en": "持续加重、腹部僵硬、呕血黑便、反复呕吐或高热时立即就医。"
       }
     },
     {
@@ -2257,7 +2785,7 @@
       "summaryEn": "Right abdominal or groin pain with food, fever, vomiting or urinary changes needs visceral causes considered.",
       "advice": {
         "zh": "不要只按肌肉痛处理，记录疼痛迁移、进食和排尿变化，尽快评估。",
-        "en": "不要只按肌肉痛处理，记录疼痛迁移、进食和排尿变化，尽快评估。"
+        "en": "不要只按肌肉痛处理，记录疼痛迁移、进食和排尿变化，尽快评估。."
       },
       "redFlags": {
         "zh": "右下腹痛逐渐加重、右上腹痛伴黄疸、高热或持续呕吐时及时急诊。",
@@ -2266,6 +2794,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "右侧腹痛伴进食、发热、呕吐或尿路变化。",
+        "en": "Right-sided abdominal pain with meal-related, fever, vomiting or urinary symptoms."
+      },
+      "triggers": {
+        "zh": "进食、泌尿变化、感染或胆道刺激",
+        "en": "Meals, urinary changes, infection or biliary irritation"
+      },
+      "threshold": {
+        "zh": "右下腹痛逐渐加重、右上腹痛伴黄疸、高热或持续呕吐时及时急诊。",
+        "en": "右下腹痛逐渐加重、右上腹痛伴黄疸、高热或持续呕吐时及时急诊。"
       }
     },
     {
@@ -2296,8 +2836,8 @@
       "summary": "腹痛伴恶心、呕吐或腹泻可能符合胃肠道感染或刺激，需要关注脱水。",
       "summaryEn": "Abdominal pain with nausea, vomiting or diarrhoea can fit an intestinal infection or irritation; watch for dehydration.",
       "advice": {
-        "zh": "少量多次补充水分和电解质，暂时选择清淡饮食；症状持续请就医。",
-        "en": "少量多次补充水分和电解质，暂时选择清淡饮食；症状持续请就医。"
+        "zh": "少量多次补充水分和电解质，暂时选择清淡饮食。",
+        "en": "少量多次补充水分和电解质，暂时选择清淡饮食；症状持续请就医。."
       },
       "redFlags": {
         "zh": "无法进水、明显脱水、血便、持续高热或剧烈腹痛时立即就医。",
@@ -2306,6 +2846,18 @@
       "medication": {
         "zh": "优先补液；止泻或止吐类别先咨询药师，并按标签使用。",
         "en": "Prioritise fluids; ask a pharmacist before using an anti-diarrhoeal or anti-nausea category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "腹部绞痛伴腹泻、恶心或呕吐。",
+        "en": "Abdominal cramping with diarrhoea, nausea or vomiting."
+      },
+      "triggers": {
+        "zh": "受污染食物、接触感染者或饮食刺激",
+        "en": "Contaminated food, contact with infection or dietary irritation"
+      },
+      "threshold": {
+        "zh": "无法进水、明显脱水、血便、持续高热或剧烈腹痛时立即就医。",
+        "en": "无法进水、明显脱水、血便、持续高热或剧烈腹痛时立即就医。"
       }
     },
     {
@@ -2337,7 +2889,7 @@
       "summaryEn": "Pain that concentrates in the right lower abdomen with nausea, fever or tenderness needs appendicitis assessment.",
       "advice": {
         "zh": "避免自行热敷、泻药或大量进食，尽快就医检查。",
-        "en": "避免自行热敷、泻药或大量进食，尽快就医检查。"
+        "en": "避免自行热敷、泻药或大量进食，尽快就医检查。."
       },
       "redFlags": {
         "zh": "疼痛持续加重、走动震动明显加重、腹部僵硬或反复呕吐时立即急诊。",
@@ -2346,6 +2898,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "腹痛逐渐集中到右下腹，可伴恶心、发热。",
+        "en": "Abdominal pain concentrating in the lower right side, with possible nausea or fever."
+      },
+      "triggers": {
+        "zh": "阑尾腔阻塞或腹腔炎症过程",
+        "en": "Appendiceal blockage or an inflammatory abdominal process"
+      },
+      "threshold": {
+        "zh": "疼痛持续加重、走动震动明显加重、腹部僵硬或反复呕吐时立即急诊。",
+        "en": "疼痛持续加重、走动震动明显加重、腹部僵硬或反复呕吐时立即急诊。"
       }
     },
     {
@@ -2378,7 +2942,7 @@
       "summaryEn": "Flank or back-to-groin pain with urinary symptoms needs urinary-tract causes considered rather than muscle pain alone.",
       "advice": {
         "zh": "记录尿色、排尿和疼痛波动，补充适量水分并尽快评估。",
-        "en": "记录尿色、排尿和疼痛波动，补充适量水分并尽快评估。"
+        "en": "记录尿色、排尿和疼痛波动，补充适量水分并尽快评估。."
       },
       "redFlags": {
         "zh": "发热寒战、无法排尿、血尿明显、持续呕吐或疼痛无法控制时立即就医。",
@@ -2387,6 +2951,18 @@
       "medication": {
         "zh": "可向药师咨询短期止痛类别并按标签使用；血尿、发热或腰痛加重时及时就医。",
         "en": "Ask a pharmacist about a short-term pain-relief category and follow the label; seek care for blood in urine, fever or worsening flank pain."
+      },
+      "shortDescription": {
+        "zh": "腰侧绞痛向腹股沟放射，可伴血尿或恶心。",
+        "en": "Colicky flank pain radiating to the groin, sometimes with blood in urine or nausea."
+      },
+      "triggers": {
+        "zh": "尿路结石移动、脱水或泌尿系感染",
+        "en": "A moving urinary stone, dehydration or urinary infection"
+      },
+      "threshold": {
+        "zh": "发热寒战、无法排尿、血尿明显、持续呕吐或疼痛无法控制时立即就医。",
+        "en": "发热寒战、无法排尿、血尿明显、持续呕吐或疼痛无法控制时立即就医。"
       }
     },
     {
@@ -2415,7 +2991,7 @@
       "summaryEn": "Chest pain on breathing or coughing may come from the chest wall, lung or pleura and needs respiratory context.",
       "advice": {
         "zh": "暂停剧烈活动并记录呼吸变化，不要只按肌肉痛持续观察。",
-        "en": "暂停剧烈活动并记录呼吸变化，不要只按肌肉痛持续观察。"
+        "en": "暂停剧烈活动并记录呼吸变化，不要只按肌肉痛持续观察。."
       },
       "redFlags": {
         "zh": "呼吸困难、咳血、嘴唇发青、突发剧烈胸痛或晕厥时立即急诊。",
@@ -2424,6 +3000,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "深呼吸或咳嗽时胸部锐痛。",
+        "en": "Sharp chest pain with deep breathing or coughing."
+      },
+      "triggers": {
+        "zh": "呼吸道感染、咳嗽或胸壁牵拉",
+        "en": "Respiratory infection, coughing or chest-wall strain"
+      },
+      "threshold": {
+        "zh": "呼吸困难、咳血、嘴唇发青、突发剧烈胸痛或晕厥时立即急诊。",
+        "en": "呼吸困难、咳血、嘴唇发青、突发剧烈胸痛或晕厥时立即急诊。"
       }
     },
     {
@@ -2454,8 +3042,8 @@
       "summary": "眼红、异物感、流泪或灼痛可见于干眼、异物、角膜擦伤或结膜炎，需结合视力和隐形眼镜史。",
       "summaryEn": "Redness, gritty pain, watering or burning can come from dry eye, a foreign body, abrasion or conjunctivitis; check vision and contact-lens use.",
       "advice": {
-        "zh": "停止佩戴隐形眼镜，避免揉眼；若有异物感或症状持续，尽快看眼科或验光师。",
-        "en": "Stop contact lenses and avoid rubbing the eye; seek an eye examination if a gritty feeling or symptoms persist."
+        "zh": "停止佩戴隐形眼镜，避免揉眼。",
+        "en": "Stop contact lenses and avoid rubbing the eye."
       },
       "redFlags": {
         "zh": "视力下降、畏光明显、剧烈疼痛、角膜外伤或红眼伴恶心头痛时立即就医。",
@@ -2464,6 +3052,18 @@
       "medication": {
         "zh": "可向药师咨询适合的润滑、清洁或短期止痛类别；出现视力/听力变化先就医。",
         "en": "Ask a pharmacist about suitable lubricating, cleansing or short-term pain-relief categories; seek care for vision or hearing changes."
+      },
+      "shortDescription": {
+        "zh": "眼红、异物感、流泪或灼痛。",
+        "en": "Redness, grittiness, watering or burning in the eye."
+      },
+      "triggers": {
+        "zh": "干燥、异物、隐形眼镜或过敏",
+        "en": "Dryness, a foreign body, contact lenses or allergy"
+      },
+      "threshold": {
+        "zh": "视力下降、畏光明显、剧烈疼痛、角膜外伤或红眼伴恶心头痛时立即就医。",
+        "en": "Seek urgent care for reduced vision, marked light sensitivity, severe pain, eye injury, or a red eye with nausea and headache."
       }
     },
     {
@@ -2493,8 +3093,8 @@
       "summary": "耳痛伴耳道触痛、分泌物、发热或听力下降可见于外耳或中耳感染，需要耳镜检查。",
       "summaryEn": "Ear pain with canal tenderness, discharge, fever or reduced hearing can fit an outer- or middle-ear infection and needs an ear examination.",
       "advice": {
-        "zh": "保持耳道干燥，不要把棉签或药液伸入耳道；持续或加重时就医。",
-        "en": "Keep the ear dry and do not insert cotton buds or unprescribed drops; seek care if symptoms persist or worsen."
+        "zh": "保持耳道干燥，不要把棉签或药液伸入耳道。",
+        "en": "Keep the ear dry and do not insert cotton buds or unprescribed drops."
       },
       "redFlags": {
         "zh": "耳后肿痛、耳廓被推起、突发听力下降、眩晕或高热时尽快急诊评估。",
@@ -2503,6 +3103,18 @@
       "medication": {
         "zh": "可向药师咨询适合的润滑、清洁或短期止痛类别；出现视力/听力变化先就医。",
         "en": "Ask a pharmacist about suitable lubricating, cleansing or short-term pain-relief categories; seek care for vision or hearing changes."
+      },
+      "shortDescription": {
+        "zh": "耳痛伴触痛、分泌物、发热或听力下降。",
+        "en": "Ear pain with tenderness, discharge, fever or reduced hearing."
+      },
+      "triggers": {
+        "zh": "上呼吸道感染、进水或耳道刺激",
+        "en": "An upper-airway infection, water exposure or ear-canal irritation"
+      },
+      "threshold": {
+        "zh": "耳后肿痛、耳廓被推起、突发听力下降、眩晕或高热时尽快急诊评估。",
+        "en": "Seek urgent assessment for swelling behind the ear, a pushed-out ear, sudden hearing loss, vertigo or high fever."
       }
     },
     {
@@ -2535,8 +3147,8 @@
       "summary": "突然剧烈的单关节痛、红、热、肿，尤其是足趾或踝部，可见于痛风等晶体性关节炎，但首次发作要排除感染。",
       "summaryEn": "Sudden severe pain with a hot, red, swollen single joint can fit crystal arthritis such as gout, but a first attack must exclude infection.",
       "advice": {
-        "zh": "抬高并短时间冷敷，避免挤压和饮酒；首次或伴发热的急性关节肿痛应尽快就医检查。",
-        "en": "Elevate and use a short wrapped cold pack; avoid pressure and alcohol. A first hot swollen joint or fever needs prompt assessment."
+        "zh": "抬高并短时间冷敷，避免挤压和饮酒。",
+        "en": "Elevate and use a short wrapped cold pack."
       },
       "redFlags": {
         "zh": "高热、寒战、全身不适、疼痛快速加重或无法活动时立即就医，以排除化脓性关节炎。",
@@ -2545,6 +3157,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "突发单关节剧痛、红热肿胀，常见于足趾或踝。",
+        "en": "Sudden severe pain in a red, hot, swollen joint, often a toe or ankle."
+      },
+      "triggers": {
+        "zh": "高嘌呤饮食、饮酒、脱水或关节负荷",
+        "en": "Purine-rich food, alcohol, dehydration or joint stress"
+      },
+      "threshold": {
+        "zh": "高热、寒战、全身不适、疼痛快速加重或无法活动时立即就医，以排除化脓性关节炎。",
+        "en": "Urgent care is needed for fever, chills, feeling very unwell, rapidly worsening pain or inability to move, to exclude septic arthritis."
       }
     },
     {
@@ -2576,8 +3200,8 @@
       "summary": "单侧小腿或大腿疼痛伴肿胀、发热或皮肤变色，尤其在久坐、手术、妊娠或既往血栓后，需要排查深静脉血栓。",
       "summaryEn": "One-sided calf or thigh pain with swelling, warmth or colour change, especially after immobility, surgery, pregnancy or prior clots, needs DVT assessment.",
       "advice": {
-        "zh": "不要按摩或剧烈运动来“揉开”，尽快接受医疗评估；突发胸痛或气短立即急诊。",
-        "en": "Do not massage or exercise to try to clear it; seek medical assessment promptly. Sudden chest pain or breathlessness is an emergency."
+        "zh": "不要按摩或剧烈运动来“揉开”，尽快接受医疗评估。",
+        "en": "Do not massage or exercise to try to clear it."
       },
       "redFlags": {
         "zh": "呼吸困难、胸痛、咳血、晕厥或心跳明显加快时立即呼叫急救。",
@@ -2586,6 +3210,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "单侧腿部肿痛、发热或皮肤颜色变化。",
+        "en": "One-sided leg swelling, pain, warmth or skin-colour change."
+      },
+      "triggers": {
+        "zh": "久坐、近期手术、妊娠或既往血栓风险",
+        "en": "Prolonged immobility, recent surgery, pregnancy or prior clot risk"
+      },
+      "threshold": {
+        "zh": "呼吸困难、胸痛、咳血、晕厥或心跳明显加快时立即呼叫急救。",
+        "en": "Call emergency services for breathlessness, chest pain, coughing blood, fainting or a markedly fast heartbeat."
       }
     },
     {
@@ -2617,8 +3253,8 @@
       "summary": "左下腹反复痉挛、进食后加重且排便或排气后缓解，伴排便习惯改变时，需要考虑结肠憩室病；持续剧痛或发热需排除憩室炎。",
       "summaryEn": "Recurrent left-lower abdominal cramps that worsen after food and ease after stool or gas, with bowel changes, can fit diverticular disease; constant pain or fever needs assessment for diverticulitis.",
       "advice": {
-        "zh": "记录排便和进食关系，补充水分；症状反复请就医。",
-        "en": "Record the relation to meals and bowel movements and keep hydrated; seek care if symptoms recur."
+        "zh": "记录排便和进食关系，补充水分。",
+        "en": "Record the relation to meals and bowel movements and keep hydrated."
       },
       "redFlags": {
         "zh": "持续加重的腹痛、发热寒战、反复呕吐、腹胀不能排便排气或血便时立即就医。",
@@ -2627,6 +3263,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "左下腹痛伴排便改变，可伴发热。",
+        "en": "Left-lower abdominal pain with bowel changes, sometimes with fever."
+      },
+      "triggers": {
+        "zh": "低纤维饮食、便秘或结肠局部炎症",
+        "en": "Low fibre intake, constipation or local colonic inflammation"
+      },
+      "threshold": {
+        "zh": "持续加重的腹痛、发热寒战、反复呕吐、腹胀不能排便排气或血便时立即就医。",
+        "en": "Seek urgent care for worsening constant pain, fever or chills, repeated vomiting, a swollen bowel with no stool or gas, or blood in stool."
       }
     },
     {
@@ -2668,6 +3316,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "右上腹或上腹持续痛，可伴恶心、呕吐。",
+        "en": "Sustained right-upper or central-upper abdominal pain with nausea or vomiting."
+      },
+      "triggers": {
+        "zh": "高脂餐后胆囊收缩或胆道阻塞",
+        "en": "Gallbladder contraction after a fatty meal or biliary blockage"
+      },
+      "threshold": {
+        "zh": "高热寒战、黄疸、持续呕吐或腹痛向背部放射时立即急诊。",
+        "en": "Go urgently for fever or chills, jaundice, persistent vomiting, or pain spreading to the back."
       }
     },
     {
@@ -2702,8 +3362,8 @@
       "summary": "尿痛、尿频伴下腹或侧腰痛需要考虑尿路感染；发热寒战、肋下背痛或呕吐时需排除肾盂肾炎。",
       "summaryEn": "Burning or frequent urination with lower abdominal or flank pain can fit a UTI; fever, chills, back-under-rib pain or vomiting needs kidney-infection assessment.",
       "advice": {
-        "zh": "尽快做尿液评估，补充平时适量水分；孕期、男性、儿童或症状快速加重应更早就医。",
-        "en": "Arrange urine assessment and keep ordinary hydration; seek earlier care if pregnant, male, a child, or symptoms worsen quickly."
+        "zh": "尽快做尿液评估，补充平时适量水分。",
+        "en": "Arrange urine assessment and keep ordinary hydration."
       },
       "redFlags": {
         "zh": "高热寒战、意识改变、持续呕吐、明显血尿、无法排尿或腰侧剧痛时立即就医。",
@@ -2712,6 +3372,18 @@
       "medication": {
         "zh": "可向药师咨询短期止痛类别并按标签使用；血尿、发热或腰痛加重时及时就医。",
         "en": "Ask a pharmacist about a short-term pain-relief category and follow the label; seek care for blood in urine, fever or worsening flank pain."
+      },
+      "shortDescription": {
+        "zh": "尿频、尿痛伴下腹痛；腰侧痛或寒战可提示上尿路受累。",
+        "en": "Urinary frequency or burning with lower abdominal pain; flank pain or chills can indicate upper-tract involvement."
+      },
+      "triggers": {
+        "zh": "细菌上行感染、饮水不足或排尿受阻",
+        "en": "Ascending bacterial infection, low fluid intake or impaired drainage"
+      },
+      "threshold": {
+        "zh": "高热寒战、意识改变、持续呕吐、明显血尿、无法排尿或腰侧剧痛时立即就医。",
+        "en": "Seek urgent care for high fever or chills, confusion, persistent vomiting, marked blood in urine, inability to urinate or severe flank pain."
       }
     },
     {
@@ -2745,8 +3417,8 @@
       "summary": "上腹或胸骨后灼烧、反酸、餐后饱胀或嗳气可见于反流或消化不良，但胸部压榨感不能自行归因于胃。",
       "summaryEn": "Upper-abdominal or retrosternal burning with reflux, post-meal fullness or belching can fit reflux or dyspepsia, but pressure-like chest pain is not automatically gastric.",
       "advice": {
-        "zh": "记录排便和进食关系，补充水分；症状反复请就医。",
-        "en": "Record the relation to meals and bowel movements and keep hydrated; seek care if symptoms recur."
+        "zh": "少量分餐，避开诱发食物，饭后保持直立。",
+        "en": "Eat smaller meals, avoid trigger foods and stay upright after eating."
       },
       "redFlags": {
         "zh": "胸部压迫伴气短、冷汗、晕厥，或呕血、黑便、进行性吞咽困难时立即急诊。",
@@ -2755,6 +3427,18 @@
       "medication": {
         "zh": "可向药师咨询短期抗酸类别并按标签使用；反复或吞咽困难时就医。",
         "en": "Ask a pharmacist about a short course of an antacid category and follow the label; seek care for recurrent symptoms or swallowing difficulty."
+      },
+      "shortDescription": {
+        "zh": "胸骨后或上腹灼烧、反酸、餐后饱胀。",
+        "en": "Burning behind the breastbone or in the upper abdomen, reflux or post-meal fullness."
+      },
+      "triggers": {
+        "zh": "餐后平卧、油腻辛辣食物、咖啡因或饮酒",
+        "en": "Lying down after meals, fatty or spicy food, caffeine or alcohol"
+      },
+      "threshold": {
+        "zh": "胸部压迫伴气短、冷汗、晕厥，或呕血、黑便、进行性吞咽困难时立即急诊。",
+        "en": "Urgent care is needed for pressure-like chest pain with breathlessness, sweating or fainting, or for vomiting blood, black stool or progressive swallowing difficulty."
       }
     },
     {
@@ -2786,8 +3470,8 @@
       "summary": "剧烈牙痛伴牙龈或面部肿胀、口腔异味、流脓或发热，需优先排查牙源性脓肿；模型不能判断感染范围。",
       "summaryEn": "Severe tooth pain with gum or facial swelling, a bad taste, drainage or fever needs prompt dental assessment for a possible abscess; the model cannot assess its spread.",
       "advice": {
-        "zh": "尽快预约急诊牙科；保持口腔清洁，选择柔软食物，避免冷热刺激。不要挤压肿包。",
-        "en": "Arrange urgent dental care; keep the mouth clean, choose soft foods and avoid temperature triggers. Do not squeeze a swelling."
+        "zh": "尽快预约急诊牙科。",
+        "en": "Arrange urgent dental care."
       },
       "redFlags": {
         "zh": "呼吸、吞咽或说话困难，眼周肿痛/视力变化，口底明显肿胀或无法张口时立即急诊。",
@@ -2796,6 +3480,18 @@
       "medication": {
         "zh": "短期不适可向药师咨询适合的非处方止痛或口腔护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about an appropriate OTC pain-relief or oral-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "牙痛伴牙龈或面部肿胀、流脓或发热。",
+        "en": "Toothache with gum or facial swelling, pus or fever."
+      },
+      "triggers": {
+        "zh": "龋病进展、牙裂或牙周感染",
+        "en": "Advanced decay, a tooth crack or periodontal infection"
+      },
+      "threshold": {
+        "zh": "呼吸、吞咽或说话困难，眼周肿痛/视力变化，口底明显肿胀或无法张口时立即急诊。",
+        "en": "Emergency care is needed for difficulty breathing, swallowing or speaking, eye swelling or vision change, marked floor-of-mouth swelling or inability to open the mouth."
       }
     },
     {
@@ -2824,8 +3520,8 @@
       "summary": "咽痛、吞咽痛伴发热、咳嗽或鼻部症状常见于呼吸道感染；是否需要检测或抗菌治疗不能由模型判断。",
       "summaryEn": "Sore or painful swallowing with fever, cough or nasal symptoms can occur with respiratory infection; a model cannot decide whether testing or antimicrobials are needed.",
       "advice": {
-        "zh": "补充水分，选择温软食物，避免烟雾刺激；症状持续、反复或影响饮水时就医。",
-        "en": "Keep hydrated, choose soft warm foods and avoid smoke; seek care if symptoms persist, recur or limit drinking."
+        "zh": "补充水分，选择温软食物，避免烟雾刺激。",
+        "en": "Keep hydrated, choose soft warm foods and avoid smoke."
       },
       "redFlags": {
         "zh": "呼吸困难、无法吞咽液体、流口水、声音含糊、单侧明显肿胀或高热寒战时立即就医。",
@@ -2834,6 +3530,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "咽痛、吞咽痛，可伴发热或咳嗽。",
+        "en": "Sore throat or painful swallowing, sometimes with fever or cough."
+      },
+      "triggers": {
+        "zh": "病毒感染、密切接触或烟雾刺激",
+        "en": "Viral infection, close contact or smoke irritation"
+      },
+      "threshold": {
+        "zh": "呼吸困难、无法吞咽液体、流口水、声音含糊、单侧明显肿胀或高热寒战时立即就医。",
+        "en": "Seek urgent care for breathing difficulty, inability to swallow fluids, drooling, a muffled voice, marked one-sided swelling or high fever with chills."
       }
     },
     {
@@ -2866,8 +3574,8 @@
       "summary": "盆底肌肉或会阴点位不能代表单一器官；排尿、排便、月经/妊娠可能、异常出血和发热决定下一步鉴别方向。",
       "summaryEn": "A pelvic-floor or perineal point does not identify one organ; urinary, bowel, menstrual or pregnancy symptoms, bleeding and fever determine the next differential.",
       "advice": {
-        "zh": "记录疼痛位置、周期、排尿排便和出血情况；持续或反复疼痛应就医评估，不要只按肌肉拉伤处理。",
-        "en": "Record the exact location, timing, urinary and bowel changes and any bleeding; persistent or recurrent pain needs assessment rather than being treated as muscle strain alone."
+        "zh": "记录疼痛位置、周期、排尿排便和出血情况。",
+        "en": "Record the exact location, timing, urinary and bowel changes and any bleeding."
       },
       "redFlags": {
         "zh": "可能怀孕伴单侧剧痛/出血/晕厥，或高热、持续呕吐、无法排尿、剧烈加重时立即急诊。",
@@ -2876,6 +3584,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "盆腔或会阴痛，可能伴排尿、排便、周期或出血变化。",
+        "en": "Pelvic or perineal pain with possible urinary, bowel, menstrual or bleeding changes."
+      },
+      "triggers": {
+        "zh": "泌尿、肠道、生殖系统症状或盆底肌负荷",
+        "en": "Urinary, bowel or reproductive symptoms, or pelvic-floor load"
+      },
+      "threshold": {
+        "zh": "可能怀孕伴单侧剧痛/出血/晕厥，或高热、持续呕吐、无法排尿、剧烈加重时立即急诊。",
+        "en": "Emergency assessment is needed for possible pregnancy with one-sided severe pain, bleeding or fainting, or for fever, persistent vomiting, inability to urinate or rapidly worsening pain."
       }
     },
     {
@@ -2908,8 +3628,8 @@
       "summary": "明确外伤后骨点压痛、肿胀、淤青、畸形或无法承重，需要排查骨挫伤、应力性损伤或骨折；3D位置不能替代X线等检查。",
       "summaryEn": "Focal bony tenderness, swelling, bruising, deformity or inability to bear weight after injury needs assessment for contusion, stress injury or fracture; 3D position cannot replace imaging.",
       "advice": {
-        "zh": "停止负重和剧烈活动，保护患处并尽快安排医学评估；不要自行复位或反复按压。",
-        "en": "Stop weight-bearing and strenuous activity, protect the area and arrange medical assessment; do not manipulate or repeatedly press a suspected fracture."
+        "zh": "停止负重和剧烈活动，保护患处并尽快安排医学评估。",
+        "en": "Stop weight-bearing and strenuous activity, protect the area and arrange medical assessment."
       },
       "redFlags": {
         "zh": "开放伤口、明显畸形、肢体发冷发白/麻木、疼痛快速加重或无法承重时立即就医。",
@@ -2918,6 +3638,18 @@
       "medication": {
         "zh": "如需短期缓解，可向药师咨询适合的非处方止痛或局部护理类别，并按包装标签使用。",
         "en": "For short-term relief, ask a pharmacist about a suitable OTC pain-relief or local-care category and follow the label."
+      },
+      "shortDescription": {
+        "zh": "骨点压痛、肿胀或淤青，可伴畸形、无法承重。",
+        "en": "Focal bony tenderness, swelling or bruising; deformity or inability to bear weight may occur."
+      },
+      "triggers": {
+        "zh": "跌倒、碰撞、重复冲击或突然增加的负重",
+        "en": "A fall, impact, repeated impact or sudden weight-bearing increase"
+      },
+      "threshold": {
+        "zh": "开放伤口、明显畸形、肢体发冷发白/麻木、疼痛快速加重或无法承重时立即就医。",
+        "en": "Seek urgent care for an open wound, deformity, a cold pale or numb limb, rapidly worsening pain or inability to bear weight."
       }
     },
     {
@@ -2949,8 +3681,8 @@
       "summary": "交感或迷走神经节点跨越多个器官；心悸、体位性眩晕、出汗异常、胃肠或膀胱变化需要按实际器官症状评估，不能由模型定位病因。",
       "summaryEn": "Sympathetic and vagal pathways span several organs; palpitations, postural dizziness, sweating, bowel or bladder changes need organ-specific assessment rather than an anatomical label alone.",
       "advice": {
-        "zh": "记录症状发生时的体位、心率感受、进食、排尿排便和用药变化；反复或影响日常时就医。",
-        "en": "Record posture, perceived heart rate, meals, bowel or bladder changes and medicines when symptoms occur; seek care if recurrent or disruptive."
+        "zh": "记录症状发生时的体位、心率感受、进食、排尿排便和用药变化。",
+        "en": "Record posture, perceived heart rate, meals, bowel or bladder changes and medicines when symptoms occur."
       },
       "redFlags": {
         "zh": "晕厥、胸痛、严重气短、意识改变、持续呕吐或无法排尿时立即就医。",
@@ -2959,6 +3691,18 @@
       "medication": {
         "zh": "自主神经症状的用药需先确认原因；可向药师咨询是否有合适的非处方对症类别。",
         "en": "Medication depends on the cause; ask a pharmacist whether a suitable OTC symptom-relief category is appropriate."
+      },
+      "shortDescription": {
+        "zh": "心悸、体位性眩晕、出汗或胃肠和膀胱功能变化。",
+        "en": "Palpitations, postural dizziness, sweating or bowel and bladder changes."
+      },
+      "triggers": {
+        "zh": "体位变化、脱水、感染、压力或基础疾病",
+        "en": "Posture change, dehydration, infection, stress or an underlying condition"
+      },
+      "threshold": {
+        "zh": "晕厥、胸痛、严重气短、意识改变、持续呕吐或无法排尿时立即就医。",
+        "en": "Seek emergency care for fainting, chest pain, severe breathlessness, confusion, persistent vomiting or inability to urinate."
       }
     }
   ]

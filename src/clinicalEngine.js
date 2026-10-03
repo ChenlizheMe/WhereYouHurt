@@ -74,10 +74,10 @@ export function assessSymptoms(knowledge,{parts=[],layer='skeleton',feelings=[],
  // Triage is independent of ranking and cannot disappear below the top cards.
  if(has('面部歪斜','说话含糊','突然单侧无力'))warn('新出现面部歪斜、说话含糊或单侧无力：立即联系急救，记录起病时间。','New facial droop, slurred speech or one-sided weakness: call emergency services and note onset time.');
  if(chest&&(has('气短','冷汗','晕厥')||has('压迫感')&&severity>=7))warn('胸痛伴气短、冷汗、晕厥或明显压迫：立即急诊，不要用胃药试验排除心脏原因。','Chest pain with breathlessness, cold sweat, fainting or marked pressure needs emergency assessment; an antacid response cannot exclude a cardiac cause.');
- if(abdominal&&(severity>=8||has('突发剧痛','黑便','血便','呕血','腹部僵硬','晕厥')))warn('严重或突发腹痛、出血、腹部僵硬或晕厥：立即急诊；模型位置不能排除急腹症。','Severe or sudden abdominal pain, bleeding, rigidity or fainting needs emergency assessment regardless of the selected structure.');
+ if(abdominal&&(severity>=8||has('突发剧痛','黑便','血便','呕血','腹部僵硬','晕厥')))warn('严重或突发腹痛、出血、腹部僵硬或晕厥：立即急诊。','Severe or sudden abdominal pain, bleeding, rigidity or fainting: seek emergency assessment.');
  if(abdominal&&has('腹痛迁移至右下腹')||abdominal&&location==='rlq'&&has('持续加重','发热'))warn('右下腹迁移痛或持续加重的右下腹痛伴发热：尽快急诊排查阑尾炎等原因。','Migrating or worsening right-lower abdominal pain, especially with fever, needs urgent assessment for appendicitis and other causes.');
  if(has('会阴麻木','排尿困难')&&profiles.some(p=>['spine','hip','lower-limb'].includes(p.region)))warn('腰腿症状伴会阴麻木或新发排尿困难：立即急诊评估。','Back/leg symptoms with saddle numbness or new difficulty passing urine need emergency assessment.');
- if(profiles.some(p=>p.region==='eye')&&has('视物模糊','畏光'))warn('眼痛伴视力变化或畏光：尽快眼科急诊，避免自行使用激素或麻醉滴眼液。','Eye pain with vision change or light sensitivity needs urgent eye assessment; do not self-use steroid or anaesthetic eye drops.');
+ if(profiles.some(p=>p.region==='eye')&&has('视物模糊','畏光'))warn('眼痛伴视力变化或畏光：尽快眼科急诊。','Eye pain with vision change or light sensitivity: seek urgent eye assessment.');
  if(has('单侧肿胀')&&profiles.some(p=>p.region==='lower-limb'))warn('单侧腿部新发肿痛需要当日排查血栓；同时气短或胸痛应立即急救。','New one-sided leg swelling needs same-day assessment for a clot; associated breathlessness or chest pain is an emergency.');
  if(abdominal&&has('可能怀孕'))warn('可能怀孕且腹痛：尽快就医确认；单侧剧痛、出血、肩尖痛或晕厥立即急诊。','Possible pregnancy with abdominal pain needs prompt assessment; severe one-sided pain, bleeding, shoulder-tip pain or fainting is an emergency.');
  const items=knowledge.conditions.flatMap(condition=>{
@@ -94,8 +94,8 @@ export function assessSymptoms(knowledge,{parts=[],layer='skeleton',feelings=[],
    const important=(IMPORTANT[condition.id]||[]).filter(s=>symptoms.has(s));
    const matched=[...symptoms].filter(s=>condition.feelings.includes(s)||condition.signs.includes(s)||important.includes(s));
    const evidence=[...new Set([...matching.map(p=>p.raw),...matched].filter(Boolean))];
-   // A body-part label alone is too weak to justify a disease card. Keep the
-   // regional profile visible, but require one additional reported feature.
+   // A body-part label alone is too weak to justify a disease card. Require
+   // one additional reported feature.
    if(evidence.length<2||!matched.length)return [];
    if(regions.includes('skin')&&!SKIN_SIGNS.some(t=>symptoms.has(t)))return [];
    let score=4+matched.length*2+important.length*4;

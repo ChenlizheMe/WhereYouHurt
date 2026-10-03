@@ -3,9 +3,37 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {assessSymptoms} from '../src/clinicalEngine.js';
 import {visibleSymptoms} from '../src/symptomFilters.js';
+import {ANATOMY_MODELS,isVisibleAnatomyMesh} from '../src/anatomyModels.js';
+import {clinicalProfile} from '../src/clinicalRegions.js';
 
 const knowledge=JSON.parse(fs.readFileSync(new URL('../data/knowledge.json',import.meta.url),'utf8'));
 const selectableTags=new Set([...knowledge.feelings,...knowledge.signs].map(tag=>tag.id));
+
+test('all assessment cards have concise bilingual descriptions, triggers and thresholds',()=>{
+ for(const condition of knowledge.conditions){
+  for(const field of ['shortDescription','triggers','advice','threshold']){
+   for(const lang of ['zh','en'])assert.ok(condition[field]?.[lang]?.trim(),`${condition.id} missing ${field}.${lang}`);
+  }
+  assert.ok(condition.shortDescription.zh.length<=70,`${condition.id} description is too long`);
+  assert.ok(condition.advice.zh.length<=85,`${condition.id} advice is too long`);
+ }
+});
+
+test('the visible muscle resource routes every selectable muscle to a clinical region',()=>{
+ assert.deepEqual(Object.keys(ANATOMY_MODELS),['skeleton','muscle']);
+ assert.equal(ANATOMY_MODELS.muscle.file,'nervous_male.glb');
+ const bytes=fs.readFileSync(new URL(`../public/anatomy/${ANATOMY_MODELS.muscle.file}`,import.meta.url));
+ const atlas=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));
+ const muscles=atlas.nodes.filter(node=>node.mesh!==undefined&&isVisibleAnatomyMesh(node.name,'muscle'));
+ assert.ok(muscles.length>200);
+ for(const name of ['Cauda equina','Corpus callosum','Median nerve.l','Brachial plexus','Cornea.l'])assert.equal(isVisibleAnatomyMesh(name,'muscle'),false,`${name} must be excluded from the muscle view`);
+ for(const name of ['Rectus abdominis muscle.l','Palpebral part of orbicularis oculil','Masseter muscle.r'])assert.equal(isVisibleAnatomyMesh(name,'muscle'),true,`${name} must remain visible`);
+ for(const muscle of muscles){
+  assert.notEqual(clinicalProfile(muscle.name,'muscle').region,'general',muscle.name);
+  const result=assessSymptoms(knowledge,{parts:[muscle.name],layer:'muscle',feelings:knowledge.feelings.map(tag=>tag.id),signs:knowledge.signs.map(tag=>tag.id)});
+  assert.ok(result.items.length,`${muscle.name} has no assessment`);
+ }
+});
 
 test('feelings and signs stay in separate selector groups',()=>{
  const feelings=new Set(knowledge.feelings.map(tag=>tag.id));
