@@ -14,6 +14,14 @@ test('feelings and signs stay in separate selector groups',()=>{
  assert.ok(!feelings.has('剧烈'));
 });
 
+test('medication cards contain OTC categories only',()=>{
+ const restricted=/(?<!非)处方|prescription|抗生素|antibiotic|激素|steroid|镇静|sedative|阿片|opioid|抗凝|anticoagulant|抗病毒|antiviral|抗癫痫|antiepileptic/i;
+ for(const condition of knowledge.conditions){
+  assert.ok(condition.medication?.zh&&!restricted.test(condition.medication.zh),`${condition.id} exposes restricted medication text`);
+  assert.ok(condition.medication?.en&&!restricted.test(condition.medication.en),`${condition.id} exposes restricted medication text`);
+ }
+});
+
 test('every differential uses a selectable symptom tag',()=>{
  for(const condition of knowledge.conditions){
   for(const tag of [...condition.feelings,...condition.signs]){
