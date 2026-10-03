@@ -762,8 +762,8 @@
     {
       "id": "itch-skin-pattern",
       "name": {
-        "zh": "瘙痒或皮肤表现（参考模式）",
-        "en": "Itch / skin pattern (reference only)"
+        "zh": "接触性皮炎或荨麻疹样反应（需鉴别）",
+        "en": "Possible contact dermatitis or urticaria"
       },
       "parts": [
         "general",
@@ -796,13 +796,19 @@
       "medication": {
         "zh": "可向药师咨询短期外用止痒或止痛类别；破损、感染或快速扩散的皮肤不要自行涂药。",
         "en": "Ask a pharmacist about a short-term topical itch or pain category; do not self-treat broken, infected or rapidly spreading skin."
+      },
+      "summary": "接触新护肤品、清洁剂或金属后出现持续瘙痒、红斑、脱皮或水疱，更符合接触性皮炎；短时间出现、迁移并消退的风团更像荨麻疹，仍需结合病史判断。",
+      "summaryEn": "Persistent itch, redness, scaling or blisters after a new product, detergent or metal can fit contact dermatitis; rapidly appearing, moving and fading welts fit urticaria more closely. History is still needed.",
+      "redFlags": {
+        "zh": "面唇舌肿胀、喘鸣或吞咽困难提示严重过敏；皮疹迅速扩散、流脓、明显疼痛或伴发热时尽快就医。",
+        "en": "Swelling of the lips, tongue or face, wheeze or trouble swallowing can signal a severe allergy. Seek prompt care if the rash spreads quickly, drains, becomes very painful or comes with fever."
       }
     },
     {
       "id": "minor-injury-bruise",
       "name": {
-        "zh": "轻微碰撞或淤青（参考模式）",
-        "en": "Minor bump / bruise pattern (reference only)"
+        "zh": "软组织挫伤（可能）",
+        "en": "Possible soft-tissue contusion"
       },
       "parts": [
         "general",
@@ -833,13 +839,19 @@
       "medication": {
         "zh": "可向药师咨询适合的非处方止痛类别，按包装标签短期使用；有胃肠道、肝肾、过敏、妊娠哺乳或正在用药情况先询问。",
         "en": "Ask a pharmacist about an appropriate OTC pain-relief category and follow the label short term; ask first if you have stomach, liver or kidney problems, allergies, pregnancy, breastfeeding or other medicines."
+      },
+      "summary": "明确碰撞或挤压后出现局部淤青、压痛和轻度肿胀，符合软组织挫伤的常见表现；没有外伤经过时应重新考虑其他原因。",
+      "summaryEn": "Local bruising, tenderness and mild swelling after a clear bump or compression can fit a soft-tissue contusion; without an injury history, other causes should be considered.",
+      "redFlags": {
+        "zh": "肿胀快速增大、无法活动或承重、肢体麻冷、疼痛持续加重，或无明显外伤却反复淤青时尽快就医。",
+        "en": "Seek prompt care for rapidly increasing swelling, inability to move or bear weight, a cold or numb limb, worsening pain, or recurrent bruising without a clear injury."
       }
     },
     {
       "id": "muscle-cramp-pattern",
       "name": {
-        "zh": "肌肉抽筋样表现（参考模式）",
-        "en": "Muscle cramp pattern (reference only)"
+        "zh": "肌肉痉挛（可能）",
+        "en": "Possible muscle cramp"
       },
       "parts": [
         "arm",
@@ -866,13 +878,19 @@
       "medication": {
         "zh": "可向药师咨询适合的非处方止痛类别，按包装标签短期使用；有胃肠道、肝肾、过敏、妊娠哺乳或正在用药情况先询问。",
         "en": "Ask a pharmacist about an appropriate OTC pain-relief category and follow the label short term; ask first if you have stomach, liver or kidney problems, allergies, pregnancy, breastfeeding or other medicines."
+      },
+      "summary": "肌肉突然紧缩、变硬并出现短暂剧痛，活动、出汗、脱水或长时间保持姿势后更常见；反复发作需要寻找诱因。",
+      "summaryEn": "Sudden tightening, hardening and brief severe pain in a muscle can fit a cramp, often after activity, sweating, dehydration or prolonged posture; recurrent episodes need a cause review.",
+      "redFlags": {
+        "zh": "痉挛持续不缓解、反复频繁、伴明显无力、肿胀、发热或尿色明显变深时尽快就医。",
+        "en": "Seek care if a cramp does not release, keeps recurring, or comes with marked weakness, swelling, fever or very dark urine."
       }
     },
     {
       "id": "joint-swelling-pattern",
       "name": {
-        "zh": "关节肿胀样表现（参考模式）",
-        "en": "Joint swelling pattern (reference only)"
+        "zh": "急性关节炎或滑囊炎（需鉴别）",
+        "en": "Possible acute arthritis or bursitis"
       },
       "parts": [
         "arm",
@@ -901,13 +919,19 @@
       "medication": {
         "zh": "可向药师咨询适合的非处方止痛类别，按包装标签短期使用；有胃肠道、肝肾、过敏、妊娠哺乳或正在用药情况先询问。",
         "en": "Ask a pharmacist about an appropriate OTC pain-relief category and follow the label short term; ask first if you have stomach, liver or kidney problems, allergies, pregnancy, breastfeeding or other medicines."
+      },
+      "summary": "关节或关节旁组织出现红、热、肿、痛和活动受限时，可能来自外伤、晶体性关节炎、感染或滑囊炎，单靠模型不能区分。",
+      "summaryEn": "A red, hot, swollen and painful joint or nearby bursa can result from injury, crystal arthritis, infection or bursitis; the model cannot distinguish them.",
+      "redFlags": {
+        "zh": "首次出现的红热肿胀关节、伴高热寒战、无法承重、明显变形或疼痛快速加重时应尽快排除感染。",
+        "en": "A first hot swollen joint, fever or chills, inability to bear weight, deformity or rapidly worsening pain needs prompt assessment to exclude infection."
       }
     },
     {
       "id": "nerve-sensation-pattern",
       "name": {
-        "zh": "麻刺或电击样感觉（参考模式）",
-        "en": "Tingling / electric sensation pattern (reference only)"
+        "zh": "周围神经受压或神经病理性疼痛（需鉴别）",
+        "en": "Possible peripheral nerve compression or neuropathic pain"
       },
       "parts": [
         "spine",
@@ -938,13 +962,19 @@
       "medication": {
         "zh": "神经性疼痛不一定对普通止痛药有反应；先咨询医生或药师，不要自行使用处方镇痛药、激素或镇静药。",
         "en": "Neuropathic pain may not respond to ordinary analgesics; ask a clinician or pharmacist and do not self-start prescription painkillers, steroids or sedatives."
+      },
+      "summary": "沿固定神经分布出现麻刺、灼烧、电击样痛或感觉减退，可能涉及神经受压、神经根刺激或周围神经病变；需要记录范围和力量变化。",
+      "summaryEn": "Pins-and-needles, burning, electric pain or reduced sensation along a nerve distribution can involve compression, a nerve root or peripheral neuropathy; track the area and strength changes.",
+      "redFlags": {
+        "zh": "突然单侧无力、面部歪斜、说话含糊、步行困难，或进行性肌力下降、大小便异常时立即就医。",
+        "en": "Get urgent help for sudden one-sided weakness, facial droop, slurred speech or trouble walking, or for progressive weakness or bowel/bladder changes."
       }
     },
     {
       "id": "head-pressure-pattern",
       "name": {
-        "zh": "头部压迫或紧箍样感觉（参考模式）",
-        "en": "Head pressure / band-like pattern (reference only)"
+        "zh": "紧张型头痛（可能）",
+        "en": "Possible tension-type headache"
       },
       "parts": [
         "head"
@@ -970,13 +1000,19 @@
       "medication": {
         "zh": "可向药师咨询适合的非处方止痛类别，按包装标签短期使用；有胃肠道、肝肾、过敏、妊娠哺乳或正在用药情况先询问。",
         "en": "Ask a pharmacist about an appropriate OTC pain-relief category and follow the label short term; ask first if you have stomach, liver or kidney problems, allergies, pregnancy, breastfeeding or other medicines."
+      },
+      "summary": "双侧或环形压迫、紧箍样疼痛，伴颈肩紧张且通常没有明显恶心呕吐，更符合紧张型头痛；首次或模式改变仍需评估。",
+      "summaryEn": "Bilateral or band-like pressure with neck or shoulder tension and little nausea can fit a tension-type headache; a first or changed pattern still needs assessment.",
+      "redFlags": {
+        "zh": "突然达到最严重、伴高热颈硬、意识改变、单侧无力、视力异常或反复呕吐时立即急诊。",
+        "en": "Seek emergency care for sudden worst-ever pain, fever with stiff neck, confusion, one-sided weakness, vision change or repeated vomiting."
       }
     },
     {
       "id": "visible-skin-change-pattern",
       "name": {
-        "zh": "可见皮肤变化（参考模式）",
-        "en": "Visible skin-change pattern (reference only)"
+        "zh": "湿疹或接触性皮炎（需鉴别）",
+        "en": "Possible eczema or contact dermatitis"
       },
       "parts": [
         "general",
@@ -1009,6 +1045,12 @@
       "medication": {
         "zh": "可向药师咨询短期外用止痒或止痛类别；破损、感染或快速扩散的皮肤不要自行涂药。",
         "en": "Ask a pharmacist about a short-term topical itch or pain category; do not self-treat broken, infected or rapidly spreading skin."
+      },
+      "summary": "干燥、脱皮、红斑、瘙痒或反复在接触部位出现的皮损，常见于湿疹或接触性皮炎；需要追问新产品、药物和环境暴露。",
+      "summaryEn": "Dryness, scaling, redness, itch or recurrent changes at contact sites can fit eczema or contact dermatitis; ask about new products, medicines and exposures.",
+      "redFlags": {
+        "zh": "大片水疱、皮肤破溃、流脓、明显疼痛、迅速扩散或伴发热时尽快就医。",
+        "en": "Seek prompt care for extensive blisters, open skin, drainage, marked pain, rapid spread or fever."
       }
     },
     {
@@ -1543,8 +1585,8 @@
     {
       "id": "headache-pattern",
       "name": {
-        "zh": "头部压迫或搏动样疼痛（参考模式）",
-        "en": "Head pressure or throbbing pattern (reference only)"
+        "zh": "未分型头痛（需评估）",
+        "en": "Unclassified headache requiring assessment"
       },
       "parts": [
         "head-neuro"
@@ -1565,15 +1607,15 @@
         "头部软组织",
         "脑神经"
       ],
-      "summary": "头痛的部位和感觉只能帮助记录模式，不能单独区分偏头痛、紧张性头痛或其他原因。",
-      "summaryEn": "Location and quality help record a headache pattern but cannot distinguish migraine, tension headache or other causes on their own.",
+      "summary": "头痛部位、持续时间和伴随症状只能帮助分型，不能仅凭模型判断偏头痛、紧张型头痛或继发性原因。",
+      "summaryEn": "Location, duration and associated symptoms help classify a headache but cannot by themselves distinguish migraine, tension-type or secondary causes.",
       "advice": {
         "zh": "在安静环境休息，记录起始时间、诱因和伴随症状；反复或影响生活时咨询医生。",
         "en": "Rest in a quiet setting and record onset, triggers and associated symptoms; consult a clinician if headaches recur or disrupt life."
       },
       "redFlags": {
-        "zh": "突然达到最严重、伴意识改变、颈项僵硬、单侧无力、视力改变或高热时立即急诊。",
-        "en": "Seek emergency care for sudden worst-ever pain, confusion, stiff neck, one-sided weakness, vision change or high fever."
+        "zh": "突发最严重头痛、发热颈硬、意识改变、单侧无力、视力改变或头部外伤后加重时立即急诊。",
+        "en": "Seek emergency care for sudden worst-ever pain, fever with stiff neck, confusion, one-sided weakness, vision change or worsening after head injury."
       },
       "medication": {
         "zh": "可向药师咨询适合的非处方止痛类别，按包装标签短期使用；有胃肠道、肝肾、过敏、妊娠哺乳或正在用药情况先询问。",
