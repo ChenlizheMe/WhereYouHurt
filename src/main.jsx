@@ -44,10 +44,13 @@ const CURATED_PARTS={skeleton:{'atlas c1':{zh:'寰椎',en:'Atlas (C1)'},'axis c2
 const UNMAPPED_VISIBLE_PARTS={skeleton:new Set(),muscle:new Set(),nerve:new Set()};
 if(import.meta.env.DEV&&typeof window!=='undefined')window.__anatomyUnmapped=UNMAPPED_VISIBLE_PARTS;
 function cleanPartName(raw){return String(raw||'').replace(/[._-](?:left|right|l|r|ol|or|el|er|o1l|o1r|e1l|e1r)$/i,'').replace(/\b(?:left|right|ol|or|el|er|l|r)\b/gi,'').replace(/[()]/g,'').replace(/[-/]+/g,' ').replace(/[_]+/g,' ').replace(/\s+/g,' ').trim()}
+const RIB_ORDINALS={first:'第一',second:'第二',third:'第三',fourth:'第四',fifth:'第五',sixth:'第六',seventh:'第七',eighth:'第八',ninth:'第九',tenth:'第十',eleventh:'第十一',twelfth:'第十二'};
 function partLabel(raw,layer){
   const cleaned=cleanPartName(raw);
   const fallback=layer==='skeleton'?{zh:'人体骨骼',en:'Human skeleton'}:layer==='muscle'?{zh:'人体肌肉',en:'Human musculature'}:{zh:'人体神经',en:'Human nervous system'};
   if(!cleaned||/^general$/i.test(cleaned)||/^mesh/i.test(cleaned)){UNMAPPED_VISIBLE_PARTS[layer]?.add(cleaned||'empty');return fallback;}
+  const ribOrdinal=layer==='skeleton'&&RIB_ORDINALS[cleaned.toLowerCase()];
+  if(ribOrdinal)return {zh:`${ribOrdinal}肋骨`,en:`${cleaned} rib`};
   const curated=CURATED_PARTS[layer]?.[cleaned.toLowerCase()];
   if(curated)return curated;
   let zh=cleaned.toLowerCase();
@@ -58,6 +61,7 @@ function partLabel(raw,layer){
   zh=mapped.join('').replace(/\s+/g,'').trim();
   return {zh:zh.trim(),en:cleaned};
 }
+function semanticPartName(object){let current=object;while(current){const name=String(current.name||'').trim();if(name&&!/^mesh(?:[_-]|$)/i.test(name)&&!/^scene$/i.test(name))return name;current=current.parent}return ''}
 function bilingualPartText(raw,layer,lang='zh'){const label=partLabel(raw,layer);return lang==='zh'?label.zh:label.en}
 // The head/face batch uses explicit clinical topics so a model node such as
 // “upper molar” can select the dental and nasal knowledge cards without exposing
@@ -110,7 +114,7 @@ function Model({layer,onPart,selected}){
     // they are the source of the intermittent black contour flash in some WebGL drivers.
     if(o.isLine||o.isLineSegments||o.isPoints){o.visible=false;return}
     if(!o.isMesh)return;
-    o.userData.part=o.userData.part||o.name||'general';
+    o.userData.part=o.userData.part||semanticPartName(o)||'general';
     const materials=Array.isArray(o.material)?o.material:o.material?[o.material]:[];
     if(!materials.length)return;
     if(!o.userData.whereHurtMaterial){
@@ -144,10 +148,10 @@ function Model({layer,onPart,selected}){
   });},[root,layer,selected]);
   useEffect(()=>()=>{root.traverse(o=>{if(o.isMesh&&o.userData.whereHurtMaterial){o.material.dispose();delete o.userData.whereHurtMaterial;}})},[root]);
   const meshPart=e=>e.object?.userData?.part||e.object?.name||'general';
-  const onMeshPointerDown=e=>{e.stopPropagation();clickRef.current={pointerId:e.pointerId,part:meshPart(e),x:e.clientX,y:e.clientY,startedAt:performance.now(),moved:false};};
+  const onMeshPointerDown=e=>{if(clickRef.current?.pointerId===e.pointerId)return;clickRef.current={pointerId:e.pointerId,part:meshPart(e),x:e.clientX,y:e.clientY,startedAt:performance.now(),moved:false};};
   const onMeshPointerMove=e=>{const candidate=clickRef.current;if(!candidate||candidate.pointerId!==e.pointerId)return;const distance=Math.hypot(e.clientX-candidate.x,e.clientY-candidate.y);if(distance>6)candidate.moved=true;};
-  const onMeshPointerUp=e=>{e.stopPropagation();const candidate=clickRef.current;if(!candidate||candidate.pointerId!==e.pointerId){clickRef.current=null;return;}const elapsed=performance.now()-candidate.startedAt;const distance=Math.hypot(e.clientX-candidate.x,e.clientY-candidate.y);if(!candidate.moved&&elapsed<=420&&distance<=8)onPart(candidate.part);clickRef.current=null;};
-  const onMeshPointerCancel=e=>{e.stopPropagation();clickRef.current=null;};
+  const onMeshPointerUp=e=>{const candidate=clickRef.current;if(!candidate||candidate.pointerId!==e.pointerId){clickRef.current=null;return;}const elapsed=performance.now()-candidate.startedAt;const distance=Math.hypot(e.clientX-candidate.x,e.clientY-candidate.y);if(!candidate.moved&&elapsed<=420&&distance<=8)onPart(candidate.part);clickRef.current=null;};
+  const onMeshPointerCancel=()=>{clickRef.current=null;};
   return <group ref={groupRef}><primitive object={root} onPointerDown={onMeshPointerDown} onPointerMove={onMeshPointerMove} onPointerUp={onMeshPointerUp} onPointerCancel={onMeshPointerCancel}/></group>;
 }
 class ModelErrorBoundary extends React.Component{state={error:null}; static getDerivedStateFromError(error){return {error};} componentDidUpdate(prev){if(prev.layer!==this.props.layer&&this.state.error)this.setState({error:null});} render(){return this.state.error?<div className="model-error" role="alert">Unable to load the anatomy model. Try another layer or reload the page. {this.state.error?.message||'Unknown loader error'}</div>:this.props.children;}}
