@@ -9,7 +9,9 @@ import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader.js';
 import SignalDisplay from './SignalDisplay.jsx';
 import './console.css';
 import knowledge from '../data/knowledge.json';
-import anatomyGlossary from './anatomyGlossary.js';
+import anatomyGlossaryBase from './anatomyGlossary.js';
+import anatomyGlossaryExtended from './anatomyGlossaryExtended.js';
+const anatomyGlossary={...anatomyGlossaryBase,...anatomyGlossaryExtended};
 
 // Register the lightweight offline shell only in production builds.
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
