@@ -350,6 +350,16 @@ body{background:#10110f}
 
 
 /* Canonical medical note placement: directly above the action tape, behind the drawer. */
-.medical-note{position:absolute;top:auto!important;left:50%!important;right:auto!important;bottom:calc(env(safe-area-inset-bottom) + 92px)!important;transform:translateX(-50%)!important;z-index:10!important;width:min(520px,calc(100% - 112px))!important;max-width:none!important;box-sizing:border-box!important;color:#d9d0aa;font-size:8px;line-height:1.45;background:rgba(16,18,15,.78);border:1px solid rgba(207,200,164,.45);border-radius:4px;padding:6px 8px}
+.medical-note{position:absolute;top:auto!important;left:50%!important;right:auto!important;bottom:calc(env(safe-area-inset-bottom) + clamp(104px,13dvh,132px))!important;transform:translateX(-50%)!important;z-index:10!important;width:min(520px,calc(100% - 48px))!important;max-width:none!important;box-sizing:border-box!important;color:#d9d0aa;font-size:8px;line-height:1.45;background:rgba(16,18,15,.78);border:1px solid rgba(207,200,164,.45);border-radius:4px;padding:6px 8px}
 .sticker-dock{z-index:20!important}.sticker-sheet{z-index:30!important}
-@media(max-width:760px){.medical-note{bottom:calc(env(safe-area-inset-bottom) + 82px)!important;width:calc(100% - 66px)!important;font-size:7px!important}.sticker-sheet{z-index:30!important}}
+@media(max-width:760px){.medical-note{bottom:calc(env(safe-area-inset-bottom) + clamp(94px,14dvh,118px))!important;width:calc(100% - 48px)!important;font-size:7px!important}.sticker-sheet{z-index:30!important}}
+
+
+/* Responsive anatomy part map and bilingual rail labels. */
+.layer-dot .layer-name{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-width:0}
+.layer-dot .layer-name b{font:inherit;line-height:1;white-space:nowrap}
+.layer-dot .layer-name small{font-size:6px;line-height:1;letter-spacing:.08em;opacity:.72;white-space:nowrap}
+.part-selection{width:100%;max-height:clamp(48px,16dvh,104px);overflow:auto;margin-top:6px;padding:6px 7px;border-top:1px solid rgba(65,186,142,.4);border-bottom:1px solid rgba(232,223,185,.22);background:rgba(14,17,14,.72);color:#d9d0aa;box-sizing:border-box}
+.part-selection-head{display:flex;justify-content:space-between;gap:4px;font-size:6px;letter-spacing:.1em;color:#41ba8e;white-space:nowrap}.part-selection-head span{color:rgba(232,223,185,.56)}
+.part-selection-item{display:grid;gap:2px;margin-top:5px;min-width:0}.part-selection-item b{font-size:8px;line-height:1.15;color:#e8dfb9;overflow-wrap:anywhere}.part-selection-item span{font-size:6px;line-height:1.15;color:rgba(232,223,185,.68);overflow-wrap:anywhere}.part-selection-empty{margin-top:6px;font-size:7px;line-height:1.2;color:rgba(232,223,185,.54)}
+@media(max-width:760px){.part-selection{max-height:clamp(42px,13dvh,78px);margin-top:4px;padding:5px}.part-selection-item{margin-top:4px}.part-selection-item b{font-size:7px}.part-selection-item span{font-size:5.5px}.part-selection-empty{font-size:6px}.layer-dot .layer-name small{font-size:5px}}
