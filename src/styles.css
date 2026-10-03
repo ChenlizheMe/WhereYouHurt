@@ -325,7 +325,6 @@ body{background:#10110f}
 .app{background:#10110f!important;color:#e8dfb9!important}
 .scene-controls button{background:rgba(16,18,15,.82)!important;color:#e8dfb9!important}
 .scene-controls button:first-child:before{content:"LANG // ";color:#41ba8e;font-size:7px;letter-spacing:.08em}
-.scene-tools:before{content:"TAPE 01 // LAYER BUS";position:absolute;right:0;top:-13px;color:rgba(65,186,142,.72);font-size:7px;letter-spacing:.13em;white-space:nowrap}
 .screen-label{padding-left:8px;border-left:3px solid #e45d3c}
 .viewer:before{content:"";position:absolute;inset:11px;z-index:2;pointer-events:none;border-top:1px solid rgba(232,223,185,.12);border-bottom:1px solid rgba(232,223,185,.12);box-shadow:inset 12px 0 rgba(228,93,60,.025),inset -12px 0 rgba(65,186,142,.025)}
 .vertical-control{left:calc(env(safe-area-inset-left) + 42px)!important;top:clamp(104px,24dvh,230px)!important;width:44px!important;height:202px!important;min-width:44px!important;max-width:44px!important;min-height:202px!important;max-height:202px!important;padding:9px 6px!important;display:flex!important;align-items:center!important;justify-content:center!important;background:linear-gradient(180deg,rgba(36,39,30,.96),rgba(14,17,14,.96))!important;border:1px solid rgba(232,223,185,.6)!important;border-top:3px solid #e45d3c!important;border-bottom:2px solid #41ba8e!important;border-radius:3px!important;box-shadow:4px 4px 0 rgba(0,0,0,.38),0 0 0 5px rgba(16,18,15,.18)!important;overflow:hidden!important;contain:layout paint!important}
@@ -377,4 +376,30 @@ body{background:#10110f}
  .scene-tools{top:max(9px,env(safe-area-inset-top))!important;right:max(8px,env(safe-area-inset-right))!important;width:min(126px,calc(100% - 144px))!important;max-width:calc(100% - 144px)!important}
  .scene-controls button{padding:4px 6px!important;font-size:8px!important}.layer-dot{height:28px!important;min-height:28px!important;max-height:28px!important;padding:3px 7px!important}.layer-dot .layer-icon{font-size:12px!important}.layer-dot .layer-name{font-size:8px!important}.layer-dot .layer-name small{font-size:5px!important}
  .part-selection{max-height:34px!important;padding:5px 6px!important}.part-selection b{font-size:8px!important}.part-selection span{font-size:5px!important}
+}
+
+/* Desktop and drawer polish: the cassette drawer is a vertical reading stack. */
+.scene-tools:before{display:none!important}
+.sticker-sheet{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:8px!important;overflow-y:auto!important;overflow-x:hidden!important}
+.sticker-sheet .sheet-head{flex:0 0 auto!important;width:100%!important}
+.sticker-sheet .severity-control{flex:0 0 auto!important;width:100%!important}
+.sticker-grid{display:grid!important;grid-template-columns:1fr!important;grid-auto-rows:minmax(30px,auto)!important;align-content:start!important;gap:5px!important;width:100%!important}
+.sheet-sticker{width:100%!important;text-align:left!important;min-height:30px!important}
+.sticker-card:nth-child(1),.sticker-card:nth-child(2){border-top-color:#d4c99d!important;border-radius:2px!important;transform:none!important}
+.sticker-card:nth-child(1),.sticker-card:nth-child(2){background:linear-gradient(180deg,rgba(37,39,30,.95),rgba(21,24,20,.95))!important;color:#e8dfb9!important}
+.sticker-card:nth-child(1).active,.sticker-card:nth-child(2).active{background:linear-gradient(180deg,rgba(65,186,142,.34),rgba(21,24,20,.96))!important;color:#e8dfb9!important}
+.sticker-card.diagnosis{border-color:#e45d3c!important;border-top-color:#e45d3c!important;background:linear-gradient(180deg,rgba(228,93,60,.82),rgba(130,48,31,.9))!important;color:#201b14!important}
+@media(min-width:1100px){
+ .screen-label{max-width:430px!important;width:min(42vw,430px)!important;left:max(28px,env(safe-area-inset-left))!important}
+ .scene-tools{right:max(28px,env(safe-area-inset-right))!important;width:156px!important;max-width:156px!important}
+ .layer-dot{height:34px!important;min-height:34px!important;max-height:34px!important;padding:5px 10px!important}
+ .vertical-control{left:max(46px,calc(env(safe-area-inset-left) + 32px))!important}
+ .sticker-dock{width:min(620px,calc(100% - 260px))!important;max-width:620px!important}
+ .sticker-sheet{width:min(620px,calc(100% - 260px))!important;max-height:min(48dvh,430px)!important;height:min(48dvh,430px)!important;bottom:calc(env(safe-area-inset-bottom) + 94px)!important}
+ .medical-note{width:min(560px,calc(100% - 300px))!important}
+}
+@media(max-width:760px){
+ .sticker-sheet{display:flex!important;gap:6px!important;height:231px!important;max-height:min(231px,calc(100dvh - 190px))!important}
+ .sticker-grid{grid-template-columns:1fr!important;grid-auto-rows:minmax(29px,auto)!important}
+ .sheet-sticker{min-height:29px!important}
 }
