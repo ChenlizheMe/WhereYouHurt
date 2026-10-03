@@ -52,7 +52,14 @@ const CURATED_PARTS={skeleton:{'anterior longitudinal ligament':{zh:'前纵韧�
 const UNMAPPED_VISIBLE_PARTS={skeleton:new Set(),muscle:new Set(),nerve:new Set()};
 if(import.meta.env.DEV&&typeof window!=='undefined')window.__anatomyUnmapped=UNMAPPED_VISIBLE_PARTS;
 function cleanPartName(raw){
-  let value=String(raw||'').trim().replace(/[()]/g,'');
+  const decodeEntities=input=>{
+    let value=String(input||'');
+    for(let pass=0;pass<2;pass+=1){
+      value=value.replace(/&amp;/gi,'&').replace(/&#x([0-9a-f]+);?/gi,(_,hex)=>String.fromCodePoint(parseInt(hex,16))).replace(/&#(\d+);?/g,(_,dec)=>String.fromCodePoint(Number(dec))).replace(/&(nbsp|amp|lt|gt|quot|apos);/gi,(_,name)=>({nbsp:' ',amp:'&',lt:'<',gt:'>',quot:'"',apos:"'"}[name.toLowerCase()]));
+    }
+    return value;
+  };
+  let value=decodeEntities(raw).trim().replace(/[()]/g,'');
   // Exported mesh names encode side as `.l`, `_r`, `el`, `or`, and sometimes a
   // final lowercase/uppercase L or R with no separator. Remove only a suffix
   // that still leaves an anatomical base term; this avoids corrupting words
@@ -64,7 +71,7 @@ function cleanPartName(raw){
     const normalized=candidate.toLowerCase();
     const tokens=normalized.split(/\s+/).filter(Boolean);
     const last=tokens[tokens.length-1];
-    return Boolean(last&&PART_TERMS[last])||Boolean(CURATED_PARTS.skeleton?.[normalized])||Boolean(CURATED_PARTS.muscle?.[normalized])||Boolean(CURATED_PARTS.nerve?.[normalized]);
+    return Boolean(last&&PART_TERMS[last])||Boolean(anatomyGlossary[normalized])||Boolean(CURATED_PARTS.skeleton?.[normalized])||Boolean(CURATED_PARTS.muscle?.[normalized])||Boolean(CURATED_PARTS.nerve?.[normalized]);
   };
   const sideMatch=compact.match(/(?:e1|o1|e|o)?[lr]$/i);
   if(sideMatch){
