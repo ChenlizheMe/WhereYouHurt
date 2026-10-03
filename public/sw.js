@@ -1,5 +1,5 @@
 /* Offline app shell. Anatomy GLBs and the Draco decoder stay network-first. */
-const CACHE = 'trauma-team-international-shell-v2';
+const CACHE = 'trauma-team-international-shell-v3';
 const SHELL = [
   './',
   './index.html',
