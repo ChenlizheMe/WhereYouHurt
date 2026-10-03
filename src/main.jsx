@@ -85,28 +85,31 @@ function cleanPartName(raw){
 const RIB_ORDINALS={first:'第一',second:'第二',third:'第三',fourth:'第四',fifth:'第五',sixth:'第六',seventh:'第七',eighth:'第八',ninth:'第九',tenth:'第十',eleventh:'第十一',twelfth:'第十二'};
 function partLabel(raw,layer){
   const cleaned=cleanPartName(raw);
+  const rawValue=String(raw||'').toLowerCase();
+  const side=/(?:^|[._\s-])(left|l)\s*$/.test(rawValue)?'left':/(?:^|[._\s-])(right|r)\s*$/.test(rawValue)?'right':'';
+  const withSide=result=>side?{zh:`${side==='left'?'左侧':'右侧'}${result.zh}`,en:`${side==='left'?'Left ':'Right '}${result.en}`}:result;
   const fallback=layer==='skeleton'?{zh:'人体骨骼',en:'Human skeleton'}:layer==='muscle'?{zh:'人体肌肉',en:'Human musculature'}:{zh:'人体神经',en:'Human nervous system'};
-  if(!cleaned||/^general$/i.test(cleaned)||/^mesh/i.test(cleaned)){UNMAPPED_VISIBLE_PARTS[layer]?.add(cleaned||'empty');return fallback;}
+  if(!cleaned||/^general$/i.test(cleaned)||/^mesh/i.test(cleaned)){UNMAPPED_VISIBLE_PARTS[layer]?.add(cleaned||'empty');return withSide(fallback);}
   const ribOrdinal=layer==='skeleton'&&RIB_ORDINALS[cleaned.toLowerCase()];
-  if(ribOrdinal)return {zh:`${ribOrdinal}肋骨`,en:`${cleaned} rib`};
+  if(ribOrdinal)return withSide({zh:`${ribOrdinal}肋骨`,en:`${cleaned} rib`});
   const reviewed=anatomyGlossary[cleaned.toLowerCase()];
-  if(reviewed)return {zh:reviewed.zh,en:reviewed.en||cleaned};
+  if(reviewed)return withSide({zh:reviewed.zh,en:reviewed.en||cleaned});
   const curated=CURATED_PARTS[layer]?.[cleaned.toLowerCase()];
-  if(curated)return curated;
+  if(curated)return withSide(curated);
   let zh=cleaned.toLowerCase();
   let phraseMatched=false;
   PART_PHRASES.forEach(([phrase,translation])=>{const pattern=new RegExp(phrase,'ig');if(pattern.test(zh))phraseMatched=true;zh=zh.replace(pattern,translation)});
-  if(phraseMatched)return {zh,en:cleaned};
+  if(phraseMatched)return withSide({zh,en:cleaned});
   const tokens=zh.split(' ').filter(token=>!['of','the','and','a'].includes(token));
   // A partial token translation is more misleading than the atlas's own
-  // standardized English term. Multi-word names are translated only when they
-  // have an explicit reviewed entry or phrase rule above.
-  if(tokens.length>1)return {zh:cleaned,en:cleaned};
+  // standardized English term. Multi-word names are translated only when
+  // they have an explicit reviewed entry or phrase rule above.
+  if(tokens.length>1)return withSide({zh:cleaned,en:cleaned});
   const mapped=tokens.map(token=>PART_TERMS[token]||'').filter(Boolean);
-  if(!mapped.length){UNMAPPED_VISIBLE_PARTS[layer].add(cleaned);return cleaned?{zh:cleaned,en:cleaned}:fallback;}
+  if(!mapped.length){UNMAPPED_VISIBLE_PARTS[layer].add(cleaned);return withSide(cleaned?{zh:cleaned,en:cleaned}:fallback);}
   zh=mapped.join('').replace(/\s+/g,'').trim();
-  if(mapped.length===1&&tokens.length>1&&zh.length<=2)return {zh:cleaned,en:cleaned};
-  return {zh:zh.trim(),en:cleaned};
+  if(mapped.length===1&&tokens.length>1&&zh.length<=2)return withSide({zh:cleaned,en:cleaned});
+  return withSide({zh:zh.trim(),en:cleaned});
 }
 function semanticPartName(object){let current=object;while(current){const name=String(current.name||'').trim();if(name&&!/^mesh(?:[_-]|$)/i.test(name)&&!/^scene$/i.test(name))return name;current=current.parent}return ''}
 function bilingualPartText(raw,layer,lang='zh'){const label=partLabel(raw,layer);return lang==='zh'?label.zh:label.en}
