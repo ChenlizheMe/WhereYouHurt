@@ -108,3 +108,9 @@ html,body,#root{background:#141614;color:var(--ink)}
 /* The selected anatomy label is the primary readout; keep it legible on a phone. */
 .part-selection{font-size:36px!important;line-height:1.08!important;letter-spacing:-.04em!important}
 @media(max-width:700px){.part-selection{font-size:30px!important;line-height:1.05!important}}
+/* Large mobile anatomy labels need a real line box; the old 22px fixed height
+   clipped glyphs after the readout was enlarged. */
+.part-selection{white-space:normal!important;overflow:visible!important;text-overflow:clip!important;max-width:calc(100% - 140px)!important}
+@media(max-width:700px){
+  .part-selection{left:64px!important;right:14px!important;top:168px!important;height:auto!important;min-height:32px!important;max-width:none!important;line-height:1.1!important;overflow:visible!important;overflow-wrap:anywhere!important}
+}
