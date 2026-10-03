@@ -412,6 +412,7 @@ body{background:#10110f}
 .condition-summary{margin:7px 0 0;color:#d9d0aa;font-size:9px;line-height:1.5}
 .red-flags{margin-top:8px;padding-top:7px;border-top:1px dashed rgba(228,93,60,.55);color:#f0b39a;font-size:9px;line-height:1.5}
 .red-flags b{color:#e45d3c;letter-spacing:.04em}
+.location-control{margin:8px 0;padding:8px;border:1px dashed rgba(65,186,142,.55);color:#d9d0aa;font-size:9px;line-height:1.35}.location-control>b{display:block;margin-bottom:6px;color:#41ba8e;letter-spacing:.06em}.location-grid{display:flex;flex-wrap:wrap;gap:5px}.location-chip{border:1px solid #777454;background:transparent;color:#e8dfb9;padding:5px 7px;border-radius:2px;font:9px inherit;cursor:pointer}.location-chip.selected{background:#41ba8e;color:#10211a;border-color:#41ba8e}.urgent-strip{margin:0 0 10px;padding:8px 9px;border-left:4px solid #e45d3c;background:rgba(228,93,60,.13);color:#f0b39a;font-size:9px;line-height:1.5}.urgent-strip>b{display:block;color:#e45d3c;letter-spacing:.08em}.urgent-strip p{margin:3px 0 0}
 @media(max-width:760px){.condition-summary,.red-flags{font-size:8px;line-height:1.45}.diagnosis-sheet .card:before{font-size:6px}}
 
 /* Spine/thorax slice: a restrained two-tone tape edge separates each field note

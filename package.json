@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:labels": "node --test tests/anatomy-labels.test.mjs",
-    "test:clinical": "node --test tests/clinical-regions.test.mjs"
+    "test:clinical": "node --test tests/clinical-regions.test.mjs",
+    "test:engine": "node --test tests/clinical-engine.test.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
