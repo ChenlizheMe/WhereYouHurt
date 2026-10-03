@@ -1,4 +1,4 @@
-import {anatomyIdentity,partLabel} from './anatomyLabels.js';
+import {anatomyIdentity,safePartLabel} from './anatomyLabels.js';
 
 // Anatomical identity is independent of the visible layer: the nervous GLB
 // contains muscles and sense organs as well as nerves.
@@ -65,7 +65,7 @@ const INFO={
  general:['所选结构','Selected structure','该结构的空间位置尚不能可靠归类。请补充症状并确认具体身体区域，避免用通用病名替代分析。','This structure cannot yet be reliably assigned to a clinical region. Confirm the body area and symptoms before interpretation.','请说明疼痛所在身体区域、起病时间、诱因及伴随症状。','Specify body region, onset, triggers and associated symptoms.']
 };
 export function clinicalProfile(raw,layer){
- const {name,side}=anatomyIdentity(raw);const label=partLabel(raw,layer);
+ const {name,side}=anatomyIdentity(raw);const label=safePartLabel(raw,layer);
  const text=`${label.zh} ${name}`;
  const region=REGIONS.find(([,pattern])=>pattern.test(text))?.[0]||'general';
  const tissue=/神经|脊髓|脑|nerve|tract|nucleus|gyrus|sulc|cereb|fascicul|gangli/i.test(text)?'nerve':/肌|腱|筋膜|muscle|tendon|fascia/i.test(text)?'muscle':/骨|韧带|软骨|椎间盘|关节|bone|ligament|cartilage/i.test(text)?'skeleton':layer;
