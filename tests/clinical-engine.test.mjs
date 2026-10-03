@@ -44,3 +44,14 @@ test('new region routes return concrete differentials',()=>{
   assert.ok(result.items.some(item=>item.id===id),`${part} did not route to ${id}`);
  }
 });
+
+test('every selectable atlas mesh has at least one regional differential',()=>{
+ for(const [layer,file] of Object.entries({skeleton:'skeletal',muscle:'muscular',nerve:'nervous'})){
+  const bytes=fs.readFileSync(new URL(`../public/anatomy/${file}_male.glb`,import.meta.url));
+  const json=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));
+  for(const node of json.nodes.filter(node=>node.mesh!==undefined)){
+   const result=assessSymptoms(knowledge,{parts:[node.name],layer});
+   assert.ok(result.items.length,`${layer}: ${node.name} produced no differential`);
+  }
+ }
+});
