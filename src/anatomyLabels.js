@@ -28,7 +28,9 @@ export function decodeName(raw){
     }).replace(/&(nbsp|lt|gt|quot|apos);/gi,(_,n)=>({nbsp:' ',lt:'<',gt:'>',quot:'"',apos:"'"}[n.toLowerCase()]));
     if(value===previous)break;
   }
-  return value.replace(/[\u0000-\u001f\u007f\u200b-\u200f\ufeff]/g,'').trim();
+  // Some inspection/canvas integrations append their own surface name to a
+  // node identifier. It is not anatomy and must never become part of a label.
+  return value.replace(/[\u0000-\u001f\u007f\u200b-\u200f\ufeff]/g,'').replace(/\s+(?:html)?canvas\s*$/i,'').trim();
 }
 export function anatomyIdentity(raw){
   const value=tidy(decodeName(raw));
@@ -69,9 +71,9 @@ function partLabel(raw,layer){
   // A partial token translation is more misleading than the atlas's own
   // standardized English term. Multi-word names are translated only when
   // they have an explicit reviewed entry or phrase rule above.
-  if(tokens.length>1)return withSide({zh:cleaned,en:cleaned});
+  if(tokens.length>1)return withSide({zh:fallback.zh,en:cleaned});
   const mapped=tokens.map(token=>PART_TERMS[token]||'').filter(Boolean);
-  if(!mapped.length){UNMAPPED_VISIBLE_PARTS[layer].add(cleaned);return withSide(cleaned?{zh:cleaned,en:cleaned}:fallback);}
+  if(!mapped.length){UNMAPPED_VISIBLE_PARTS[layer].add(cleaned);return withSide(cleaned?{zh:fallback.zh,en:cleaned}:fallback);}
   zh=mapped.join('').replace(/\s+/g,'').trim();
   if(mapped.length===1&&tokens.length>1&&zh.length<=2)return withSide({zh:cleaned,en:cleaned});
   return withSide({zh:zh.trim(),en:cleaned});
@@ -84,7 +86,8 @@ export function safePartLabel(raw,layer){
   const fallback=layer==='skeleton'?{zh:'待核验骨骼结构',en:'Unreviewed skeletal structure'}:layer==='muscle'?{zh:'待核验肌肉结构',en:'Unreviewed muscular structure'}:{zh:'待核验神经结构',en:'Unreviewed nervous structure'};
   const zh=decodeName(label.zh).replace(/&#(?:x[\da-f]+|\d+);?/gi,'').trim();
   const en=decodeName(label.en).replace(/&#(?:x[\da-f]+|\d+);?/gi,'').trim();
-  return {zh:/[A-Za-z]{2,}/.test(zh)?fallback.zh:zh||fallback.zh,en:en||fallback.en};
+  const generic=/^人体(?:骨骼|肌肉|神经)$/;
+  return {zh:generic.test(zh)||/[A-Za-z]{2,}/.test(zh)?fallback.zh:zh||fallback.zh,en:en||fallback.en};
 }
 
 export { cleanPartName, partLabel };

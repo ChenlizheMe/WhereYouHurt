@@ -27,5 +27,7 @@ test('reported palpebral name and natural terminal letters',()=>{
  assert.doesNotThrow(()=>partLabel('&#99999999999999;','muscle'));
  const safe=safePartLabel('Palpebral part of orbicularis oculil&amp;#x20;','muscle');
  assert.equal(safe.zh,'左侧眼轮匝肌睑部');
+ assert.equal(partLabel('Palpebral part of orbicularis oculil&#x20; &#x63;anvas','muscle').zh,'左侧眼轮匝肌睑部');
+ assert.equal(safePartLabel('Unreviewed atlas node &#x20; canvas','muscle').zh,'待核验肌肉结构');
  assert.equal(safePartLabel('Unreviewed atlas node &#x20;','muscle').zh,'待核验肌肉结构');
 });
