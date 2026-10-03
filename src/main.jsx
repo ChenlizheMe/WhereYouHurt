@@ -9,7 +9,7 @@ import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader.js';
 import SignalDisplay from './SignalDisplay.jsx';
 import './console.css';
 import knowledge from '../data/knowledge.json';
-import { cleanPartName, decodeName, partLabel, safePartLabel } from './anatomyLabels.js';
+import { cleanPartName, decodeName, safePartLabel } from './anatomyLabels.js';
 import { clinicalProfile } from './clinicalRegions.js';
 
 // Register the lightweight offline shell only in production builds.
