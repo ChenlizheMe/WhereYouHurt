@@ -119,3 +119,34 @@ html,body,#root{background:#141614;color:var(--ink)}
 
 .clinical-profiles{display:grid;gap:8px;margin:0 0 14px}.clinical-profile{padding:11px 12px;background:#20231f;border-left:3px solid var(--red);box-shadow:3px 3px 0 #0b0c0b}.clinical-profile strong{display:block;color:#f0ead8;font-size:13px}.clinical-profile p,.clinical-profile small{display:block;margin:6px 0 0;color:#c7c0af;font-size:11px;line-height:1.55}.clinical-profile small{color:#e1a486;font-size:10px}.clinical-profile + .clinical-profile{border-left-color:#8db79d}
 @media(max-width:700px){.clinical-profile{padding:9px 10px}.clinical-profile p,.clinical-profile small{font-size:10px;line-height:1.45}}
+
+/* Compact reference cards: evidence first, a short preview, full guidance on demand. */
+.diagnosis-sheet .cards{gap:10px}
+.compact-card{padding:12px}
+.card-heading{display:flex;align-items:baseline;gap:9px}
+.card-heading .rank{flex:none;margin:0;font-size:10px}
+.card-heading .condition{font-size:15px;line-height:1.45}
+.compact-card .evidence-line{display:flex;align-items:baseline;gap:8px;margin:8px 0 0;font-size:11px;line-height:1.5}
+.evidence-line b{flex:none;color:var(--muted);font-weight:500}
+.evidence-line>div{display:flex;flex-wrap:wrap;gap:4px}
+.compact-card .evidence-line span{margin:0;padding:3px 6px}
+.compact-preview{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:12px;line-height:1.55}
+.compact-card .condition-summary{margin:8px 0 0}
+.card-details{margin-top:8px}
+.card-details>summary{list-style:none;cursor:pointer}
+.card-details>summary::-webkit-details-marker{display:none}
+.advice-preview{color:#d7d2c1}
+.card-expand,.card-collapse{display:block;margin-top:6px;color:var(--red);font-size:11px;line-height:1.5}
+.card-collapse{display:none}
+.card-details[open] .advice-preview,.card-details[open] .card-expand{display:none}
+.card-details[open] .card-collapse{display:block}
+.compact-card:has(.card-details[open])>.condition-summary{display:none}
+.card-detail-body{padding-top:2px}
+.card-detail-body p{margin:4px 0 0}
+.card-detail-body .advice,.card-detail-body .red-flags,.card-detail-body .medication-info{margin-top:10px;font-size:12px;line-height:1.6}
+.profile-details{margin-top:5px;font-size:11px;color:var(--muted)}
+.profile-details summary{cursor:pointer;line-height:1.5}
+.evidence-empty{margin:0;padding:12px;background:#282b25;color:#d7d2c1;font-size:13px;line-height:1.6;border-radius:5px}
+.urgent-strip{margin-bottom:12px;padding:10px 12px;background:#e45d3c16;border-left:3px solid var(--red);color:#ee9178;font-size:12px;line-height:1.55}
+.urgent-strip p{margin:5px 0 0}
+@media(max-width:700px){.compact-card{padding:10px}.card-heading .condition{font-size:14px}.compact-card .evidence-line{font-size:10px}.clinical-profiles{margin-bottom:10px}}

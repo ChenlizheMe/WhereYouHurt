@@ -48,7 +48,7 @@ test('new region routes return concrete differentials',()=>{
   ['Sympathetic trunk','nerve','autonomic-assessment']
  ];
  for(const [part,layer,id] of cases){
-  const result=assessSymptoms(knowledge,{parts:[part],layer,feelings:['钝痛'],signs:['发热']});
+  const result=assessSymptoms(knowledge,{parts:[part],layer,feelings:id==='autonomic-assessment'?['心悸']:['钝痛'],signs:id==='autonomic-assessment'?['出汗']:['发热']});
   assert.ok(result.items.some(item=>item.id===id),`${part} did not route to ${id}`);
  }
 });
@@ -62,13 +62,35 @@ test('selectors hide unrelated regional observations',()=>{
  assert.ok(noseSigns.includes('脓性鼻涕'));
 });
 
-test('every selectable atlas mesh has at least one regional differential',()=>{
+test('every atlas mesh supports symptom-based analysis and suppresses position-only cards',()=>{
  for(const [layer,file] of Object.entries({skeleton:'skeletal',muscle:'muscular',nerve:'nervous'})){
   const bytes=fs.readFileSync(new URL(`../public/anatomy/${file}_male.glb`,import.meta.url));
   const json=JSON.parse(bytes.subarray(20,20+bytes.readUInt32LE(12)));
   for(const node of json.nodes.filter(node=>node.mesh!==undefined)){
-   const result=assessSymptoms(knowledge,{parts:[node.name],layer});
+   const positionOnly=assessSymptoms(knowledge,{parts:[node.name],layer});
+   assert.equal(positionOnly.items.length,0,`${layer}: ${node.name} produced a position-only card`);
+   assert.ok(positionOnly.needsEvidence);
+   const result=assessSymptoms(knowledge,{parts:[node.name],layer,feelings:knowledge.feelings.map(tag=>tag.id),signs:knowledge.signs.map(tag=>tag.id)});
    assert.ok(result.items.length,`${layer}: ${node.name} produced no differential`);
+   assert.ok(result.items.every(item=>item.why.length>=2));
   }
  }
+});
+
+test('unrelated symptoms and duplicate body parts cannot satisfy the evidence minimum',()=>{
+ for(const parts of [['Frontal bone'],['Frontal bone','Frontal bone']]){
+  const result=assessSymptoms(knowledge,{parts,layer:'skeleton',signs:['牙龋洞']});
+  assert.equal(result.items.length,0);
+  assert.ok(result.needsEvidence);
+ }
+ const result=assessSymptoms(knowledge,{parts:['Upper first molar tooth.r'],layer:'skeleton',feelings:['冷热敏感','冷热敏感']});
+ assert.ok(result.items.length>0);
+ assert.ok(result.items.every(item=>item.why.length>=2&&new Set(item.why).size===item.why.length));
+ assert.ok(result.items.every(item=>item.matchedSymptoms.length>0));
+});
+
+test('urgent guidance survives when no differential reaches the evidence threshold',()=>{
+ const result=assessSymptoms(knowledge,{parts:['Rectus abdominis muscle.r'],layer:'muscle',signs:['呕血']});
+ assert.equal(result.items.length,0);
+ assert.ok(result.urgent.length>0);
 });

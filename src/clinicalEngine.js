@@ -93,6 +93,10 @@ export function assessSymptoms(knowledge,{parts=[],layer='skeleton',feelings=[],
    if(location!=='unknown'&&location!=='diffuse'&&condition.parts.includes('abdomen-right')&&!condition.parts.includes('abdomen-left')&&!['ruq','rlq','epigastric'].includes(location))return [];
    const important=(IMPORTANT[condition.id]||[]).filter(s=>symptoms.has(s));
    const matched=[...symptoms].filter(s=>condition.feelings.includes(s)||condition.signs.includes(s)||important.includes(s));
+   const evidence=[...new Set([...matching.map(p=>p.raw),...matched].filter(Boolean))];
+   // A body-part label alone is too weak to justify a disease card. Keep the
+   // regional profile visible, but require one additional reported feature.
+   if(evidence.length<2||!matched.length)return [];
    if(regions.includes('skin')&&!SKIN_SIGNS.some(t=>symptoms.has(t)))return [];
    let score=4+matched.length*2+important.length*4;
    if(matching.some(p=>p.tissue==='nerve')&&NEURAL.test(condition.id))score+=2;
@@ -100,7 +104,8 @@ export function assessSymptoms(knowledge,{parts=[],layer='skeleton',feelings=[],
    if(QUADRANTS[condition.id]?.includes(location))score+=3;
    if(locationMismatch)score-=5;
    if(condition.id==='muscle-strain'||condition.id.startsWith('abdominal-visceral'))score-=2;
-   return [{...condition,score,why:[...matching.map(p=>p.raw),...matched].filter(Boolean),matchedSymptoms:matched,locationMismatch}];
+   return [{...condition,score,why:evidence,matchedSymptoms:matched,locationMismatch}];
  }).sort((a,b)=>b.score-a.score||a.id.localeCompare(b.id));
- return {profiles,items:items.slice(0,6),urgent,needsSymptoms:!symptoms.size,needsPart:!profiles.length};
+ const limitedItems=items.slice(0,6);
+ return {profiles,items:limitedItems,urgent,needsSymptoms:!symptoms.size,needsPart:!profiles.length,needsEvidence:profiles.length>0&&!limitedItems.length};
 }
