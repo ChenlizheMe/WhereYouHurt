@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "WhereYouHurt / 您哪疼",
-  "short_name": "WhereYouHurt",
-  "description": "An offline-first body-area and pain reference tool.",
+  "name": "创伤小组",
+  "short_name": "创伤小组",
+  "description": "可交互的解剖疼痛探索与日常参考工具。",
   "lang": "zh-CN",
   "dir": "ltr",
   "start_url": "./",

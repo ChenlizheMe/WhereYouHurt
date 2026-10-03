@@ -98,7 +98,6 @@ body{background:#10110f}
 .sticker-card{min-height:48px}
 
 .sticker-sheet{bottom:74px;z-index:8;width:min(600px,calc(100% - 180px));max-height:min(42%,340px)}
-.telemetry{position:absolute;top:16px;left:22px;z-index:1;display:flex;gap:12px;color:#41ba8e;font:9px 'JetBrains Mono',monospace;opacity:.72;transform:translateY(31px)}
 .signal-bars{position:absolute;right:24px;bottom:104px;z-index:1;display:flex;gap:3px;align-items:end;opacity:.6}.signal-bars i{display:block;width:4px;background:#41ba8e}.signal-bars i:nth-child(1){height:6px}.signal-bars i:nth-child(2){height:10px}.signal-bars i:nth-child(3){height:14px}.signal-bars i:nth-child(4){height:18px}
 .boot-screen{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#10110f;color:#e8dfb9;animation:boot-fade .25s ease 1.15s forwards;pointer-events:none}
 .boot-brand{font-size:clamp(28px,7vw,70px);font-weight:800;letter-spacing:-.08em;color:#e45d3c;text-shadow:4px 0 #41ba8e}.boot-brand small{display:block;margin-top:8px;text-align:center;font-size:10px;letter-spacing:.28em;color:#41ba8e;text-shadow:none}.boot-copy{margin-top:35px;font-size:9px;letter-spacing:.16em;opacity:.8}.boot-bar{width:min(280px,60vw);height:4px;margin-top:14px;background:#393b2f;overflow:hidden}.boot-bar i{display:block;width:40%;height:100%;background:#e45d3c;animation:boot-load .85s steps(5,end) forwards}
@@ -328,7 +327,6 @@ body{background:#10110f}
 .scene-controls button:first-child:before{content:"LANG // ";color:#41ba8e;font-size:7px;letter-spacing:.08em}
 .scene-tools:before{content:"TAPE 01 // LAYER BUS";position:absolute;right:0;top:-13px;color:rgba(65,186,142,.72);font-size:7px;letter-spacing:.13em;white-space:nowrap}
 .screen-label{padding-left:8px;border-left:3px solid #e45d3c}
-.screen-label:after{content:"TRACK 01  ·  LOCAL";position:absolute;left:0;top:34px;color:rgba(65,186,142,.7);font-size:7px;letter-spacing:.12em;white-space:nowrap}
 .viewer:before{content:"";position:absolute;inset:11px;z-index:2;pointer-events:none;border-top:1px solid rgba(232,223,185,.12);border-bottom:1px solid rgba(232,223,185,.12);box-shadow:inset 12px 0 rgba(228,93,60,.025),inset -12px 0 rgba(65,186,142,.025)}
 .vertical-control{left:calc(env(safe-area-inset-left) + 42px)!important;top:clamp(104px,24dvh,230px)!important;width:44px!important;height:202px!important;min-width:44px!important;max-width:44px!important;min-height:202px!important;max-height:202px!important;padding:9px 6px!important;display:flex!important;align-items:center!important;justify-content:center!important;background:linear-gradient(180deg,rgba(36,39,30,.96),rgba(14,17,14,.96))!important;border:1px solid rgba(232,223,185,.6)!important;border-top:3px solid #e45d3c!important;border-bottom:2px solid #41ba8e!important;border-radius:3px!important;box-shadow:4px 4px 0 rgba(0,0,0,.38),0 0 0 5px rgba(16,18,15,.18)!important;overflow:hidden!important;contain:layout paint!important}
 .vertical-control:before{content:"Y / LIFT";position:absolute;top:6px;left:0;right:0;text-align:center;color:#41ba8e;font-size:6px;letter-spacing:.1em}
@@ -339,7 +337,7 @@ body{background:#10110f}
 .severity-control{margin:0 0 9px;padding:8px 8px 7px;border:1px solid rgba(232,223,185,.3);border-left:3px solid #e45d3c;background:linear-gradient(90deg,rgba(228,93,60,.12),rgba(65,186,142,.06));}
 .severity-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;color:#d9d0aa;font-size:8px;letter-spacing:.07em;text-transform:uppercase}.severity-meta output{color:#41ba8e;font-size:8px;white-space:nowrap}.severity-control input{width:100%;height:18px;margin:4px 0 0;accent-color:#e45d3c;cursor:ew-resize}
 .sticker-dock:before{content:"LOCAL PAIN INDEX";position:absolute;left:0;right:0;top:-13px;color:rgba(232,223,185,.48);font-size:6px;letter-spacing:.14em;text-align:center}
-@media(max-width:760px){.scene-tools:before{top:-11px;font-size:6px}.screen-label:after{top:31px;font-size:6px}.viewer:before{inset:8px}.vertical-control{left:calc(env(safe-area-inset-left) + 22px)!important;width:40px!important;min-width:40px!important;max-width:40px!important;height:178px!important;min-height:178px!important;max-height:178px!important;padding:8px 5px!important}.vertical-track{width:18px!important;height:144px!important}.vertical-control:before{font-size:5px}.vertical-control:after{font-size:5px}.sticker-dock:before{top:-11px;font-size:5px}}
+@media(max-width:760px){.scene-tools:before{top:-11px;font-size:6px}.viewer:before{inset:8px}.vertical-control{left:calc(env(safe-area-inset-left) + 22px)!important;width:40px!important;min-width:40px!important;max-width:40px!important;height:178px!important;min-height:178px!important;max-height:178px!important;padding:8px 5px!important}.vertical-track{width:18px!important;height:144px!important}.vertical-control:before{font-size:5px}.vertical-control:after{font-size:5px}.sticker-dock:before{top:-11px;font-size:5px}}
 
 
 /* Final shell geometry: keep the medical note with the bottom action tape. */
@@ -355,11 +353,28 @@ body{background:#10110f}
 @media(max-width:760px){.medical-note{bottom:calc(env(safe-area-inset-bottom) + clamp(94px,14dvh,118px))!important;width:calc(100% - 48px)!important;font-size:7px!important}.sticker-sheet{z-index:30!important}}
 
 
-/* Responsive anatomy part map and bilingual rail labels. */
+/* Responsive bilingual layer labels and selected anatomy name. */
 .layer-dot .layer-name{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-width:0}
 .layer-dot .layer-name b{font:inherit;line-height:1;white-space:nowrap}
 .layer-dot .layer-name small{font-size:6px;line-height:1;letter-spacing:.08em;opacity:.72;white-space:nowrap}
-.part-selection{width:100%;max-height:clamp(48px,16dvh,104px);overflow:auto;margin-top:6px;padding:6px 7px;border-top:1px solid rgba(65,186,142,.4);border-bottom:1px solid rgba(232,223,185,.22);background:rgba(14,17,14,.72);color:#d9d0aa;box-sizing:border-box}
-.part-selection-head{display:flex;justify-content:space-between;gap:4px;font-size:6px;letter-spacing:.1em;color:#41ba8e;white-space:nowrap}.part-selection-head span{color:rgba(232,223,185,.56)}
-.part-selection-item{display:grid;gap:2px;margin-top:5px;min-width:0}.part-selection-item b{font-size:8px;line-height:1.15;color:#e8dfb9;overflow-wrap:anywhere}.part-selection-item span{font-size:6px;line-height:1.15;color:rgba(232,223,185,.68);overflow-wrap:anywhere}.part-selection-empty{margin-top:6px;font-size:7px;line-height:1.2;color:rgba(232,223,185,.54)}
-@media(max-width:760px){.part-selection{max-height:clamp(42px,13dvh,78px);margin-top:4px;padding:5px}.part-selection-item{margin-top:4px}.part-selection-item b{font-size:7px}.part-selection-item span{font-size:5.5px}.part-selection-empty{font-size:6px}.layer-dot .layer-name small{font-size:5px}}
+
+/* Final content pass: one calm header stack and one selected anatomy name. */
+.screen-label{top:max(12px,env(safe-area-inset-top))!important;left:max(14px,env(safe-area-inset-left))!important;right:auto!important;display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;width:min(52vw,330px);max-width:calc(100% - 180px);padding:7px 10px!important;border-left:3px solid #e45d3c;background:rgba(16,18,15,.72);border-top:1px solid rgba(232,223,185,.18);border-bottom:1px solid rgba(232,223,185,.12);box-sizing:border-box;text-shadow:none!important}
+.screen-label strong{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:clamp(14px,2vw,20px)!important;line-height:1.1}
+.screen-label .screen-status{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:8px!important;letter-spacing:.08em;opacity:.72}
+.screen-label .led{justify-self:end;margin-left:0!important}
+.screen-label:after,.telemetry,.signal-bars{display:none!important}
+.scene-tools{top:max(12px,env(safe-area-inset-top))!important;right:max(12px,env(safe-area-inset-right))!important;width:min(138px,calc(100% - 200px))!important;max-width:calc(100% - 200px)!important;align-items:stretch!important;gap:7px!important}
+.scene-controls{justify-content:flex-end;gap:5px!important}
+.model-layers{width:100%!important;max-width:100%!important;gap:4px!important}
+.layer-dot{width:100%!important;min-width:0!important;max-width:100%!important;height:31px!important;min-height:31px!important;max-height:31px!important}
+.part-selection{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:6px;width:100%!important;max-width:100%!important;max-height:42px!important;min-height:0!important;margin:1px 0 0!important;padding:6px 8px!important;border:1px solid rgba(65,186,142,.55)!important;border-left:3px solid #e45d3c!important;background:rgba(14,17,14,.9)!important;overflow:hidden!important;box-shadow:2px 2px 0 rgba(0,0,0,.26)}
+.part-selection b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#e8dfb9!important;font-size:9px!important;line-height:1.15!important}
+.part-selection span{min-width:0;max-width:52%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:rgba(232,223,185,.64)!important;font-size:6px!important;line-height:1.15!important;text-align:right}
+@media(max-width:760px){
+ .screen-label{top:max(9px,env(safe-area-inset-top))!important;left:max(10px,env(safe-area-inset-left))!important;width:min(54vw,196px);max-width:calc(100% - 156px);padding:6px 7px!important;grid-template-columns:minmax(0,1fr) auto;gap:5px}
+ .screen-label strong{font-size:13px!important}.screen-label .screen-status{display:none}
+ .scene-tools{top:max(9px,env(safe-area-inset-top))!important;right:max(8px,env(safe-area-inset-right))!important;width:min(126px,calc(100% - 144px))!important;max-width:calc(100% - 144px)!important}
+ .scene-controls button{padding:4px 6px!important;font-size:8px!important}.layer-dot{height:28px!important;min-height:28px!important;max-height:28px!important;padding:3px 7px!important}.layer-dot .layer-icon{font-size:12px!important}.layer-dot .layer-name{font-size:8px!important}.layer-dot .layer-name small{font-size:5px!important}
+ .part-selection{max-height:34px!important;padding:5px 6px!important}.part-selection b{font-size:8px!important}.part-selection span{font-size:5px!important}
+}
