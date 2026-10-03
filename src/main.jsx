@@ -37,7 +37,7 @@ useLoader.preload(GLTFLoader,MODEL_URLS.skeleton,configureGLTF);
 // exhausts mobile WebGL memory before the user has selected a second layer.
 const copy={zh:{slogan:'创伤小队',feelAction:'感觉',signsAction:'表现',diagnoseAction:'诊断',view:'查看',layer:'选择图层',parts:'点击疼痛部位',feel:'疼痛感觉',signs:'外部表现',result:'本地参考结果',loading:'加载解剖模型…',none:'请至少选择一个疼痛部位或标签',basis:'判断依据',advice:'日常建议',redFlags:'需要尽快就医的信号',disclaimer:'非专业医疗建议，仅为日常自我参考，不能替代医生诊断。如有严重或持续症状请及时就医。',disclaimerShort:'医疗提示：仅供参考，严重或持续症状请就医',medication:'非处方药教育信息',medicationIntro:'仅为一般类别说明；请阅读包装标签并咨询药师。这里不提供处方药建议或个体化剂量。',otcPain:'止痛类非处方药（如对乙酰氨基酚或布洛芬）可能用于短期轻微疼痛；按标签使用。',otcTopical:'局部非处方产品（如冷/热敷或外用止痛/止痒产品）可按标签短期使用；破损皮肤勿用外用产品。',medicationWarn:'有肝肾疾病、胃溃疡/出血、正在用药、怀孕/哺乳、对药物过敏或不确定是否适合时，先咨询药师或医生；出现严重反应立即停用并求助。',noPrescription:'不推荐处方药，也不提供个体化用药或剂量。'},en:{slogan:'TRAUMA TEAM',feelAction:'FEEL',signsAction:'SIGNS',diagnoseAction:'DIAGNOSE',view:'VIEW',layer:'LAYERS',parts:'CLICK A PAINFUL AREA',feel:'PAIN FEELINGS',signs:'VISIBLE SIGNS',result:'LOCAL REFERENCE',loading:'Loading anatomy…',none:'Select at least one body area or tag',basis:'Why it matched',advice:'Everyday advice',redFlags:'Seek care promptly for',disclaimer:'Not professional medical advice. For daily self-reference only. Cannot replace a doctor’s diagnosis. Seek medical help if severe or persistent.',disclaimerShort:'Medical note: reference only; seek care for severe or persistent symptoms',medication:'OTC medication education',medicationIntro:'General categories only; read the package label and ask a pharmacist. No prescription recommendations or individualized dosing.',otcPain:'OTC pain-relief categories (such as acetaminophen or ibuprofen) may help short-term minor pain; follow the label.',otcTopical:'OTC topical options (such as cold/heat packs or topical pain/itch products) may be used briefly as labeled; do not use topical products on broken skin.',medicationWarn:'If you have liver/kidney disease, ulcers or bleeding, take other medicines, are pregnant/breastfeeding, have allergies, or are unsure, ask a pharmacist or clinician first; stop and seek help for a serious reaction.',noPrescription:'No prescription medicines or individualized medication/dose recommendations.'}};
 const layers=[['skeleton','骨骼','SKELETON'],['muscle','肌肉','MUSCLE'],['nerve','神经','NERVES']];
-function semanticPartName(object){let current=object;while(current){const name=decodeName(current.userData?.anatomyName||current.name||'');if(name&&!/^mesh(?:[_-]|$)/i.test(name)&&!/^scene$/i.test(name))return name;current=current.parent}return ''}
+function semanticPartName(object){let current=object;while(current){const name=decodeName(current.userData?.clinicalName||current.userData?.anatomyName||current.name||'');if(name&&!/^mesh(?:[_-]|$)/i.test(name)&&!/^scene$/i.test(name))return name;current=current.parent}return ''}
 function bilingualPartText(raw,layer,lang='zh'){const label=safePartLabel(raw,layer);return lang==='zh'?label.zh:label.en}
 // The head/face batch uses explicit clinical topics so a model node such as
 // “upper molar” can select the dental and nasal knowledge cards without exposing
@@ -93,7 +93,15 @@ function Model({layer,onPart,selectedObject,registerApproximatePick}){
     gltf.scene.traverse(object=>{
       const node=gltf.parser.associations.get(object)?.nodes;
       const original=node===undefined?null:gltf.parser.json.nodes[node]?.name;
-      if(original)object.userData.anatomyName=decodeName(original);
+      if(original){
+        const clinicalName=decodeName(original);
+        const displayName=safePartLabel(clinicalName,layer).zh;
+        // Keep the source term only for internal clinical matching. Three.js
+        // object names and display metadata must never expose raw atlas text.
+        object.userData.clinicalName=clinicalName;
+        object.userData.anatomyName=displayName;
+        object.name=displayName;
+      }
     });
     return gltf.scene;
   },[gltf]);
