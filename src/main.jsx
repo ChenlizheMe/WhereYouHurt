@@ -116,7 +116,7 @@ function bilingualPartText(raw,layer,lang='zh'){const label=partLabel(raw,layer)
 const PART_TOPIC_ALIASES=[
   ['tooth',['tooth','molar','premolar','incisor','canine','dental']],
   ['nose',['nasal','nose','sinus','concha','turbinate','septum','vomer']],
-  ['head-neuro',['head','brain','cranial','trigeminal','optic','facial','cochlear','vestibular','vagus','cerebell','thalam','pons','medulla','midbrain','hypothalam','ventricle']],
+  ['head-neuro',['head','brain','cranial','trigeminal','optic','facial','cochlear','vestibular','vagus','cerebell','thalam','pons','medulla','midbrain','hypothalam','ventricle','eye','eyeball','cornea','retina','lens','lacrimal','ear','auditory','tympanic','olfactory','nasal']],
   ['jaw',['mandible','maxilla','jaw']],
   ['spine',['vertebra','spine','intervertebral','disc','sacrum','coccyx','cervical','thoracic','lumbar','neck','back']],
   ['neck-muscle',['neck','sternocleidomastoid','scalenus','splenius','semispinalis','longus capitis','longus colli','digastric','mylohyoid','geniohyoid','stylohyoid','platysma']],
@@ -124,7 +124,7 @@ const PART_TOPIC_ALIASES=[
   ['abdomen',['abdomen','abdominal','rectus abdominis','oblique','transversus abdominis','linea alba','umbilical']],
   ['ribcage',['rib','sternum','costal','chest']],
   ['shoulder',['shoulder','clavicle','scapula','humerus','rotator','deltoid']],
-  ['upper-limb',['arm','forearm','elbow','wrist','hand','radius','ulna','brachialis','brachioradialis','nerve']],
+  ['upper-limb',['arm','forearm','elbow','wrist','hand','radius','ulna','brachialis','brachioradialis','median nerve','ulnar nerve','radial nerve','axillary nerve','musculocutaneous nerve','brachial plexus']],
   ['hip',['hip','pelvis','femur','gluteus','iliacus','iliopsoas','psoas','piriformis']],
   ['knee',['knee','patella','popliteus']],
   ['ankle',['ankle','talus','calcaneus','malleolus','gastrocnemius','soleus']],
@@ -141,6 +141,7 @@ function partTopics(raw){
     [...topics].forEach(topic=>topics.push(`${topic}-${side}`));
     if(topics.includes('abdomen')||topics.includes('torso'))topics.push(`abdomen-${side}`);
   }
+  if(topics.length===1)topics.push('general');
   return [...new Set(topics)];
 }
 // Measured from the three Anatria GLBs: all share this canonical anatomical box
