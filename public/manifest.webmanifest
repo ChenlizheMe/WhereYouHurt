@@ -1,4 +1,5 @@
 {
+  "id": "./",
   "name": "WhereYouHurt / 您哪疼",
   "short_name": "WhereYouHurt",
   "description": "An offline-first body-area and pain reference tool.",
@@ -7,15 +8,15 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
   "orientation": "portrait-primary",
   "background_color": "#171916",
   "theme_color": "#d4c99d",
+  "categories": ["health", "medical", "education"],
+  "prefer_related_applications": false,
   "icons": [
-    {
-      "src": "./icons/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"},
+    {"src":"./icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
   ]
 }

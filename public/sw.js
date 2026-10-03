@@ -1,8 +1,13 @@
-/* Lightweight offline shell for WhereYouHurt. Runtime anatomy GLBs remain network-first. */
-const CACHE = 'wherehurt-shell-v2';
-// Keep this list in sync with public/manifest.webmanifest. SVG is the only
-// checked-in icon, so install never fails on missing raster placeholders.
-const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon.svg'];
+/* Offline app shell. Anatomy GLBs and the Draco decoder stay network-first. */
+const CACHE = 'wherehurt-shell-v3';
+const SHELL = [
+  './',
+  './index.html',
+  './manifest.webmanifest',
+  './icons/icon.svg',
+  './icons/icon-192.png',
+  './icons/icon-512.png'
+];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
 });
