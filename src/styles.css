@@ -345,6 +345,15 @@ body{background:#10110f}
 .sticker-sheet{z-index:30!important}
 @media(max-width:760px){.sticker-sheet{z-index:30!important}}
 
+/* The tutorial is a compact field guide, opened from the ? control in the
+   model header. It shares the drawer geometry but keeps its copy readable. */
+.tutorial-control{min-width:30px!important;width:30px!important;text-align:center!important;font-weight:800!important}
+.tutorial-copy{padding:2px 16px 18px;color:var(--swiss-paper);font-size:10px;line-height:1.6}
+.tutorial-copy p{margin:0 0 10px;color:var(--swiss-yellow);font-weight:700}
+.tutorial-copy ol{margin:0;padding-left:21px}
+.tutorial-copy li{margin:0 0 8px}
+@media(max-width:760px){.tutorial-copy{padding:0 12px 14px;font-size:9px;line-height:1.5}.tutorial-copy li{margin-bottom:6px}}
+
 
 /* Canonical medical note placement: directly above the action tape, behind the drawer. */
 .medical-note{position:absolute;top:auto!important;left:50%!important;right:auto!important;bottom:calc(env(safe-area-inset-bottom) + clamp(104px,13dvh,132px))!important;transform:translateX(-50%)!important;z-index:10!important;width:min(520px,calc(100% - 48px))!important;max-width:none!important;box-sizing:border-box!important;color:#d9d0aa;font-size:8px;line-height:1.45;background:rgba(16,18,15,.78);border:1px solid rgba(207,200,164,.45);border-radius:4px;padding:6px 8px}

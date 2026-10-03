@@ -2,9 +2,17 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {assessSymptoms} from '../src/clinicalEngine.js';
+import {visibleSymptoms} from '../src/symptomFilters.js';
 
 const knowledge=JSON.parse(fs.readFileSync(new URL('../data/knowledge.json',import.meta.url),'utf8'));
 const selectableTags=new Set([...knowledge.feelings,...knowledge.signs].map(tag=>tag.id));
+
+test('feelings and signs stay in separate selector groups',()=>{
+ const feelings=new Set(knowledge.feelings.map(tag=>tag.id));
+ assert.deepEqual(knowledge.signs.filter(tag=>feelings.has(tag.id)),[]);
+ assert.ok(!feelings.has('轻微'));
+ assert.ok(!feelings.has('剧烈'));
+});
 
 test('every differential uses a selectable symptom tag',()=>{
  for(const condition of knowledge.conditions){
@@ -43,6 +51,15 @@ test('new region routes return concrete differentials',()=>{
   const result=assessSymptoms(knowledge,{parts:[part],layer,feelings:['钝痛'],signs:['发热']});
   assert.ok(result.items.some(item=>item.id===id),`${part} did not route to ${id}`);
  }
+});
+
+test('selectors hide unrelated regional observations',()=>{
+ const mouthSigns=visibleSymptoms(knowledge,{parts:['Masseter muscle.r'],layer:'muscle',kind:'signs'}).map(tag=>tag.id);
+ const noseSigns=visibleSymptoms(knowledge,{parts:['Inferior nasal concha bone.l'],layer:'skeleton',kind:'signs'}).map(tag=>tag.id);
+ assert.ok(!mouthSigns.includes('鼻塞'));
+ assert.ok(!mouthSigns.includes('脓性鼻涕'));
+ assert.ok(noseSigns.includes('鼻塞'));
+ assert.ok(noseSigns.includes('脓性鼻涕'));
 });
 
 test('every selectable atlas mesh has at least one regional differential',()=>{

@@ -81,11 +81,6 @@
       "en": "itchy"
     },
     {
-      "id": "轻微",
-      "zh": "轻微",
-      "en": "mild"
-    },
-    {
       "id": "酸胀",
       "zh": "酸胀",
       "en": "sore + full"
@@ -94,11 +89,6 @@
       "id": "灼痒",
       "zh": "灼痒",
       "en": "itchy burning"
-    },
-    {
-      "id": "剧烈",
-      "zh": "剧烈",
-      "en": "severe"
     },
     {
       "id": "紧绷",
@@ -144,161 +134,6 @@
       "id": "放射痛",
       "zh": "放射痛",
       "en": "radiating pain"
-    },
-    {
-      "id": "活动受限",
-      "zh": "活动受限",
-      "en": "limited movement"
-    },
-    {
-      "id": "无法承重",
-      "zh": "无法承重",
-      "en": "unable to bear weight"
-    },
-    {
-      "id": "肌力下降",
-      "zh": "肌力下降",
-      "en": "weakness"
-    },
-    {
-      "id": "感觉减退",
-      "zh": "感觉减退",
-      "en": "reduced sensation"
-    },
-    {
-      "id": "视物模糊",
-      "zh": "视物模糊",
-      "en": "blurred vision"
-    },
-    {
-      "id": "畏光",
-      "zh": "畏光",
-      "en": "light sensitivity"
-    },
-    {
-      "id": "流泪",
-      "zh": "流泪",
-      "en": "tearing"
-    },
-    {
-      "id": "鼻塞",
-      "zh": "鼻塞",
-      "en": "nasal congestion"
-    },
-    {
-      "id": "脓性鼻涕",
-      "zh": "脓性鼻涕",
-      "en": "purulent nasal discharge"
-    },
-    {
-      "id": "咳嗽",
-      "zh": "咳嗽",
-      "en": "cough"
-    },
-    {
-      "id": "呼吸痛",
-      "zh": "呼吸痛",
-      "en": "pain with breathing"
-    },
-    {
-      "id": "气短",
-      "zh": "气短",
-      "en": "shortness of breath"
-    },
-    {
-      "id": "恶心",
-      "zh": "恶心",
-      "en": "nausea"
-    },
-    {
-      "id": "呕吐",
-      "zh": "呕吐",
-      "en": "vomiting"
-    },
-    {
-      "id": "腹泻",
-      "zh": "腹泻",
-      "en": "diarrhea"
-    },
-    {
-      "id": "便秘",
-      "zh": "便秘",
-      "en": "constipation"
-    },
-    {
-      "id": "进食后腹痛",
-      "zh": "进食后腹痛",
-      "en": "post-meal abdominal pain"
-    },
-    {
-      "id": "排便后缓解",
-      "zh": "排便后缓解",
-      "en": "relieved after bowel movement"
-    },
-    {
-      "id": "尿频",
-      "zh": "尿频",
-      "en": "urinary frequency"
-    },
-    {
-      "id": "尿痛",
-      "zh": "尿痛",
-      "en": "painful urination"
-    },
-    {
-      "id": "血尿",
-      "zh": "血尿",
-      "en": "blood in urine"
-    },
-    {
-      "id": "耳鸣",
-      "zh": "耳鸣",
-      "en": "ringing in the ear"
-    },
-    {
-      "id": "听力下降",
-      "zh": "听力下降",
-      "en": "hearing loss"
-    },
-    {
-      "id": "吞咽痛",
-      "zh": "吞咽痛",
-      "en": "painful swallowing"
-    },
-    {
-      "id": "张口受限",
-      "zh": "张口受限",
-      "en": "limited mouth opening"
-    },
-    {
-      "id": "咬合改变",
-      "zh": "咬合改变",
-      "en": "changed bite"
-    },
-    {
-      "id": "牙龈出血",
-      "zh": "牙龈出血",
-      "en": "bleeding gums"
-    },
-    {
-      "id": "牙龋洞",
-      "zh": "牙龋洞",
-      "en": "cavity"
-    },
-    {
-      "id": "关节不稳",
-      "zh": "关节不稳",
-      "en": "joint instability"
-    },
-    {
-      "id": "关节卡住",
-      "zh": "关节卡住",
-      "en": "locking"
-    },
-    {
-      "id": "局部压痛",
-      "zh": "局部压痛",
-      "en": "localized tenderness"
     },
     {
       "id": "绞痛",
@@ -646,6 +481,16 @@
       "id": "眩晕",
       "zh": "眩晕",
       "en": "dizziness or vertigo"
+    },
+    {
+      "id": "进食后腹痛",
+      "zh": "进食后腹痛",
+      "en": "post-meal abdominal pain"
+    },
+    {
+      "id": "排便后缓解",
+      "zh": "排便后缓解",
+      "en": "relieved after bowel movement"
     }
   ],
   "conditions": [
@@ -849,8 +694,7 @@
       "feelings": [
         "酸痛",
         "钝痛",
-        "隐痛",
-        "轻微"
+        "隐痛"
       ],
       "signs": [
         "淤青",
@@ -2675,7 +2519,6 @@
         "lower-limb"
       ],
       "feelings": [
-        "剧烈",
         "跳痛",
         "胀痛",
         "绞痛"
@@ -2800,7 +2643,6 @@
       ],
       "feelings": [
         "绞痛",
-        "剧烈",
         "胀痛",
         "恶心"
       ],
