@@ -616,6 +616,36 @@
       "id": "面部歪斜",
       "zh": "面部歪斜",
       "en": "facial droop"
+    },
+    {
+      "id": "单侧肿胀",
+      "zh": "单侧肿胀",
+      "en": "one-sided swelling"
+    },
+    {
+      "id": "血便",
+      "zh": "血便",
+      "en": "blood in stool"
+    },
+    {
+      "id": "黄疸",
+      "zh": "黄疸",
+      "en": "jaundice"
+    },
+    {
+      "id": "发冷",
+      "zh": "发冷",
+      "en": "chills"
+    },
+    {
+      "id": "心悸",
+      "zh": "心悸",
+      "en": "palpitations"
+    },
+    {
+      "id": "眩晕",
+      "zh": "眩晕",
+      "en": "dizziness or vertigo"
     }
   ],
   "conditions": [
@@ -2883,6 +2913,210 @@
       "medication": {
         "zh": "可向药师咨询短期抗酸或抑酸类别；正在服其他药、孕期或症状反复时先咨询，不要长期自行使用。",
         "en": "Ask a pharmacist about a short course of antacid or acid-suppression categories; check interactions and pregnancy, and do not self-treat recurrent symptoms long term."
+      }
+    },
+    {
+      "id": "dental-abscess",
+      "name": {
+        "zh": "牙源性脓肿（需尽快牙科评估）",
+        "en": "Possible dental abscess requiring dental assessment"
+      },
+      "parts": [
+        "tooth",
+        "jaw"
+      ],
+      "feelings": [
+        "跳痛",
+        "钝痛",
+        "冷热敏感",
+        "咬合痛"
+      ],
+      "signs": [
+        "牙龈肿胀",
+        "面部肿胀",
+        "流脓",
+        "发热",
+        "口腔异味"
+      ],
+      "structures": [
+        "牙髓、根尖与牙龈 / Tooth pulp, root and gum"
+      ],
+      "summary": "剧烈牙痛伴牙龈或面部肿胀、口腔异味、流脓或发热，需优先排查牙源性脓肿；模型不能判断感染范围。",
+      "summaryEn": "Severe tooth pain with gum or facial swelling, a bad taste, drainage or fever needs prompt dental assessment for a possible abscess; the model cannot assess its spread.",
+      "advice": {
+        "zh": "尽快预约急诊牙科；保持口腔清洁，选择柔软食物，避免冷热刺激。不要挤压肿包。",
+        "en": "Arrange urgent dental care; keep the mouth clean, choose soft foods and avoid temperature triggers. Do not squeeze a swelling."
+      },
+      "redFlags": {
+        "zh": "呼吸、吞咽或说话困难，眼周肿痛/视力变化，口底明显肿胀或无法张口时立即急诊。",
+        "en": "Emergency care is needed for difficulty breathing, swallowing or speaking, eye swelling or vision change, marked floor-of-mouth swelling or inability to open the mouth."
+      },
+      "medication": {
+        "zh": "可向药师咨询适合的非处方止痛类别并按标签使用；抗生素和根管/引流需由牙医判断，不要使用剩余药物。",
+        "en": "Ask a pharmacist about an appropriate OTC pain-relief category and follow the label; antibiotics and drainage or root-canal treatment require a dentist, not leftover medicines."
+      }
+    },
+    {
+      "id": "pharyngitis",
+      "name": {
+        "zh": "咽炎或扁桃体炎样表现（需鉴别）",
+        "en": "Possible pharyngitis or tonsillitis"
+      },
+      "parts": [
+        "throat"
+      ],
+      "feelings": [
+        "吞咽痛",
+        "灼烧",
+        "钝痛"
+      ],
+      "signs": [
+        "发热",
+        "红肿",
+        "咳嗽",
+        "脓性鼻涕"
+      ],
+      "structures": [
+        "咽部与扁桃体 / Pharynx and tonsils"
+      ],
+      "summary": "咽痛、吞咽痛伴发热、咳嗽或鼻部症状常见于呼吸道感染；是否需要检测或抗菌治疗不能由模型判断。",
+      "summaryEn": "Sore or painful swallowing with fever, cough or nasal symptoms can occur with respiratory infection; a model cannot decide whether testing or antimicrobials are needed.",
+      "advice": {
+        "zh": "补充水分，选择温软食物，避免烟雾刺激；症状持续、反复或影响饮水时就医。",
+        "en": "Keep hydrated, choose soft warm foods and avoid smoke; seek care if symptoms persist, recur or limit drinking."
+      },
+      "redFlags": {
+        "zh": "呼吸困难、无法吞咽液体、流口水、声音含糊、单侧明显肿胀或高热寒战时立即就医。",
+        "en": "Seek urgent care for breathing difficulty, inability to swallow fluids, drooling, a muffled voice, marked one-sided swelling or high fever with chills."
+      },
+      "medication": {
+        "zh": "可向药师咨询适合的止痛或含片类别；不要自行使用抗生素或剩余处方药。",
+        "en": "Ask a pharmacist about a suitable pain-relief or lozenge category; do not self-start antibiotics or leftover prescriptions."
+      }
+    },
+    {
+      "id": "pelvic-pain",
+      "name": {
+        "zh": "盆腔或会阴疼痛（需按泌尿/肠道/生殖症状鉴别）",
+        "en": "Pelvic or perineal pain requiring urinary, bowel or reproductive assessment"
+      },
+      "parts": [
+        "pelvis"
+      ],
+      "feelings": [
+        "钝痛",
+        "胀痛",
+        "绞痛",
+        "刺痛",
+        "灼烧"
+      ],
+      "signs": [
+        "尿频",
+        "尿痛",
+        "血尿",
+        "发热",
+        "红肿",
+        "流脓"
+      ],
+      "structures": [
+        "盆腔、膀胱、肠道与生殖系统 / Pelvis, bladder, bowel and reproductive organs"
+      ],
+      "summary": "盆底肌肉或会阴点位不能代表单一器官；排尿、排便、月经/妊娠可能、异常出血和发热决定下一步鉴别方向。",
+      "summaryEn": "A pelvic-floor or perineal point does not identify one organ; urinary, bowel, menstrual or pregnancy symptoms, bleeding and fever determine the next differential.",
+      "advice": {
+        "zh": "记录疼痛位置、周期、排尿排便和出血情况；持续或反复疼痛应就医评估，不要只按肌肉拉伤处理。",
+        "en": "Record the exact location, timing, urinary and bowel changes and any bleeding; persistent or recurrent pain needs assessment rather than being treated as muscle strain alone."
+      },
+      "redFlags": {
+        "zh": "可能怀孕伴单侧剧痛/出血/晕厥，或高热、持续呕吐、无法排尿、剧烈加重时立即急诊。",
+        "en": "Emergency assessment is needed for possible pregnancy with one-sided severe pain, bleeding or fainting, or for fever, persistent vomiting, inability to urinate or rapidly worsening pain."
+      },
+      "medication": {
+        "zh": "不明原因盆腔痛先咨询医生或药师；不要自行使用抗生素、激素或强效止痛药掩盖症状。",
+        "en": "Ask a clinician or pharmacist before treating unexplained pelvic pain; do not self-start antibiotics, steroids or strong analgesics to mask symptoms."
+      }
+    },
+    {
+      "id": "bone-injury",
+      "name": {
+        "zh": "骨挫伤、应力性损伤或骨折（需影像检查）",
+        "en": "Possible bone contusion, stress injury or fracture"
+      },
+      "parts": [
+        "skeleton"
+      ],
+      "feelings": [
+        "钝痛",
+        "刺痛",
+        "撕裂",
+        "无法承重",
+        "活动受限"
+      ],
+      "signs": [
+        "局部压痛",
+        "局部肿胀",
+        "淤青",
+        "发凉",
+        "苍白",
+        "伤口"
+      ],
+      "structures": [
+        "骨与骨膜 / Bone and periosteum"
+      ],
+      "summary": "明确外伤后骨点压痛、肿胀、淤青、畸形或无法承重，需要排查骨挫伤、应力性损伤或骨折；3D位置不能替代X线等检查。",
+      "summaryEn": "Focal bony tenderness, swelling, bruising, deformity or inability to bear weight after injury needs assessment for contusion, stress injury or fracture; 3D position cannot replace imaging.",
+      "advice": {
+        "zh": "停止负重和剧烈活动，保护患处并尽快安排医学评估；不要自行复位或反复按压。",
+        "en": "Stop weight-bearing and strenuous activity, protect the area and arrange medical assessment; do not manipulate or repeatedly press a suspected fracture."
+      },
+      "redFlags": {
+        "zh": "开放伤口、明显畸形、肢体发冷发白/麻木、疼痛快速加重或无法承重时立即就医。",
+        "en": "Seek urgent care for an open wound, deformity, a cold pale or numb limb, rapidly worsening pain or inability to bear weight."
+      },
+      "medication": {
+        "zh": "止痛类别需结合年龄、胃肠、肝肾和正在用药情况咨询药师；不要用药掩盖需要影像检查的伤情。",
+        "en": "Ask a pharmacist which pain-relief category fits your age, stomach, liver, kidney and medicines; medication cannot replace imaging for a suspected fracture."
+      }
+    },
+    {
+      "id": "autonomic-assessment",
+      "name": {
+        "zh": "自主神经功能异常线索（需结合器官症状评估）",
+        "en": "Possible autonomic dysfunction requiring organ-specific assessment"
+      },
+      "parts": [
+        "autonomic"
+      ],
+      "feelings": [
+        "心悸",
+        "眩晕",
+        "恶心",
+        "灼烧"
+      ],
+      "signs": [
+        "出汗",
+        "发凉",
+        "尿频",
+        "尿痛",
+        "腹泻",
+        "便秘"
+      ],
+      "structures": [
+        "自主神经通路 / Autonomic pathways"
+      ],
+      "summary": "交感或迷走神经节点跨越多个器官；心悸、体位性眩晕、出汗异常、胃肠或膀胱变化需要按实际器官症状评估，不能由模型定位病因。",
+      "summaryEn": "Sympathetic and vagal pathways span several organs; palpitations, postural dizziness, sweating, bowel or bladder changes need organ-specific assessment rather than an anatomical label alone.",
+      "advice": {
+        "zh": "记录症状发生时的体位、心率感受、进食、排尿排便和用药变化；反复或影响日常时就医。",
+        "en": "Record posture, perceived heart rate, meals, bowel or bladder changes and medicines when symptoms occur; seek care if recurrent or disruptive."
+      },
+      "redFlags": {
+        "zh": "晕厥、胸痛、严重气短、意识改变、持续呕吐或无法排尿时立即就医。",
+        "en": "Seek emergency care for fainting, chest pain, severe breathlessness, confusion, persistent vomiting or inability to urinate."
+      },
+      "medication": {
+        "zh": "自主神经症状的药物取决于具体病因；不要自行使用抗心律失常药、镇静药或促胃肠药。",
+        "en": "Medication depends on the cause; do not self-start anti-arrhythmics, sedatives or motility drugs."
       }
     }
   ]
