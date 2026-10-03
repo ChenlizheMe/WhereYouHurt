@@ -1,6 +1,8 @@
-# 创伤小组
+# Trauma Team International
 
-移动优先的交互式解剖疼痛探索与日常参考工具：React + React Three Fiber + Three.js。页面把部位、疼痛感觉、外部表现编码为本地特征，通过 `data/knowledge.json` 中的规则和加权相似度输出最多三个“参考匹配”。没有大模型或远程推理 API。
+这是一个致敬《赛博朋克2077》世界观中 Trauma Team International 的交互式解剖疼痛探索与日常参考工具。
+
+页面把部位、疼痛感觉、外部表现编码为本地特征，通过 `data/knowledge.json` 中的规则和加权相似度输出最多三个“参考匹配”。没有大模型或远程推理 API。
 
 ## 开发
 
